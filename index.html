@@ -13,7 +13,10 @@
       <div id="question"></div>
       <div id="answers"></div>
     </div>
-    <button id="next-button" onclick="nextQuestion()">다음</button>
+    <div class="navigation-buttons">
+      <button id="back-button" class="hidden" onclick="goBack()">이전</button>
+      <button id="next-button" onclick="nextQuestion()">다음</button>
+    </div>
     <div id="result-container" class="hidden">
       <h2>테스트 결과</h2>
       <p id="result"></p>
