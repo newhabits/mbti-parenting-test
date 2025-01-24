@@ -397,8 +397,6 @@ const results = {
   }
 };
 
-
-
 let currentQuestionIndex = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 let previousAnswers = [];
@@ -452,6 +450,14 @@ function goBack() {
   }
 }
 
+function calculateMBTI() {
+  const eOrI = scores.E >= scores.I ? "E" : "I";
+  const sOrN = scores.S >= scores.N ? "S" : "N";
+  const tOrF = scores.T >= scores.F ? "T" : "F";
+  const jOrP = scores.J >= scores.P ? "J" : "P";
+  return `${eOrI}${sOrN}${tOrF}${jOrP}`;
+}
+
 function showResult() {
   document.getElementById("quiz-container").classList.add("hidden");
   document.getElementById("result-container").classList.remove("hidden");
@@ -459,23 +465,24 @@ function showResult() {
   const resultType = calculateMBTI();
   const resultData = results[resultType];
 
+  if (!resultData) {
+    console.error(`결과 데이터를 찾을 수 없습니다: ${resultType}`);
+    document.getElementById("result").innerText = "결과를 찾을 수 없습니다. 다시 시도해주세요.";
+    return;
+  }
+
   const resultElement = document.getElementById("result");
   const productLink = document.getElementById("product-link");
 
   resultElement.innerHTML = `
     <h2>${resultType} - ${resultData.title}</h2>
     <p>${resultData.description}</p>
+    <p>${resultData.matchesWell}</p>
+    <p>${resultData.matchesPoorly}</p>
     <p>${resultData.message}</p>
+    <p>${resultData.productMessage}</p>
   `;
   productLink.href = resultData.productLink;
-}
-
-function calculateMBTI() {
-  const eOrI = scores.E >= scores.I ? "E" : "I";
-  const sOrN = scores.S >= scores.N ? "S" : "N";
-  const tOrF = scores.T >= scores.F ? "T" : "F";
-  const jOrP = scores.J >= scores.P ? "J" : "P";
-  return `${eOrI}${sOrN}${tOrF}${jOrP}`;
 }
 
 renderQuestion();
