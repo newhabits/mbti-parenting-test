@@ -32,13 +32,19 @@ body {
   cursor: pointer;
 }
 
-.hidden {
-  display: none;
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
+#back-button,
 #next-button {
-  margin-top: 20px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
