@@ -246,11 +246,14 @@ const results = {
 
 let currentQuestionIndex = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+let previousAnswers = [];
 
 function renderQuestion() {
   const question = questions[currentQuestionIndex];
   const questionElement = document.getElementById("question");
   const answersElement = document.getElementById("answers");
+  const backButton = document.getElementById("back-button");
+
   questionElement.innerText = question.question;
   answersElement.innerHTML = "";
 
@@ -258,6 +261,7 @@ function renderQuestion() {
     const button = document.createElement("button");
     button.innerText = answer.text;
     button.onclick = () => {
+      previousAnswers.push({ questionIndex: currentQuestionIndex, scores: answer.scores });
       Object.keys(answer.scores).forEach((key) => {
         scores[key] += answer.scores[key];
       });
@@ -265,6 +269,12 @@ function renderQuestion() {
     };
     answersElement.appendChild(button);
   });
+
+  if (currentQuestionIndex > 0) {
+    backButton.classList.remove("hidden");
+  } else {
+    backButton.classList.add("hidden");
+  }
 }
 
 function nextQuestion() {
@@ -273,6 +283,17 @@ function nextQuestion() {
     renderQuestion();
   } else {
     showResult();
+  }
+}
+
+function goBack() {
+  if (currentQuestionIndex > 0) {
+    const lastAnswer = previousAnswers.pop();
+    Object.keys(lastAnswer.scores).forEach((key) => {
+      scores[key] -= lastAnswer.scores[key];
+    });
+    currentQuestionIndex--;
+    renderQuestion();
   }
 }
 
