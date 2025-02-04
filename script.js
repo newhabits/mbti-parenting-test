@@ -558,7 +558,7 @@ function showResult() {
   const resultElement = document.getElementById("result");
   const productLink = document.getElementById("product-link");
 
-  resultElement.innerHTML = `
+resultElement.innerHTML = `
     <h2>${resultType} - ${resultData.title}</h2>
     <div class="description">
       ${resultData.description}
@@ -566,11 +566,8 @@ function showResult() {
     <div class="message">
       ${resultData.message}
     </div>
-    <div class="product-message">
-      추천 제품 보러가기
-    </div>
   `;
-  productLink.href = resultData.productLink;
+productLink.href = resultData.productLink;
 }
 
 renderQuestion();
