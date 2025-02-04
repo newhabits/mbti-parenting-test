@@ -87,27 +87,33 @@ button:hover, .product-button:hover {
 .product-button:hover {
   background-color: #1976D2;
 }
+.product-button:hover {
+  background-color: #1976D2;
+}
+
 .description, .message {
   margin: 20px 0;
   line-height: 1.8;
   white-space: pre-line;
-}
-
-#result h2 {
-  margin-bottom: 30px;
-  color: #333;
-  font-size: 24px;
-}
-
-.product-message {
-  margin-top: 30px;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  font-weight: bold;
-  color: #2196F3;
+  word-break: keep-all;
+  word-wrap: break-word;
 }
 
 #result {
   padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  #result {
+    font-size: 15px;
+  }
+  
+  #result h2 {
+    font-size: 20px;
+    word-break: keep-all;
+  }
 }
