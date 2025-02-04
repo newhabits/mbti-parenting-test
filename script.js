@@ -560,11 +560,15 @@ function showResult() {
 
   resultElement.innerHTML = `
     <h2>${resultType} - ${resultData.title}</h2>
-    <p>${resultData.description}</p>
-    <p>${resultData.matchesWell}</p>
-    <p>${resultData.matchesPoorly}</p>
-    <p>${resultData.message}</p>
-    <p>${resultData.productMessage}</p>
+    <div class="description">
+      ${resultData.description}
+    </div>
+    <div class="message">
+      ${resultData.message}
+    </div>
+    <div class="product-message">
+      추천 제품 보러가기
+    </div>
   `;
   productLink.href = resultData.productLink;
 }
