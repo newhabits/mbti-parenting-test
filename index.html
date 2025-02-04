@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>부모 유형 MBTI 테스트</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI 육아 테스트</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100">
-    <div id="app" class="container mx-auto px-4 py-8 max-w-2xl">
-        <div id="test-container" class="bg-white rounded-lg shadow-lg p-6">
-        </div>
+<body>
+  <div class="container">
+    <h1>MBTI 육아 테스트</h1>
+    <div id="quiz-container">
+      <div id="question"></div>
+      <div id="answers"></div>
     </div>
-    
-    <script src="questions.js"></script>
-    <script src="results.js"></script>
-    <script src="script.js"></script>
+    <div id="result-container" class="hidden">
+      <h2>테스트 결과</h2>
+      <p id="result"></p>
+      <button onclick="location.reload()">다시 테스트하기</button>
+      <a id="product-link" href="#" target="_blank" class="product-button">추천 상품 보러가기</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
