@@ -99,7 +99,26 @@ button:hover, .product-button:hover {
 .product-button:hover {
   background-color: #1976D2;
 }
+.product-button:hover {
+    background-color: #1976D2;
+}
+#intro-container {
+    text-align: center;
+}
 
+.start-button {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.start-button img {
+    max-width: 200px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
 .description, .message {
   margin: 20px 0;
   line-height: 1.8;
