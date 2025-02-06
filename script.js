@@ -1,3 +1,8 @@
+function startTest() {
+    document.getElementById('intro-container').classList.add('hidden');
+    document.getElementById('quiz-container').classList.remove('hidden');
+    renderQuestion();
+}
 const questions = [
   {
     question: "아이와 노는 시간, 당신은?",
