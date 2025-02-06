@@ -1,5 +1,5 @@
 body {
-    font-family: 'Omyu Pretty', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+    font-family: 'OmyuPretty', sans-serif; 
     margin: 0;
     padding: 20px;
     min-height: 100vh;
@@ -38,21 +38,22 @@ body {
 .start-button {
     position: absolute;
     left: 50%;
-    bottom: 20%;
+    bottom: 13%;  
     transform: translateX(-50%);
     cursor: pointer;
 }
 
 .start-button img {
-    max-width: 200px;
+    max-width: 100px;  
     height: auto;
     transform: translateZ(0);
 }
 
 #question {
+    font-family: 'OmyuPretty';
     font-size: 22px;
     font-weight: 500;
-    color: #333;
+    color: #000000;
     margin-bottom: 30px;
     text-align: center;
     transform: translateZ(0);
@@ -72,9 +73,9 @@ body {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000;
-    font-family: 'Omyu Pretty';
+    font-family: 'OmyuPretty';
+    color: #000000;
 }
-
 #answers button:hover {
     background-color: #e3f2fd;
     transform: translateY(-2px);
@@ -95,6 +96,7 @@ body {
 }
 
 #result {
+    font-family: 'OmyuPretty';
     padding: 20px;
     transform: translateZ(0);
 }
