@@ -7,22 +7,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="title-image">
-        <img src="images/title.png" alt="MBTI 육아 테스트">
+ <div class="container">
+    <div id="intro-container">
+        <div class="title-image">
+            <img src="images/title.png" alt="MBTI 육아 테스트">
+        </div>
+        <div class="start-button">
+            <img src="images/start-button.png" alt="테스트 시작하기" onclick="startTest()">
+        </div>
     </div>
-    <h1>MBTI 육아 테스트</h1>
-      <div id="quiz-container">
-      <div id="question"></div>
-      <div id="answers"></div>
+    
+    <div id="quiz-container" class="hidden">
+        <div id="question"></div>
+        <div id="answers"></div>
     </div>
+    
     <div id="result-container" class="hidden">
-      <h2>테스트 결과</h2>
-      <p id="result"></p>
-      <button onclick="location.reload()">다시 테스트하기</button>
-      <a id="product-link" href="#" target="_blank" class="product-button">추천 상품 보러가기</a>
+        <h2>테스트 결과</h2>
+        <p id="result"></p>
+        <a id="product-link" href="#" target="_blank" class="product-button">추천 상품 보러가기</a>
     </div>
-  </div>
+</div>
   <script src="script.js"></script>
 </body>
 </html>
