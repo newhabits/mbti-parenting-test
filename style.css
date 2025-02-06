@@ -45,13 +45,13 @@ body {
 .start-button {
     position: absolute;
     left: 50%;
-    bottom: 13%;  
+    bottom: 10%;  
     transform: translateX(-50%);
     cursor: pointer;
 }
 
 .start-button img {
-    max-width: 100px;  
+    max-width: 150px;  
     height: auto;
     transform: translateZ(0);
 }
