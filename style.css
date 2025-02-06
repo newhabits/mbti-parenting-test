@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OmyuPretty';
-    src: url('../fonts/OmyuPretty.ttf') format('truetype');
+    src: url('fonts/OmyuPretty.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -83,7 +83,6 @@ body {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000;
-    font-family: 'OmyuPretty';
     color: #000000;
 }
 #answers button:hover {
