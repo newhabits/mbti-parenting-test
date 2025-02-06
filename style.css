@@ -102,12 +102,25 @@ button:hover, .product-button:hover {
 .product-button:hover {
     background-color: #1976D2;
 }
-#intro-container {
+.title-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.title-image {
     text-align: center;
 }
 
+.title-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 .start-button {
-    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
     cursor: pointer;
 }
 
