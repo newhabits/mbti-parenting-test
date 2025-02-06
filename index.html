@@ -7,21 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <div class="container">
+<div class="container">
     <div id="intro-container">
-        <div class="title-image">
-            <img src="images/title.png" alt="MBTI 육아 테스트">
-        </div>
-        <div class="start-button">
-            <img src="images/start-button.png" alt="테스트 시작하기" onclick="startTest()">
+        <div class="title-wrapper">
+            <div class="title-image">
+                <img src="images/title.png" alt="MBTI 육아 테스트">
+            </div>
+            <div class="start-button">
+                <img src="images/start-button.png" alt="테스트 시작하기" onclick="startTest()">
+            </div>
         </div>
     </div>
-    
-    <div id="quiz-container" class="hidden">
-        <div id="question"></div>
-        <div id="answers"></div>
-    </div>
-    
     <div id="result-container" class="hidden">
         <h2>테스트 결과</h2>
         <p id="result"></p>
