@@ -67,7 +67,7 @@ body {
 
 .start-button {
     position: absolute;
-    top: 80%; 
+    top: 70%; 
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
@@ -88,8 +88,8 @@ body {
 
 #question {
     font-family: 'KyoboHand', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: Extrabold;
     text-align: center;
     color: #2c3e50;
 }
