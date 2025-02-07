@@ -120,7 +120,6 @@ const questions = [
 ];
 
 const results = {
-  const results = {
   INFP: {
     title: "동화 속 이야기꾼",
     description: `
@@ -588,6 +587,9 @@ function showResult() {
 window.onload = function() {
     const startButton = document.querySelector('.start-button');
     if (startButton) {
-        startButton.onclick = startTest;
+        startButton.onclick = function() {
+            document.getElementById('quiz-container').classList.remove('hidden');
+            renderQuestion();
+        };
     }
 };
