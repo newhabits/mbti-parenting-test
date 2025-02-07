@@ -113,6 +113,21 @@ body {
     border-color: #adb5bd;
 }
 
+#back-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#back-button.hidden {
+    display: none;
+}
+
 
 .hidden {
     display: none !important;
