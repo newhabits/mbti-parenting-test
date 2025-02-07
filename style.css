@@ -51,17 +51,23 @@ body {
 }
 
 .start-button {
-    position: absolute;
-    left: 50%;
-    bottom: 5%;  
-    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.start-button img {
-    max-width: 170px;  
-    height: auto;
-    transform: translateZ(0);
+.start-button:hover {
+    background-color: #45a049;
 }
 
 #question {
