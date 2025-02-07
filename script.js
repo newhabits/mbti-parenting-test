@@ -491,26 +491,31 @@ let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 let previousAnswers = [];
 
 function renderQuestion() {
-  const question = questions[currentQuestionIndex];
-  const questionElement = document.getElementById("question");
-  const answersElement = document.getElementById("answers");
-  const backButton = document.getElementById("back-button");
+    const question = questions[currentQuestionIndex];
+    const questionElement = document.getElementById("question");
+    const answersElement = document.getElementById("answers");
+    const backButton = document.getElementById("back-button");
+    
+    questionElement.innerText = question.question;
+    answersElement.innerHTML = "";
 
-  questionElement.innerText = question.question;
-  answersElement.innerHTML = "";
+    const progress = document.querySelector('.progress');
+    const progressPercentage = (currentQuestionIndex / questions.length) * 100;
+    progress.style.width = `${progressPercentage}%`;
 
-  question.answers.forEach((answer) => {
-    const button = document.createElement("button");
-    button.innerText = answer.text;
-    button.onclick = () => {
-      previousAnswers.push({ questionIndex: currentQuestionIndex, scores: answer.scores });
-      Object.keys(answer.scores).forEach((key) => {
-        scores[key] += answer.scores[key];
-      });
-      nextQuestion();
-    };
-    answersElement.appendChild(button);
-  });
+    question.answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.innerText = answer.text;
+        button.onclick = () => {
+            previousAnswers.push({ questionIndex: currentQuestionIndex, scores: answer.scores });
+            Object.keys(answer.scores).forEach((key) => {
+                scores[key] += answer.scores[key];
+            });
+            nextQuestion();
+        };
+        answersElement.appendChild(button);
+    });
+}
 
   if (currentQuestionIndex > 0) {
     backButton.classList.remove("hidden");
