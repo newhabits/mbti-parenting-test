@@ -64,25 +64,26 @@ body {
     transform: translateZ(0);
 }
 
+
 .start-button {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto;
-    padding: 15px;
-    font-size: 18px;
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
+    position: absolute;
+    top: 20%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    color: white; 
+    font-family: 'KyoboHand', sans-serif;
+    font-size: 26px; 
+    font-weight: bold;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 .start-button:hover {
-    background-color: #45a049;
+    text-decoration: underline;
 }
+
 
 #question {
     font-family: 'KyoboHand', sans-serif;
