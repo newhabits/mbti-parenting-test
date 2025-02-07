@@ -553,31 +553,33 @@ function calculateMBTI() {
 }
 
 function showResult() {
-  document.getElementById("quiz-container").classList.add("hidden");
-  document.getElementById("result-container").classList.remove("hidden");
+    document.getElementById('quiz-container').classList.add('hidden');
+    document.getElementById('result-container').classList.remove('hidden');
+    const mbti = calculateMBTI();
+    const resultData = results[mbti];
 
-  const resultType = calculateMBTI();
-  const resultData = results[resultType];
+    if (!resultData) {
+        console.error(`결과 데이터를 찾을 수 없습니다: ${mbti}`);
+        document.getElementById("result").innerText = "결과를 찾을 수 없습니다. 다시 시도해주세요.";
+        return;
+    }
 
-  if (!resultData) {
-    console.error(`결과 데이터를 찾을 수 없습니다: ${resultType}`);
-    document.getElementById("result").innerText = "결과를 찾을 수 없습니다. 다시 시도해주세요.";
-    return;
-  }
-
-  const resultElement = document.getElementById("result");
-  const productLink = document.getElementById("product-link");
-
-resultElement.innerHTML = `
-    <h2>${resultType} - ${resultData.title}</h2>
-    <div class="description">
-      ${resultData.description}
-    </div>
-    <div class="message">
-      ${resultData.message}
-    </div>
-  `;
-productLink.href = resultData.productLink;
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `
+        <h2>${mbti} - ${resultData.title}</h2>
+        <div class="description">
+            ${resultData.description}
+        </div>
+        <div class="match-types">
+            ${resultData.matchesWell}
+            ${resultData.matchesPoorly}
+        </div>
+        <div class="message">
+            ${resultData.message}
+        </div>
+    `;
+    const productLink = document.getElementById('product-link');
+    productLink.href = resultData.productLink;
 }
 
 renderQuestion();
