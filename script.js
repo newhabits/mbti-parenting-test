@@ -528,6 +528,10 @@ function renderQuestion() {
 
 function nextQuestion() {
     currentQuestionIndex++;
+    if (currentQuestionIndex > 0) {
+        document.getElementById("back-button").classList.remove("hidden");
+    }
+
     if (currentQuestionIndex < questions.length) {
         renderQuestion();
     } else {
@@ -537,11 +541,13 @@ function nextQuestion() {
 
 function goBack() {
     if (currentQuestionIndex > 0) {
-        const lastAnswer = previousAnswers.pop();
-        Object.keys(lastAnswer.scores).forEach((key) => {
-            scores[key] -= lastAnswer.scores[key];
-        });
+        previousAnswers.pop(); 
         currentQuestionIndex--;
+
+        if (currentQuestionIndex === 0) {
+            document.getElementById("back-button").classList.add("hidden");
+        }
+
         renderQuestion();
     }
 }
