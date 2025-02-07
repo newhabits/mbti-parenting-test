@@ -1,8 +1,13 @@
+let currentQuestionIndex = 0;
+let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+let previousAnswers = [];
+
 function startTest() {
     document.getElementById('intro-container').classList.add('hidden');
     document.getElementById('quiz-container').classList.remove('hidden');
     renderQuestion();
 }
+
 const questions = [
   {
     question: "아이와 노는 시간, 당신은?",
@@ -95,6 +100,15 @@ const questions = [
     ]
   },
   {
+    question: "아이의 장난감을 정리할 때, 당신은?",
+    answers: [
+        { text: "용도별, 크기별로 체계적으로 수납해요", scores: { J: 2, T: 1 } },
+        { text: "아이와 함께 즐겁게 정리하는 시간을 가져요", scores: { F: 2, E: 1 } },
+        { text: "정리하면서 새로운 놀이나 수납 방법을 생각해요", scores: { N: 2, P: 1 } },
+        { text: "아이가 스스로 정리하는 습관을 기다려주며 지켜봐요", scores: { I: 2, S: 1 } }
+    ]
+},
+  {
     question: "하루를 마무리하는 저녁 시간, 어떻게 보내시나요?",
     answers: [
       { text: "내일의 할 일을 체크리스트로 정리하며 하루를 마무리해요.", scores: { J: 2, T: 1 } },
@@ -106,6 +120,7 @@ const questions = [
 ];
 
 const results = {
+  const results = {
   INFP: {
     title: "동화 속 이야기꾼",
     description: `
@@ -486,15 +501,10 @@ ESFJ: {
   }
 };
 
-let currentQuestionIndex = 0;
-let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-let previousAnswers = [];
-
 function renderQuestion() {
     const question = questions[currentQuestionIndex];
     const questionElement = document.getElementById("question");
     const answersElement = document.getElementById("answers");
-    const backButton = document.getElementById("back-button");
     
     questionElement.innerText = question.question;
     answersElement.innerHTML = "";
@@ -517,39 +527,32 @@ function renderQuestion() {
     });
 }
 
-  if (currentQuestionIndex > 0) {
-    backButton.classList.remove("hidden");
-  } else {
-    backButton.classList.add("hidden");
-  }
-}
-
 function nextQuestion() {
-  currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
-    renderQuestion();
-  } else {
-    showResult();
-  }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        renderQuestion();
+    } else {
+        showResult();
+    }
 }
 
 function goBack() {
-  if (currentQuestionIndex > 0) {
-    const lastAnswer = previousAnswers.pop();
-    Object.keys(lastAnswer.scores).forEach((key) => {
-      scores[key] -= lastAnswer.scores[key];
-    });
-    currentQuestionIndex--;
-    renderQuestion();
-  }
+    if (currentQuestionIndex > 0) {
+        const lastAnswer = previousAnswers.pop();
+        Object.keys(lastAnswer.scores).forEach((key) => {
+            scores[key] -= lastAnswer.scores[key];
+        });
+        currentQuestionIndex--;
+        renderQuestion();
+    }
 }
 
 function calculateMBTI() {
-  const eOrI = scores.E >= scores.I ? "E" : "I";
-  const sOrN = scores.S >= scores.N ? "S" : "N";
-  const tOrF = scores.T >= scores.F ? "T" : "F";
-  const jOrP = scores.J >= scores.P ? "J" : "P";
-  return `${eOrI}${sOrN}${tOrF}${jOrP}`;
+    const eOrI = scores.E >= scores.I ? "E" : "I";
+    const sOrN = scores.S >= scores.N ? "S" : "N";
+    const tOrF = scores.T >= scores.F ? "T" : "F";
+    const jOrP = scores.J >= scores.P ? "J" : "P";
+    return `${eOrI}${sOrN}${tOrF}${jOrP}`;
 }
 
 function showResult() {
@@ -571,8 +574,8 @@ function showResult() {
             ${resultData.description}
         </div>
         <div class="match-types">
-            ${resultData.matchesWell}
-            ${resultData.matchesPoorly}
+            ${resultData.matchesWell || ''}
+            ${resultData.matchesPoorly || ''}
         </div>
         <div class="message">
             ${resultData.message}
@@ -582,4 +585,9 @@ function showResult() {
     productLink.href = resultData.productLink;
 }
 
-renderQuestion();
+window.onload = function() {
+    const startButton = document.querySelector('.start-button');
+    if (startButton) {
+        startButton.onclick = startTest;
+    }
+};
