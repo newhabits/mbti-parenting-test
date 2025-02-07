@@ -1,5 +1,19 @@
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: bold; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: 'Gaegu', cursive;
+    font-family: 'omyu_pretty', sans-serif;
     margin: 0;
     padding: 20px;
     min-height: 100vh;
@@ -71,13 +85,11 @@ body {
 }
 
 #question {
-    font-family: 'Gaegu', cursive;
-    font-size: 22px;
-    font-weight: 500;
-    color: #000000;
-    margin-bottom: 30px;
+    font-family: 'KyoboHand', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
-    transform: translateZ(0);
+    color: #2c3e50;
 }
 
 #answers button {
@@ -107,27 +119,42 @@ body {
     display: none !important;
 }
 
-.description, .message {
-    margin: 20px 0;
-    line-height: 1.8;
-    white-space: pre-line;
-    word-break: keep-all;
-    word-wrap: break-word;
-    font-size: 18px;
+.description{
+    font-family: 'ChosunGu', sans-serif;
+    font-size: 20px;
+    line-height: 1.8; 
+    text-align: left;
+    color: #444;
+}
+    .match-types{
+    font-family: 'ChosunGu', sans-serif;
+    font-size: 20px;
+    line-height: 1.8; 
+    text-align: left;
+    color: #444;
+}
+    .message {
+    font-family: 'ChosunGu', sans-serif;
+    font-size: 20px;
+    line-height: 1.8; 
+    text-align: left;
+    color: #444;
 }
 
 #result {
-    font-family: 'Gaegu', cursive;
-    padding: 20px;
-    transform: translateZ(0);
+    font-family: 'ChosunGu', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    color: #444;
 }
 
 #result h2 {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 30px;
+    font-family: 'KyoboHand', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
     color: #333;
-    word-break: keep-all;
+    text-align: center;
 }
 
 button {
