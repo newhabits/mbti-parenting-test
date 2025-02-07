@@ -115,7 +115,7 @@ body {
 
 #back-button {
     display: block;
-    margin: 40px auto 20px; /* 답변과 충분한 간격을 둠 */
+    margin: 40px auto 20px;
     padding: 12px 24px;
     font-size: 16px;
     background-color: #ddd;
