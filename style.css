@@ -115,13 +115,15 @@ body {
 
 #back-button {
     display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
+    margin: 20px auto;
+    padding: 12px 24px;
     font-size: 16px;
     background-color: #ddd;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    width: fit-content;
 }
 
 #back-button.hidden {
