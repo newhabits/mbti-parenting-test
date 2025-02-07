@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBTI 육아 테스트</title>
-    <link rel="preload" href="fonts/OmyuPretty.ttf" as="font" type="font/ttf" crossorigin>
+    <link href="https://webfontworld.github.io/omyu/OmyuPretty.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="preload" as="image" href="images/title.png">
     <link rel="preload" as="image" href="images/start-button.png">
@@ -22,10 +22,13 @@
             </div>
         </div>
         
-        <div id="quiz-container" class="hidden">
-            <div id="question"></div>
-            <div id="answers"></div>
-        </div>
+       <div id="quiz-container" class="hidden">
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    <div id="question"></div>
+    <div id="answers"></div>
+</div>
         
         <div id="result-container" class="hidden">
             <h2>테스트 결과</h2>
