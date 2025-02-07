@@ -1,13 +1,5 @@
-@font-face {
-    font-family: 'OmyuPretty';
-    src: url('https://raw.githubusercontent.com/newhabits/mbti-parenting-test/main/fonts/OmyuPretty.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 body {
-    font-family: 'OmyuPretty', sans-serif !important;
+    font-family: 'Gaegu', cursive;
     margin: 0;
     padding: 20px;
     min-height: 100vh;
@@ -73,7 +65,7 @@ body {
 }
 
 #question {
-    font-family: 'OmyuPretty', sans-serif !important;
+    font-family: 'Gaegu', cursive;
     font-size: 22px;
     font-weight: 500;
     color: #000000;
@@ -89,7 +81,7 @@ body {
     border: none;
     border-radius: 10px;
     background-color: #f8f9fa;
-    font-family: 'OmyuPretty', sans-serif !important;
+    font-family: 'Gaegu', cursive;
     font-size: 18px;
     font-weight: 400;
     text-align: left;
@@ -119,7 +111,7 @@ body {
 }
 
 #result {
-    font-family: 'OmyuPretty', sans-serif !important;
+    font-family: 'Gaegu', cursive;
     padding: 20px;
     transform: translateZ(0);
 }
@@ -133,7 +125,7 @@ body {
 }
 
 button {
-    font-family: 'OmyuPretty', sans-serif !important;
+    font-family: 'Gaegu', cursive;
     display: inline-block;
     padding: 12px 24px;
     margin: 10px;
@@ -149,7 +141,7 @@ button {
 }
 
 .product-button {
-    font-family: 'OmyuPretty', sans-serif !important;
+    font-family: 'Gaegu', cursive;
     background-color: #2196F3;
 }
 
