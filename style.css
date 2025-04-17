@@ -133,6 +133,10 @@ body {
     display: none;
 }
 
+#intro-container {
+    transition: opacity 0.3s ease;
+}
+
 .hidden {
     display: none !important;
     visibility: hidden !important;
@@ -141,22 +145,15 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
-    position: absolute !important;
-    left: -9999px !important;
-}
-
-#intro-container {
-    transition: opacity 0.3s ease;
 }
 
 #quiz-container {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
-    transition: opacity 0.3s ease;
-    position: relative;
-    opacity: 0;
-    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 #quiz-container.active {
