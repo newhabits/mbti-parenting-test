@@ -131,7 +131,13 @@ body {
 }
 
 .hidden {
-    display: none !important;
+    display: none;
+}
+
+#quiz-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .description{
