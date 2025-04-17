@@ -10,8 +10,8 @@
     <link rel="preload" as="image" href="images/start-button.png">
 </head>
 <body>
-    <div class="main-wrapper">
-        <div id="intro-container" class="container">
+    <div class="container">
+        <div id="intro-container">
            <div class="title-wrapper">
                 <div class="title-image">
                     <img src="images/title.png" alt="MBTI 육아 테스트">
@@ -20,8 +20,8 @@
             </div>
         </div>
         
-        <div id="quiz-container" class="container hidden">
-            <button id="back-button" class="hidden">이전으로</button>
+        <div id="quiz-container" class="hidden">
+            <button id="back-button" onclick="goBack()" class="hidden">이전으로</button>
             
             <div class="progress-bar">
                 <div class="progress"></div>
@@ -31,39 +31,27 @@
             <div id="answers"></div>
         </div>
         
-        <div id="result-container" class="container hidden">
+        <div id="result-container" class="hidden">
             <h2>테스트 결과</h2>
             <div id="result-content"></div>
             <div id="result"></div>
-            <button id="restart-btn">다시 테스트하기</button>
+            <button onclick="location.reload()">다시 테스트하기</button>
             <a id="product-link" href="#" target="_blank" class="product-button">추천 상품 보러가기</a>
         </div>
     </div>
 
+    <script src="script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-
             document.getElementById('start-btn').addEventListener('click', function() {
-                document.getElementById('intro-container').classList.add('hidden');
-                document.getElementById('quiz-container').classList.remove('hidden');
-                
-                window.currentQuestionIndex = 0;
-                window.scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-                window.previousAnswers = [];
-                window.renderQuestion();
-            });
-            
-
-            document.getElementById('back-button').addEventListener('click', function() {
-                window.goBack();
-            });
-            
-
-            document.getElementById('restart-btn').addEventListener('click', function() {
-                location.reload();
+                document.getElementById('intro-container').style.display = 'none';
+                document.getElementById('quiz-container').style.display = 'block';
+                currentQuestionIndex = 0;
+                scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+                previousAnswers = [];
+                renderQuestion();
             });
         });
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
