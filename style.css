@@ -23,6 +23,8 @@ body {
     align-items: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    position: relative; 
 }
 
 .container {
@@ -32,6 +34,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative; 
 }
 
 .progress-bar {
@@ -142,10 +145,23 @@ body {
     left: -9999px !important;
 }
 
+#intro-container {
+    transition: opacity 0.3s ease;
+}
+
 #quiz-container {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    transition: opacity 0.3s ease;
+    position: relative;
+    opacity: 0;
+    display: none;
+}
+
+#quiz-container.active {
+    opacity: 1;
+    display: block;
 }
 
 .description{
