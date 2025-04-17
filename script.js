@@ -5,6 +5,9 @@ let previousAnswers = [];
 function startTest() {
     document.getElementById('intro-container').classList.add('hidden');
     document.getElementById('quiz-container').classList.remove('hidden');
+    currentQuestionIndex = 0;
+    scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+    previousAnswers = [];
     renderQuestion();
 }
 
@@ -1325,30 +1328,8 @@ function showResult() {
     document.getElementById('quiz-container').classList.add('hidden');
     document.getElementById('result-container').classList.remove('hidden');
     const mbti = calculateMBTI();
-    const resultData = results[mbti];
-
-    if (!resultData) {
-        console.error(`결과 데이터를 찾을 수 없습니다: ${mbti}`);
-        document.getElementById("result").innerText = "결과를 찾을 수 없습니다. 다시 시도해주세요.";
-        return;
-    }
-
-    const resultElement = document.getElementById('result');
-    resultElement.innerHTML = `
-        <h2>${mbti} - ${resultData.title}</h2>
-        <div class="description">
-            ${resultData.description}
-        </div>
-        <div class="match-types">
-            ${resultData.matchesWell || ''}
-            ${resultData.matchesPoorly || ''}
-        </div>
-        <div class="message">
-            ${resultData.message}
-        </div>
-    `;
-    const productLink = document.getElementById('product-link');
-    productLink.href = resultData.productLink;
+    
+    showPersonalityResult(mbti);
 }
 
 window.onload = function() {
