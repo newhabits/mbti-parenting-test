@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preload" as="image" href="images/title.png">
     <link rel="preload" as="image" href="images/start-button.png">
+    <script>
+        function testClick() {
+            alert("버튼이 클릭되었습니다!");
+            document.getElementById('intro-container').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -15,7 +22,7 @@
            <div class="title-wrapper">
                 <div class="title-image">
                     <img src="images/title.png" alt="MBTI 육아 테스트">
-                    <button class="start-button" onclick="startTest()">테스트 시작하기</button>
+                   <button class="start-button" onclick="testClick()">테스트 시작하기</button>
                 </div>
             </div>
         </div>
