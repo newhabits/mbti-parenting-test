@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preload" as="image" href="images/title.png">
     <link rel="preload" as="image" href="images/start-button.png">
-    <script>
-        function testClick() {
-            alert("버튼이 클릭되었습니다!");
-            document.getElementById('intro-container').classList.add('hidden');
-            document.getElementById('quiz-container').classList.remove('hidden');
-        }
-    </script>
-</head>
+
+<script>
+    function switchToQuiz() {
+        document.getElementById('intro-container').style.display = 'none';
+        document.getElementById('quiz-container').style.display = 'block';
+        document.getElementById('quiz-container').classList.add('active');
+        startTest();
+    }
+</script>
 <body>
     <div id="intro-container" class="container">
         <div class="title-wrapper">
             <div class="title-image">
                 <img src="images/title.png" alt="MBTI 육아 테스트">
-                <button class="start-button" onclick="switchToQuiz()">테스트 시작하기</button>
+<button class="start-button" onclick="switchToQuiz()">테스트 시작하기</button>
             </div>
         </div>
     </div>
