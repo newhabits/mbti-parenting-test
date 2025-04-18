@@ -2,20 +2,29 @@ let currentQuestionIndex = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 let previousAnswers = [];
 
-function startTest() {
-    const introContainer = document.getElementById('intro-container');
-    if (introContainer) {
-        introContainer.parentNode.removeChild(introContainer);
+// 페이지 로드 시 이벤트 등록
+document.addEventListener('DOMContentLoaded', function() {
+    const startBtn = document.getElementById('start-btn');
+    if (startBtn) {
+        startBtn.addEventListener('click', function() {
+            // 인트로 컨테이너 완전히 제거
+            const introContainer = document.getElementById('intro-container');
+            if (introContainer) {
+                introContainer.remove();
+            }
+            
+            // 퀴즈 컨테이너 표시
+            document.getElementById('quiz-container').classList.remove('hidden');
+            
+            // 초기화 및 질문 렌더링
+            currentQuestionIndex = 0;
+            scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+            previousAnswers = [];
+            renderQuestion();
+        });
     }
-    
-    const quizContainer = document.getElementById('quiz-container');
-    quizContainer.style.display = 'block';
-    
-    currentQuestionIndex = 0;
-    scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-    previousAnswers = [];
-    renderQuestion();
-}
+});
+
 
 const questions = [
   {
