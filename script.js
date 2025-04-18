@@ -2,16 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // 시작 버튼에 클릭 이벤트 등록
     const startButton = document.getElementById("start-btn");
     if (startButton) {
-        startButton.addEventListener("click", function() {
-            // 기존 컨테이너를 모두 숨김
-            document.getElementById("intro-container").style.display = "none";
-            
-            // 퀴즈 컨테이너만 표시
-            document.getElementById("quiz-container").style.display = "block";
-            
-            // 질문 렌더링 시작
-            initializeQuiz();
-        });
+        startButton.addEventListener("click", function () {
+    hideAllContainers();
+    document.getElementById("quiz-container").style.display = "block";
+    initializeQuiz();
+});
+
     }
     
     // 뒤로가기 버튼 이벤트 등록
@@ -207,10 +203,9 @@ function calculateMBTI() {
 
 // 결과 표시
 function showResult() {
-    document.getElementById('quiz-container').style.display = 'none';
+    hideAllContainers();
     document.getElementById('result-container').style.display = 'block';
     const mbti = calculateMBTI();
-    
     showPersonalityResult(mbti);
 }
 
@@ -1352,5 +1347,11 @@ function showESFPResult() {
   `;
   
    document.getElementById('result-content').innerHTML = resultContent;
+}
+
+function hideAllContainers() {
+    document.getElementById("intro-container").style.display = "none";
+    document.getElementById("quiz-container").style.display = "none";
+    document.getElementById("result-container").style.display = "none";
 }
 
