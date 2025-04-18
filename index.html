@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBTI 육아 테스트</title>
-    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" as="image" href="images/title.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI 육아 테스트</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" as="image" href="images/title.png" />
 </head>
 <body>
-    <div class="container">
-        <div id="intro-container">
-           <div class="title-wrapper">
-                <div class="title-image">
-                    <img src="images/title.png" alt="MBTI 육아 테스트">
-                    <button class="start-button" id="start-btn">테스트 시작하기</button>
-                </div>
-            </div>
+  <div class="container">
+
+    <!-- 인트로 화면 -->
+    <div id="intro-container" class="active">
+      <div class="title-wrapper">
+        <div class="title-image">
+          <img src="images/title.png" alt="MBTI 육아 테스트" />
+          <button class="start-button" id="start-btn">테스트 시작하기</button>
         </div>
-        
-        <div id="quiz-container" style="display: none;">
-            <button id="back-button" style="display: none;">이전으로</button>
-            
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-            
-            <div id="question"></div>
-            <div id="answers"></div>
-        </div>
-        
-        <div id="result-container" style="display: none;">
-            <h2>테스트 결과</h2>
-            <div id="result-content"></div>
-            <div id="result"></div>
-            <button onclick="location.reload()">다시 테스트하기</button>
-            <a id="product-link" href="#" target="_blank" class="product-button">추천 상품 보러가기</a>
-        </div>
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- 질문 화면 -->
+    <div id="quiz-container">
+      <button id="back-button" class="hidden">이전으로</button>
+
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
+      <div id="question"></div>
+      <div id="answers"></div>
+    </div>
+
+    <!-- 결과 화면 -->
+    <div id="result-container">
+      <h2>테스트 결과</h2>
+      <div id="result-content"></div>
+      <div id="result"></div>
+      <button onclick="location.reload()">다시 테스트하기</button>
+      <a id="product-link" href="#" target="_blank" class="product-button">추천 상품 보러가기</a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
