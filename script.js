@@ -148,7 +148,7 @@ function renderQuestion() {
     const questionElement = document.getElementById("question");
     const answersElement = document.getElementById("answers");
     
-    questionElement.innerText = ""; // 이전 질문 지우기
+    questionElement.innerHTML = "";
     questionElement.innerText = question.question; // 새 질문 넣기
     answersElement.innerHTML = ""; // 이전 답변 지우기
 
