@@ -1,22 +1,37 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // 시작 버튼에 클릭 이벤트 등록
+    const startButton = document.getElementById("start-btn");
+    if (startButton) {
+        startButton.addEventListener("click", function() {
+            // 기존 컨테이너를 모두 숨김
+            document.getElementById("intro-container").style.display = "none";
+            
+            // 퀴즈 컨테이너만 표시
+            document.getElementById("quiz-container").style.display = "block";
+            
+            // 질문 렌더링 시작
+            initializeQuiz();
+        });
+    }
+    
+    // 뒤로가기 버튼 이벤트 등록
+    document.getElementById("back-button").addEventListener("click", goBack);
+});
+
+// 전역 변수 선언
 let currentQuestionIndex = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 let previousAnswers = [];
 
-document.addEventListener("DOMContentLoaded", function() {
-    // 시작 버튼 이벤트 등록
-    document.getElementById("start-btn").addEventListener("click", function() {
-        // DOM에서 intro-container 완전히 제거
-        document.getElementById("intro-container").remove();
-        
-        // quiz-container 보이게 설정
-        document.getElementById("quiz-container").style.display = "block";
-        
-        // 첫 질문 렌더링
-        renderQuestion();
-    });
-     document.getElementById("back-button").addEventListener("click", goBack);
-});
+// 퀴즈 초기화 함수
+function initializeQuiz() {
+    currentQuestionIndex = 0;
+    scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+    previousAnswers = [];
+    renderQuestion();
+}
 
+// 질문 목록
 const questions = [
   {
     question: "아이와 노는 시간, 당신은?",
@@ -116,7 +131,7 @@ const questions = [
         { text: "정리하면서 새로운 놀이나 수납 방법을 생각해요", scores: { N: 2, P: 1 } },
         { text: "아이가 스스로 정리하는 습관을 기다려주며 지켜봐요", scores: { I: 2, S: 1 } }
     ]
-},
+  },
   {
     question: "하루를 마무리하는 저녁 시간, 어떻게 보내시나요?",
     answers: [
@@ -127,6 +142,136 @@ const questions = [
     ]
   }
 ];
+
+function renderQuestion() {
+    const question = questions[currentQuestionIndex];
+    const questionElement = document.getElementById("question");
+    const answersElement = document.getElementById("answers");
+    
+    questionElement.innerText = question.question;
+    answersElement.innerHTML = "";
+
+    const progress = document.querySelector('.progress');
+    const progressPercentage = (currentQuestionIndex / questions.length) * 100;
+    progress.style.width = `${progressPercentage}%`;
+
+    question.answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.innerText = answer.text;
+        button.onclick = () => {
+            previousAnswers.push({ questionIndex: currentQuestionIndex, scores: answer.scores });
+            Object.keys(answer.scores).forEach((key) => {
+                scores[key] += answer.scores[key];
+            });
+            nextQuestion();
+        };
+        answersElement.appendChild(button);
+    });
+
+    // 뒤로 가기 버튼 표시/숨김
+    if (currentQuestionIndex > 0) {
+        document.getElementById("back-button").style.display = "block";
+    } else {
+        document.getElementById("back-button").style.display = "none";
+    }
+}
+
+// 다음 질문으로 이동
+function nextQuestion() {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        renderQuestion();
+    } else {
+        showResult();
+    }
+}
+
+// 이전 질문으로 이동
+function goBack() {
+    if (currentQuestionIndex > 0) {
+        previousAnswers.pop(); 
+        currentQuestionIndex--;
+        renderQuestion();
+    }
+}
+
+// MBTI 계산
+function calculateMBTI() {
+    const eOrI = scores.E >= scores.I ? "E" : "I";
+    const sOrN = scores.S >= scores.N ? "S" : "N";
+    const tOrF = scores.T >= scores.F ? "T" : "F";
+    const jOrP = scores.J >= scores.P ? "J" : "P";
+    return `${eOrI}${sOrN}${tOrF}${jOrP}`;
+}
+
+// 결과 표시
+function showResult() {
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('result-container').style.display = 'block';
+    const mbti = calculateMBTI();
+    
+    showPersonalityResult(mbti);
+}
+
+// 모든 유형에 대한 메인 컨트롤 함수
+function showPersonalityResult(type) {
+  switch(type) {
+    case 'ISTJ':
+      showISTJResult();
+      break;
+    case 'ESTJ':
+      showESTJResult();
+      break;
+    case 'ISFJ':
+      showISFJResult();
+      break;
+    case 'ESFJ':
+      showESFJResult();
+      break;
+    case 'INFP':
+      showINFPResult();
+      break;
+    case 'ENFP':
+      showENFPResult();
+      break;
+    case 'INTP':
+      showINTPResult();
+      break;
+    case 'ENTP':
+      showENTPResult();
+      break;
+    case 'ENTJ':
+      showENTJResult();
+      break;
+    case 'INFJ':
+      showINFJResult();
+      break;
+    case 'ENFJ':
+      showENFJResult();
+      break;
+    case 'ISTP':
+      showISTPResult();
+      break;
+    case 'ESTP':
+      showESTPResult();
+      break;
+    case 'ISFP':
+      showISFPResult();
+      break;
+    case 'ESFP':
+      showESFPResult();
+      break;
+    default:
+      document.getElementById('result-content').innerHTML = '<p>선택한 유형에 대한 결과를 찾을 수 없습니다.</p>';
+  }
+}
+
+// 더 많은 아이템 보기 함수
+function showMoreItems(type) {
+  alert(type + ' 유형을 위한 더 많은 아이템을 보여줍니다.');
+}
+
 
 // ISTJ 유형 결과 페이지 콘텐츠
 function showISTJResult() {
@@ -1206,136 +1351,6 @@ function showESFPResult() {
     </div>
   `;
   
-  document.getElementById('result-content').innerHTML = resultContent;
+   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// 모든 유형에 대한 메인 컨트롤 함수
-function showPersonalityResult(type) {
-  switch(type) {
-    case 'ISTJ':
-      showISTJResult();
-      break;
-    case 'ESTJ':
-      showESTJResult();
-      break;
-    case 'ISFJ':
-      showISFJResult();
-      break;
-    case 'ESFJ':
-      showESFJResult();
-      break;
-    case 'INFP':
-      showINFPResult();
-      break;
-    case 'ENFP':
-      showENFPResult();
-      break;
-    case 'INTP':
-      showINTPResult();
-      break;
-    case 'ENTP':
-      showENTPResult();
-      break;
-    case 'ENTJ':
-      showENTJResult();
-      break;
-    case 'INFJ':
-      showINFJResult();
-      break;
-    case 'ENFJ':
-      showENFJResult();
-      break;
-    case 'ISTP':
-      showISTPResult();
-      break;
-    case 'ESTP':
-      showESTPResult();
-      break;
-    case 'ISFP':
-      showISFPResult();
-      break;
-    case 'ESFP':
-      showESFPResult();
-      break;
-    default:
-      document.getElementById('result-content').innerHTML = '<p>선택한 유형에 대한 결과를 찾을 수 없습니다.</p>';
-  }
-}
-
-// 더 많은 아이템 보기 함수
-function showMoreItems(type) {
-  // 여기에 각 유형별 추가 아이템을 보여주는 로직 구현
-  // 예: 모달 팝업 또는 새 페이지로 이동
-  alert(type + ' 유형을 위한 더 많은 아이템을 보여줍니다.');
-}
-
-          
-function renderQuestion() {
-    const question = questions[currentQuestionIndex];
-    const questionElement = document.getElementById("question");
-    const answersElement = document.getElementById("answers");
-    
-    questionElement.innerText = question.question;
-    answersElement.innerHTML = "";
-
-    const progress = document.querySelector('.progress');
-    const progressPercentage = (currentQuestionIndex / questions.length) * 100;
-    progress.style.width = `${progressPercentage}%`;
-
-    question.answers.forEach((answer, index) => {
-        const button = document.createElement("button");
-        button.innerText = answer.text;
-        button.onclick = () => {
-            previousAnswers.push({ questionIndex: currentQuestionIndex, scores: answer.scores });
-            Object.keys(answer.scores).forEach((key) => {
-                scores[key] += answer.scores[key];
-            });
-            nextQuestion();
-        };
-        answersElement.appendChild(button);
-    });
-}
-
-function nextQuestion() {
-    currentQuestionIndex++;
-
-    if (currentQuestionIndex < questions.length) {
-        renderQuestion();
-    } else {
-        showResult();
-    }
-}
-
-function goBack() {
-    if (currentQuestionIndex > 0) {
-        document.getElementById("back-button").classList.remove("hidden");
-    } else {
-        document.getElementById("back-button").classList.add("hidden");
-    }
-}
-
-function calculateMBTI() {
-    const eOrI = scores.E >= scores.I ? "E" : "I";
-    const sOrN = scores.S >= scores.N ? "S" : "N";
-    const tOrF = scores.T >= scores.F ? "T" : "F";
-    const jOrP = scores.J >= scores.P ? "J" : "P";
-    return `${eOrI}${sOrN}${tOrF}${jOrP}`;
-}
-
-function showResult() {
-    document.getElementById('quiz-container').style.display = 'none';
-    document.getElementById('result-container').style.display = 'block';
-    const mbti = calculateMBTI();
-    
-    showPersonalityResult(mbti);
-}
-
-window.onload = function() {
-    const startButton = document.querySelector('.start-button');
-    if (startButton) {
-        startButton.onclick = function() {
-            document.getElementById('quiz-container').classList.remove('hidden');
-            renderQuestion();
-        };
-    }
-};
