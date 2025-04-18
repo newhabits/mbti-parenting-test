@@ -311,3 +311,11 @@ button {
 .result-container .child-section {
     text-align: center;
 }
+
+#quiz-container,
+#result-container {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    display: none; 
+}
