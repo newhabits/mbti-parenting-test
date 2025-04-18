@@ -267,16 +267,22 @@ button {
     font-size: 24px;
     margin-top: 35px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .result-container p {
     line-height: 1.8;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .result-container ul {
     margin-left: 25px;
     margin-bottom: 30px;
+    text-align: left;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .result-container li {
@@ -288,6 +294,7 @@ button {
     margin-bottom: 40px;
     padding-bottom: 25px;
     border-bottom: 1px solid #eee;
+    text-align: left;
 }
 
 .result-container .item {
@@ -295,4 +302,12 @@ button {
     padding: 15px;
     border-radius: 8px;
     background-color: #f9f9f9;
+    text-align: left;
+}
+.result-container .style-section,
+.result-container .strengths-section,
+.result-container .growth-section,
+.result-container .partner-section,
+.result-container .child-section {
+    text-align: center;
 }
