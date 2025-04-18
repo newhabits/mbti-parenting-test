@@ -1,18 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // 시작 버튼에 클릭 이벤트 등록
     const startButton = document.getElementById("start-btn");
+    
     if (startButton) {
         startButton.addEventListener("click", function () {
-    hideAllContainers();
-    document.getElementById("quiz-container").style.display = "block";
-    initializeQuiz();
+            hideAllContainers();
+            document.getElementById("quiz-container").style.display = "block";
+            initializeQuiz();
+        });
+    }
+
+    // 뒤로가기 버튼 이벤트 등록
+    const backButton = document.getElementById("back-button");
+    if (backButton) {
+        backButton.addEventListener("click", goBack);
+    }
 });
 
-    }
-    
-    // 뒤로가기 버튼 이벤트 등록
-    document.getElementById("back-button").addEventListener("click", goBack);
-});
 
 // 전역 변수 선언
 let currentQuestionIndex = 0;
@@ -144,8 +148,9 @@ function renderQuestion() {
     const questionElement = document.getElementById("question");
     const answersElement = document.getElementById("answers");
     
-    questionElement.innerText = question.question;
-    answersElement.innerHTML = "";
+    questionElement.innerText = ""; // 이전 질문 지우기
+    questionElement.innerText = question.question; // 새 질문 넣기
+    answersElement.innerHTML = ""; // 이전 답변 지우기
 
     const progress = document.querySelector('.progress');
     const progressPercentage = (currentQuestionIndex / questions.length) * 100;
