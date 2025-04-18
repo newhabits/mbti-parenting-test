@@ -95,6 +95,15 @@ body {
     font-weight: Extrabold;
     text-align: center;
     color: #2c3e50;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+#answers {
+    position: relative;
+    z-index: 1;
+    background: white;
 }
 
 #answers button {
@@ -153,6 +162,10 @@ body {
     background: white;
     padding: 30px;
     border-radius: 15px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    background: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -318,7 +331,6 @@ button {
     display: block;
 }
 
-#quiz-container,
 #result-container {
     position: relative;
     z-index: 1;
