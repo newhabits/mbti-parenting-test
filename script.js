@@ -1,3 +1,12 @@
+function showScreen(idToShow) {
+  const screens = ["intro-container", "quiz-container", "result-container"];
+  screens.forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.remove("active");
+  });
+  document.getElementById(idToShow).classList.add("active");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // 시작 버튼에 클릭 이벤트 등록
     const startButton = document.getElementById("start-btn");
