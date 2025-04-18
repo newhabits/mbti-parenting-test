@@ -42,10 +42,20 @@
 
     <script src="script.js"></script>
     <script>
+        // 페이지가 완전히 로드된 후에 실행
         document.addEventListener('DOMContentLoaded', function() {
+            // 시작 버튼 클릭 시 실행될 함수
             document.getElementById('start-btn').addEventListener('click', function() {
-                document.getElementById('intro-container').style.display = 'none';
-                document.getElementById('quiz-container').style.display = 'block';
+                // 인트로 컨테이너 완전히 제거
+                var introContainer = document.getElementById('intro-container');
+                if (introContainer) {
+                    introContainer.parentNode.removeChild(introContainer);
+                }
+                
+                // 퀴즈 컨테이너 표시
+                document.getElementById('quiz-container').classList.remove('hidden');
+                
+                // 테스트 초기화 및 시작
                 currentQuestionIndex = 0;
                 scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
                 previousAnswers = [];
