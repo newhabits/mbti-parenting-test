@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (startButton) {
         startButton.addEventListener("click", function () {
             hideAllContainers();
-            document.getElementById("quiz-container").style.display = "block";
+            document.getElementById("quiz-container").classList.add("active");
             initializeQuiz();
         });
     }
