@@ -312,7 +312,12 @@ button {
     text-align: center;
 }
 
-#intro-container,
+#intro-container {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
 #quiz-container,
 #result-container {
     position: relative;
