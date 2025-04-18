@@ -50,11 +50,10 @@ body {
     z-index: 1;
 }
 
+#intro-container.active,
 #quiz-container.active,
-#result-container.active,
-#intro-container.active {
+#result-container.active {
     display: block;
-    z-index: 10;
 }
 
 .title-wrapper {
