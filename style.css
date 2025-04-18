@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'KyoboHand';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
@@ -36,7 +37,6 @@ body {
   z-index: 10;
 }
 
-/* 화면 전환 */
 #intro-container,
 #quiz-container,
 #result-container {
@@ -50,7 +50,6 @@ body {
   display: block;
 }
 
-/* 인트로 */
 .title-wrapper {
   position: relative;
   width: 100%;
@@ -81,7 +80,6 @@ body {
   text-decoration: underline;
 }
 
-/* 질문화면 */
 #question {
   font-family: 'KyoboHand', sans-serif;
   font-size: 30px;
@@ -145,7 +143,6 @@ body {
   transition: width 0.3s ease;
 }
 
-/* 결과화면 */
 .result-container h1 {
   font-size: 32px;
   margin-bottom: 25px;
@@ -218,7 +215,6 @@ body {
   background-color: #1976D2;
 }
 
-/* 모바일 대응 */
 @media screen and (max-width: 768px) {
   .container {
     padding: 20px;
