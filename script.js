@@ -2,29 +2,20 @@ let currentQuestionIndex = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 let previousAnswers = [];
 
-// 페이지 로드 시 이벤트 등록
-document.addEventListener('DOMContentLoaded', function() {
-    const startBtn = document.getElementById('start-btn');
-    if (startBtn) {
-        startBtn.addEventListener('click', function() {
-            // 인트로 컨테이너 완전히 제거
-            const introContainer = document.getElementById('intro-container');
-            if (introContainer) {
-                introContainer.remove();
-            }
-            
-            // 퀴즈 컨테이너 표시
-            document.getElementById('quiz-container').classList.remove('hidden');
-            
-            // 초기화 및 질문 렌더링
-            currentQuestionIndex = 0;
-            scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-            previousAnswers = [];
-            renderQuestion();
-        });
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    // 시작 버튼 이벤트 등록
+    document.getElementById("start-btn").addEventListener("click", function() {
+        // DOM에서 intro-container 완전히 제거
+        document.getElementById("intro-container").remove();
+        
+        // quiz-container 보이게 설정
+        document.getElementById("quiz-container").style.display = "block";
+        
+        // 첫 질문 렌더링
+        renderQuestion();
+    });
+     document.getElementById("back-button").addEventListener("click", goBack);
 });
-
 
 const questions = [
   {
@@ -1307,9 +1298,6 @@ function renderQuestion() {
 
 function nextQuestion() {
     currentQuestionIndex++;
-    if (currentQuestionIndex > 0) {
-        document.getElementById("back-button").classList.remove("hidden");
-    }
 
     if (currentQuestionIndex < questions.length) {
         renderQuestion();
@@ -1320,14 +1308,9 @@ function nextQuestion() {
 
 function goBack() {
     if (currentQuestionIndex > 0) {
-        previousAnswers.pop(); 
-        currentQuestionIndex--;
-
-        if (currentQuestionIndex === 0) {
-            document.getElementById("back-button").classList.add("hidden");
-        }
-
-        renderQuestion();
+        document.getElementById("back-button").classList.remove("hidden");
+    } else {
+        document.getElementById("back-button").classList.add("hidden");
     }
 }
 
@@ -1340,8 +1323,8 @@ function calculateMBTI() {
 }
 
 function showResult() {
-    document.getElementById('quiz-container').classList.add('hidden');
-    document.getElementById('result-container').classList.remove('hidden');
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('result-container').style.display = 'block';
     const mbti = calculateMBTI();
     
     showPersonalityResult(mbti);
