@@ -215,6 +215,7 @@ body {
   background-color: #1976D2;
 }
 
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 20px;
@@ -240,4 +241,17 @@ body {
     font-size: 16px;
     padding: 15px;
   }
+}
+
+.result-image {
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.result-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
 }
