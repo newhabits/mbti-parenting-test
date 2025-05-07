@@ -214,7 +214,7 @@ function showPersonalityResult(type) {
   const resultContainer = document.getElementById('result-container');
   const resultHeader = document.createElement('div');
   resultHeader.className = 'result-image';
-  resultHeader.innerHTML = `<img src="images/${type.toLowerCase()}.jpg" alt="${type} 유형 이미지">`;
+  resultHeader.innerHTML = `<img src="images/${type.toLowerCase()}.PNG" alt="${type} 유형 이미지">`;
   
   // 기존 내용을 비우고 새 이미지 추가
   document.getElementById('result-content').innerHTML = '';
