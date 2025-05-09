@@ -63,22 +63,7 @@ body {
   transform: translateZ(0);
 }
 
-.start-button {
-  position: relative;
-  margin-top: 20px;
-  background-color: transparent;
-  color: white;
-  font-family: 'KyoboHand', sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
 
-.start-button:hover {
-  text-decoration: underline;
-}
 
 #question {
   font-family: 'KyoboHand', sans-serif;
@@ -87,6 +72,62 @@ body {
   text-align: center;
   color: #2c3e50;
   margin-bottom: 20px;
+}
+
+/* 애니메이션 없는 간소화된 버튼 스타일 */
+.simple-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  border-radius: 9999px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: 'ChosunGu', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  background-color: rgba(255, 208, 116);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.simple-button:hover {
+  background-color: rgba(255, 193, 69);
+}
+
+/* 테스트 시작하기 버튼 스타일 */
+#start-btn {
+  margin-top: 20px;
+  font-family: 'KyoboHand', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 이전으로 버튼 스타일 */
+#back-button {
+  margin: 20px auto;
+  display: block;
+  font-size: 18px;
+}
+
+#back-button.hidden {
+  display: none;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+  .simple-button {
+    height: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  #start-btn {
+    font-size: 20px;
+  }
 }
 
 #answers button {
@@ -109,22 +150,6 @@ body {
 #answers button:hover {
   background-color: #f8f9fa;
   border-color: #adb5bd;
-}
-
-#back-button {
-  display: block;
-  margin: 20px auto;
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #ddd;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-}
-
-#back-button.hidden {
-  display: none;
 }
 
 .progress-bar {
