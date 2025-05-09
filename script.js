@@ -3,15 +3,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const startButton = document.getElementById("start-btn");
     if (startButton) {
         startButton.addEventListener("click", function () {
-    hideAllContainers();
-    document.getElementById("quiz-container").style.display = "block";
-    initializeQuiz();
-});
-
+            hideAllContainers();
+            document.getElementById("quiz-container").style.display = "block";
+            initializeQuiz();
+        });
     }
     
     // 뒤로가기 버튼 이벤트 등록
     document.getElementById("back-button").addEventListener("click", goBack);
+    
+    // 공유 버튼 이벤트 등록
+    const shareButton = document.getElementById("share-button");
+    if (shareButton) {
+        shareButton.addEventListener("click", shareResult);
+    }
+    
+    // URL에서 공유된 결과 확인
+    checkSharedResult();
 });
 
 // 전역 변수 선언
