@@ -1138,3 +1138,67 @@ function hideAllContainers() {
     document.getElementById("result-container").style.display = "none";
 }
 
+// 결과 페이지가 로드된 후 공유 버튼에 이벤트 리스너 추가
+document.addEventListener("DOMContentLoaded", function() {
+  const shareButton = document.getElementById("share-button");
+  if (shareButton) {
+    shareButton.addEventListener("click", shareResult);
+  }
+});
+
+// 결과 공유 함수
+function shareResult() {
+  const mbtiType = calculateMBTI(); // 현재 MBTI 결과 가져오기
+  
+  // 공유할 URL 생성 (현재 페이지 URL + 쿼리 파라미터)
+  const shareUrl = `${window.location.origin}${window.location.pathname}?type=${mbtiType}`;
+  
+  // 클립보드에 URL 복사
+  navigator.clipboard.writeText(shareUrl)
+    .then(() => {
+      // 복사 성공 알림 표시
+      const shareAlert = document.getElementById("share-alert");
+      shareAlert.classList.remove("hidden");
+      
+      // 3초 후 알림 숨기기
+      setTimeout(() => {
+        shareAlert.classList.add("hidden");
+      }, 3000);
+    })
+    .catch(err => {
+      console.error('클립보드 복사 실패:', err);
+      alert('링크 복사에 실패했습니다. 직접 URL을 복사해주세요.');
+    });
+}
+
+// URL에서 MBTI 타입 파라미터를 확인하고 결과 표시
+function checkSharedResult() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const mbtiType = urlParams.get('type');
+  
+  if (mbtiType) {
+    // 유효한 MBTI 타입인지 확인
+    const validTypes = ['ISTJ', 'ISFJ', 'INFJ', 'INTJ', 'ISTP', 'ISFP', 'INFP', 'INTP', 'ESTP', 'ESFP', 'ENFP', 'ENTP', 'ESTJ', 'ESFJ', 'ENFJ', 'ENTJ'];
+    
+    if (validTypes.includes(mbtiType)) {
+      // 인트로 화면 숨기고 결과 화면 표시
+      hideAllContainers();
+      document.getElementById('result-container').style.display = 'block';
+      
+      // 결과 표시
+      showPersonalityResult(mbtiType);
+      
+      // 공유된 결과임을 알리는 메시지 추가
+      const resultContent = document.getElementById('result-content');
+      const sharedMessage = document.createElement('div');
+      sharedMessage.className = 'shared-message';
+      sharedMessage.innerHTML = '<p>친구가 공유한 결과입니다. 나의 타입도 알아보세요!</p>';
+      resultContent.insertBefore(sharedMessage, resultContent.firstChild);
+    }
+  }
+}
+
+// 페이지 로드 시 공유된 결과 확인
+document.addEventListener("DOMContentLoaded", function() {
+  checkSharedResult();
+});
