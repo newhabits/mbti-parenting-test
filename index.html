@@ -31,13 +31,16 @@
     </div>
 
     <!-- 결과 화면 -->
-    <div id="result-container">
-      <h2>테스트 결과</h2>
-      <div id="result-content"></div>
-      <div id="result"></div>
-      <button onclick="location.reload()">다시 테스트하기</button>
-      <a id="product-link" href="#" target="_blank" class="product-button">추천 상품 보러가기</a>
-    </div>
+  <div id="result-container">
+     <h2>테스트 결과</h2>
+     <div id="result-content"></div>
+     <div id="result"></div>
+     <div class="button-group">
+       <button id="share-button" class="simple-button share-button">결과 공유하기</button>
+       <button onclick="location.reload()" class="simple-button">다시 테스트하기</button>
+     </div>
+     <div id="share-alert" class="share-alert hidden">링크가 복사되었습니다!</div>
+   </div>
 
   </div>
 
