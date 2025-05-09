@@ -322,25 +322,10 @@ function showISTJResult() {
       
       <section class="items-section">
         <h2>✨ 체계적 계획형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🗓️ 주간 가족 플래너</h3>
-            <p>온 가족의 일정과 루틴을 한눈에 관리할 수 있어 당신의 체계적인 양육 스타일을 완벽하게 지원합니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🧸 정리형 장난감 수납 시스템</h3>
-            <p>모든 것이 제자리에 있을 때 마음이 편안한 당신을 위한, 효율적이고 깔끔한 놀이 공간 솔루션입니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>📚 단계별 학습 키트</h3>
-            <p>아이의 체계적인 발달을 돕는 연령별 학습 교구로, 당신의 계획적인 교육 접근법과 잘 맞습니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ISTJ')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -394,25 +379,10 @@ function showESTJResult() {
       
       <section class="items-section">
         <h2>✨ 체계적 계획형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>📊 가족 책임 차트</h3>
-            <p>가족 구성원 모두의 책임과 할 일을 명확하게 관리할 수 있는 시각적 시스템입니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>⏱️ 어린이 시간 관리 도구</h3>
-            <p>아이가 일정과 과제를 효율적으로 관리하는 방법을 배울 수 있는 실용적인 도구입니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>📝 목표 설정 워크북</h3>
-            <p>아이와 함께 목표를 설정하고 달성해나가는 과정을 체계적으로 안내하는 워크북입니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ESTJ')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -466,25 +436,10 @@ function showISFJResult() {
       
       <section class="items-section">
         <h2>✨ 따뜻한 양육형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🧶 패밀리 추억 만들기 키트</h3>
-            <p>가족 간의 유대를 강화하는 활동 키트로, 당신이 중요시하는 소중한 가족 시간을 더욱 특별하게 만들어줍니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🛋️ 아늑한 가족 독서 공간 세트</h3>
-            <p>따뜻하고 포근한 분위기에서 아이와 함께 이야기를 나누고 책을 읽을 수 있는 공간을 만들어줍니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🍳 가족 요리 세트</h3>
-            <p>아이와 함께 따뜻한 식사를 준비하면서 소중한 가치와 전통을 자연스럽게 전달할 수 있습니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ISFJ')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -538,25 +493,10 @@ function showESFJResult() {
       
       <section class="items-section">
         <h2>✨ 따뜻한 양육형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🎭 가족 게임 나이트 세트</h3>
-            <p>온 가족이 함께 즐기며 유대를 강화할 수 있는 다양한 게임 컬렉션입니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>📔 가족 추억 저널</h3>
-            <p>소중한 가족의 순간들을 기록하고 보존할 수 있는 아름다운 저널입니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🌟 감정 표현 도구 세트</h3>
-            <p>아이가 자신의 감정을 인식하고 건강하게 표현하는 방법을 배울 수 있는 도구입니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ESFJ')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -611,25 +551,10 @@ function showENFPResult() {
       
       <section class="items-section">
         <h2>✨ 창의적 자유형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🎨 오픈엔드 창작 키트</h3>
-            <p>정해진 결과물 없이 자유롭게 상상력을 발휘할 수 있는 예술 도구로, 당신의 창의적 양육 스타일을 지원합니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🌍 세계 문화 탐험 세트</h3>
-            <p>다양한 문화와 관점을 탐험할 수 있는 키트로, 가치 중심 교육을 중요시하는 당신의 육아 철학과 일치합니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>📔 감정 표현 저널</h3>
-            <p>아이와 함께 생각과 감정을 자유롭게 표현하고 기록할 수 있는 저널로, 진정한 소통을 격려합니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ENFP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -683,25 +608,10 @@ function showINFPResult() {
       
       <section class="items-section">
         <h2>✨ 창의적 자유형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>📚 가치 중심 스토리 컬렉션</h3>
-            <p>공감, 다양성, 자기 발견과 같은 의미 있는 주제를 다루는 책 모음으로, 아이와 깊이 있는 대화를 나눌 수 있습니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🎭 자기표현 예술 키트</h3>
-            <p>다양한 미술 도구와 재료로 아이가 자신의 내면세계를 자유롭게 표현할 수 있도록 돕습니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🌱 명상 및 마음챙김 도구</h3>
-            <p>아이와 함께 내면의 평화와 자기 인식을 발달시킬 수 있는 연령별 명상 도구입니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('INFP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -755,25 +665,10 @@ function showINTPResult() {
       
       <section class="items-section">
         <h2>✨ 논리적 분석형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🔬 과학 탐험 키트</h3>
-            <p>호기심을 자극하는 실험과 탐구 활동을 통해 아이와 함께 원리를 발견하는 즐거움을 경험할 수 있습니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🧩 논리 퍼즐 컬렉션</h3>
-            <p>비판적 사고와 문제 해결 능력을 키우는 다양한 퍼즐로, 당신이 중요시하는 인지 발달을 지원합니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🤖 코딩 입문 키트</h3>
-            <p>논리적 사고와 창의적 문제 해결의 기초를 재미있게 배울 수 있는 도구로, 미래 지향적인 스킬을 가르칠 수 있습니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('INTP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -827,25 +722,10 @@ function showENTPResult() {
       
       <section class="items-section">
         <h2>✨ 논리적 분석형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🧪 DIY 발명 키트</h3>
-            <p>호기심과 창의력을 자극하는 도구들로, 아이와 함께 새로운 아이디어를 실험하고 만들어볼 수 있습니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🎲 전략 보드게임 세트</h3>
-            <p>비판적 사고와 전략적 계획 능력을 개발하는 재미있는 게임들로, 온 가족이 지적 도전을 즐길 수 있습니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🔍 탐정 과학 탐험 세트</h3>
-            <p>호기심 많은 마음으로 증거를 수집하고 논리적으로 추론하는 능력을 기를 수 있는 유쾌한 활동 키트입니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ENTP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -899,25 +779,10 @@ function showENTJResult() {
       
       <section class="items-section">
         <h2>✨ 성취 지향형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>📋 목표 달성 시스템</h3>
-            <p>아이가 자신의 목표를 설정하고 달성해나가는 과정을 시각적으로 추적할 수 있는 도구입니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>📚 기술 개발 키트</h3>
-            <p>다양한 분야의 기초 기술을 체계적으로 습득할 수 있도록 설계된 교육 자료로, 효율적인 학습을 선호하는 당신의 스타일과 잘 맞습니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>⏱️ 시간 관리 도구</h3>
-            <p>어린 나이부터 효율적인 시간 관리와 우선순위 설정의 중요성을 가르칠 수 있는 유용한 도구입니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ENTJ')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -971,25 +836,10 @@ function showINFJResult() {
       
       <section class="items-section">
         <h2>✨ 조화 추구형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>📔 가치 탐색 스토리북</h3>
-            <p>보편적 가치와 의미 있는 주제를 아름답게 담아낸 그림책으로, 아이와 깊은 대화를 나눌 수 있는 소재를 제공합니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🧘 가족 명상 키트</h3>
-            <p>온 가족이 함께 마음의 평화와 자기 인식을 발달시킬 수 있는 도구로, 내면의 조화를 중요시하는 당신의 가치와 일치합니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🎭 감정 인식 놀이 세트</h3>
-            <p>다양한 감정을 탐색하고 표현하는 활동을 통해 아이의 정서 지능을 발달시키는 도구입니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('INFJ')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -1043,25 +893,10 @@ function showENFJResult() {
       
       <section class="items-section">
         <h2>✨ 조화 추구형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>💫 긍정 확언 카드</h3>
-            <p>아이의 자존감과 긍정적 마인드셋을 키울 수 있는 영감을 주는 메시지 카드 세트입니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>👨‍👩‍👧‍👦 가족 커뮤니케이션 게임</h3>
-            <p>가족 구성원 간의 이해와 소통을 깊게 하는 활동으로, 의미 있는 대화를 촉진합니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🌱 사회적 책임 프로젝트 키트</h3>
-            <p>아이와 함께 지역사회에 기여할 수 있는 활동을 통해 공동체 의식과 배려심을 가르치는 도구입니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ENFJ')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -1115,25 +950,10 @@ function showISTPResult() {
       
       <section class="items-section">
         <h2>✨ 탐험가형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🧗‍♂️ 가족 모험 키트</h3>
-            <p>온 가족이 함께 안전하게 야외 활동을 즐길 수 있는 장비로, 경험 중심 교육을 선호하는 당신의 스타일과 완벽하게 일치합니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🛠️ 어린이 실용 기술 도구 세트</h3>
-            <p>아이 크기에 맞춘 실제 작동하는 도구로, 기본적인 만들기와 고치기 기술을 즐겁게 배울 수 있습니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🔍 자연 탐험 세트</h3>
-            <p>아이와 함께 자연을 탐험하고 관찰할 수 있는 도구로, 호기심과 실제 경험을 통한 학습을 촉진합니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ISTP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -1187,25 +1007,10 @@ function showESTPResult() {
       
       <section class="items-section">
         <h2>✨ 탐험가형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🚲 가족 액티비티 장비</h3>
-            <p>온 가족이 함께 즐길 수 있는 다양한 야외 활동 장비로, 활동적인 학습과 모험을 장려합니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🧪 실험 과학 키트</h3>
-            <p>직접 해보면서 배울 수 있는 실험 중심의 과학 키트로, 호기심과 실제 경험을 통한 학습을 제공합니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🗺️ 모험 계획 세트</h3>
-            <p>가족 모험을 계획하고 기록할 수 있는 도구로, 즐거운 경험을 통한 체계적인 접근을 도와줍니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ESTP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -1259,25 +1064,10 @@ function showISFPResult() {
       
       <section class="items-section">
         <h2>✨ 예술가형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🎨 감각 놀이 키트</h3>
-            <p>다양한 질감, 색상, 소리를 탐험할 수 있는 도구로, 감각적 경험을 중요시하는 당신의 육아 스타일과 완벽하게 일치합니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>📷 가족 추억 캡처 세트</h3>
-            <p>소중한 순간을 아름답게 기록할 수 있는 도구로, 현재의 행복을 소중히 여기는 당신의 가치를 지원합니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>🏕️ 즉흥 모험 백팩</h3>
-            <p>언제든 즉흥적인 소풍이나 모험을 떠날 수 있도록 필요한 것들이 준비된 세트로, 자발적이고 즐거운 경험을 만들 수 있습니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ISFP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
@@ -1331,25 +1121,10 @@ function showESFPResult() {
       
       <section class="items-section">
         <h2>✨ 예술가형 부모를 위한 엄선한 아이템</h2>
-        <div class="item">
-          <a href="PRODUCT_LINK_1" class="item-link">
-            <h3>🎉 가족 게임 컬렉션</h3>
-            <p>온 가족이 함께 즐길 수 있는 다양한 게임으로, 재미와 소통을 통한 유대감을 형성할 수 있습니다.</p>
-          </a>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
         </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_2" class="item-link">
-            <h3>🎭 창의적 표현 키트</h3>
-            <p>다양한 재료와 도구로 자유롭게 자신을 표현할 수 있는 창작 키트로, 감각적 경험과 창의성을 촉진합니다.</p>
-          </a>
-        </div>
-        <div class="item">
-          <a href="PRODUCT_LINK_3" class="item-link">
-            <h3>📸 모험 추억 세트</h3>
-            <p>특별한 순간들을 기록하고 공유할 수 있는 도구로, 행복한 경험을 소중한 추억으로 간직할 수 있습니다.</p>
-          </a>
-        </div>
-        <button class="more-items-btn" onclick="showMoreItems('ESFP')">더 많은 추천 아이템 보기 →</button>
       </section>
     </div>
   `;
