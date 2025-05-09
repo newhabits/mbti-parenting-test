@@ -247,6 +247,45 @@ body {
   background-color: #1976D2;
 }
 
+/* 버튼 그룹 스타일 */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/* 공유 버튼 스타일 */
+.share-button {
+  background-color: #6c5ce7; /* 보라색 배경 */
+  color: white;
+}
+
+.share-button:hover {
+  background-color: #5b4bc4;
+}
+
+/* 공유 알림창 스타일 */
+.share-alert {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 @media screen and (max-width: 768px) {
   .container {
