@@ -232,6 +232,9 @@ function showPersonalityResult(type) {
   document.getElementById('result-content').innerHTML = '';
   resultContainer.insertBefore(resultHeader, document.getElementById('result-content'));
   switch(type) {
+    case 'INTJ':
+      showISTJResult();
+      break;          
     case 'ISTJ':
       showISTJResult();
       break;
@@ -287,7 +290,86 @@ function showMoreItems(type) {
   alert(type + ' 유형을 위한 더 많은 아이템을 보여줍니다.');
 }
 
-
+// INTJ 유형 결과 페이지
+function showINTJResult() {
+  const resultContent = `
+    <div class="result-container">
+      <div class="result-image">
+        <img src="images/intj.jpg" alt="INTJ 유형 이미지">
+      </div>
+      
+      <h1 class="result-title">전략적 비전형 부모 (INTJ)</h1>
+      <div class="result-subtitle">내일을 준비하며 오늘을 살아가는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 성장을 위한 장기적 비전을 가진 전략적인 부모입니다.</strong> 자녀가 독립적이고 논리적인 사고를 발달시키도록 돕는 것을 중요시합니다. 당신의 깊은 통찰력은 자녀에게 <strong>지적 성장의 든든한 길잡이</strong>가 됩니다.</p>
+        <p>때로는 완벽을 추구하는 마음에 "이 방식이 아이에게 최선일까?" 하고 고민하기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>미래를 내다보는 선견지명</li>
+          <li>복잡한 문제도 해결하는 지혜</li>
+          <li>아이의 자립심을 키우는 인내</li>
+          <li>흔들리지 않는 내적 확신</li>
+        </ul>
+      </section>
+      
+      <section class="strengths-section">
+        <h2>당신의 강점</h2>
+        <ul>
+          <li><strong>장기적 비전:</strong> 아이의 미래를 위한 종합적이고 전략적인 계획을 세웁니다</li>
+          <li><strong>독립성 장려:</strong> 자녀가 스스로 생각하고 결정하는 능력을 기르도록 격려합니다</li>
+          <li><strong>지식 추구:</strong> 최선의 양육 방법을 찾기 위해 끊임없이 배우고 개선합니다</li>
+        </ul>
+      </section>
+      
+      <section class="growth-section">
+        <h2>성장 가능한 부분</h2>
+        <ul>
+          <li><strong>감정적 연결:</strong> 논리적 사고와 함께 감정적 유대감도 소중히 여겨보세요</li>
+          <li><strong>유연성 발휘:</strong> 계획이 틀어질 때도 적응하고 순간을 즐기는 여유를 가져보세요</li>
+          <li><strong>자기 기대치 조정:</strong> 완벽함보다는 '충분히 좋은 부모'가 되는 것에 의미를 두세요</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 깊은 통찰력이, 아이에게는 인생의 나침반이 되어줍니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>하루 10분, 계획 없이 아이와 함께하는 시간을 가져보기.</strong> 즉흥적인 순간이 주는 기쁨을 경험해보세요.</li>
+          <li>매일 잠들기 전, 오늘 아이와 함께한 순간 중 감사한 점 하나를 생각해보세요.</li>
+        </ul>
+      </section>
+      
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/intj-illustration.jpg" alt="INTJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"높이 나는 독수리처럼, 당신의 시선은 언제나 먼 미래를 바라봅니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 전략적 비전형 부모를 위한 육아 아이템</h2>
+        <div class="coming-soon">
+          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
+          <h3>See you soon!</h3>
+        </div>
+      </section>
+    </div>
+  `;
+  
+  document.getElementById('result-content').innerHTML = resultContent;
+}
+    
 // ISTJ 유형 결과 페이지 콘텐츠
 function showISTJResult() {
   const resultContent = `
@@ -482,52 +564,75 @@ function showISFJResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ESFJ 유형 결과 페이지 콘텐츠
+// ESFJ 유형 결과 페이지
 function showESFJResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">따뜻한 양육형 부모 (ESFJ)</h1>
+      <div class="result-image">
+        <img src="images/esfj.jpg" alt="ESFJ 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 따뜻한 관계 형성과 조화로운 가정 환경을 중요시하는 사교적이고 배려심 깊은 부모입니다. 아이의 정서적, 실질적 필요를 민감하게 감지하고 즉각 대응하며, 가족 행사와 전통을 통해 소속감과 안정감을 제공합니다. 긍정적인 태도와 실용적인 지원으로 아이가 사회성과 책임감을 기르도록 돕습니다.</p>
+      <h1 class="result-title">헌신적 돌봄형 부모 (ESFJ)</h1>
+      <div class="result-subtitle">아이의 행복을 위해 헌신하는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 필요를 세심하게 살피는 따뜻하고 헌신적인 부모입니다.</strong> 가족의 화목과 조화를 위해 노력하며, 자녀가 사회적 가치와 전통을 배우도록 도와줍니다. 당신의 변함없는 지지는 아이에게 <strong>안정감과 소속감</strong>을 선물합니다.</p>
+        <p>때로는 너무 많은 것을 책임지려다 보니 "내가 지나치게 개입하고 있진 않을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>가족을 따뜻하게 보살피는 헌신</li>
+          <li>타인의 필요를 알아채는 섬세함</li>
+          <li>안정된 환경을 조성하는 능력</li>
+          <li>전통과 가치를 소중히 여기는 마음</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>따뜻한 관계 형성:</strong> 아이와 깊고 신뢰 있는 정서적 유대를 쉽게 형성합니다</li>
-          <li><strong>실용적 돌봄:</strong> 아이의 일상적 필요를 빠르게 파악하고 효과적으로 지원합니다</li>
-          <li><strong>사회적 기술 교육:</strong> 아이에게 협력, 공유, 배려와 같은 중요한 사회적 기술을 가르칩니다</li>
-          <li><strong>긍정적 가정 분위기:</strong> 화목하고 지지적인 가정 환경을 조성하는 데 탁월합니다</li>
+          <li><strong>헌신적 보살핌:</strong> 아이의 모든 필요를 세심하게 챙기고 지원합니다</li>
+          <li><strong>안정적 환경 조성:</strong> 편안하고 질서 있는 가정 분위기를 만듭니다</li>
+          <li><strong>사회적 가치 전달:</strong> 아이가 타인과 조화롭게 지내는 법을 가르칩니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>개인 시간 확보:</strong> 모두를 돌보는 과정에서 자신을 위한 시간과 공간도 중요하게 여기세요</li>
-          <li><strong>갈등 직면:</strong> 조화를 유지하기 위해 중요한 이슈를 회피하기보다 건설적으로 해결해보세요</li>
-          <li><strong>과도한 개입 자제:</strong> 아이가 스스로 문제를 해결하고 독립성을 기를 수 있는 기회를 제공하세요</li>
+          <li><strong>자율성 존중:</strong> 과도한 개입 대신 아이가 스스로 결정할 공간을 허용해보세요</li>
+          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
+          <li><strong>변화 수용:</strong> 전통적 방식과 함께 새로운 접근법도 시도해보세요</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 헌신적인 사랑이, 아이에게는 세상에서 가장 안전한 둥지가 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 체계적 계획형(ISTJ/ESTJ) 부모와 함께하면 따뜻함과 구조가 균형을 이루는 환경을 만들 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 논리적 분석형(INTP/ENTP) 부모와는 감정 중심 vs 논리 중심 접근의 차이로 갈등이 생길 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 당신의 감정과 필요를 명확히 표현하고, 파트너의 다른 관점도 가치 있게 여기는 열린 자세를 유지하세요</li>
+          <li><strong>매일 15분, 오직 자신만을 위한 시간 가지기.</strong> 끊임없이 타인을 돌보는 당신, 스스로를 위한 시간도 필요합니다.</li>
+          <li>아이가 작은 실수를 했을 때, 먼저 해결해주기보다 "네가 어떻게 하고 싶니?"라고 물어보는 연습을 해보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 따뜻한 관계 형성과 타인에 대한 배려를 배웁니다. 당신의 사교적이고 지지적인 양육 덕분에 아이는 정서적으로 안정되고 대인관계 기술이 뛰어난 사람으로 성장할 가능성이 높습니다. 단, 아이의 개인적 성향과 독립성도 존중하며, 때로는 스스로 의사결정을 하고 실수로부터 배울 수 있는 자유를 주는 것이 중요합니다.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/esfj-illustration.jpg" alt="ESFJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"따뜻한 둥지처럼, 당신의 헌신은 아이에게 세상에서 가장 안전한 장소가 됩니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 따뜻한 양육형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 헌신적 돌봄형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -539,53 +644,76 @@ function showESFJResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ENFP 유형 결과 페이지 콘텐츠
+
+// ENFP 유형 결과 페이지
 function showENFPResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">창의적 자유형 부모 (ENFP)</h1>
+      <div class="result-image">
+        <img src="images/enfp.jpg" alt="ENFP 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 열정적이고 창의적인 에너지로 아이의 상상력과 자기표현을 격려하는 영감을 주는 부모입니다. 엄격한 규칙보다는 아이의 자율성과 독창성을 중요시하며, 다양한 경험과 모험을 통해 아이의 잠재력을 발견하고 키웁니다. 진정한 소통과 감정적 연결을 통해 아이와 깊은 유대를 형성합니다.</p>
+      <h1 class="result-title">열정적 영감형 부모 (ENFP)</h1>
+      <div class="result-subtitle">아이와 함께 성장하는 모험가</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이와 함께 삶의 모험을 즐기는 열정적이고 창의적인 부모입니다.</strong> 자녀의 독특한 개성을 존중하고, 다양한 가능성과 경험을 통해 성장하도록 격려합니다. 당신의 따뜻한 열정은 아이에게 <strong>무한한 가능성과 자유로운 표현</strong>의 세계를 열어줍니다.</p>
+        <p>때로는 너무 많은 아이디어와 흥미 사이에서 "일관성과 안정감을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>삶을 빛내는 넘치는 열정</li>
+          <li>모든 가능성을 보는 긍정적 시선</li>
+          <li>아이의 마음을 열어주는 공감 능력</li>
+          <li>규칙보다 중요한 가치를 아는 지혜</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>창의적 놀이와 경험:</strong> 일상을 흥미롭고 재미있는 모험으로 만들어 아이의 호기심을 자극합니다</li>
-          <li><strong>열린 소통:</strong> 아이의 생각과 감정을 진지하게 들어주고 존중하는 대화를 나눕니다</li>
-          <li><strong>가능성 발견:</strong> 아이의 독특한 재능과 관심사를 알아보고 발전시키도록 격려합니다</li>
-          <li><strong>유연한 문제 해결:</strong> 창의적인 방식으로 도전에 접근하여 아이에게 다양한 관점을 보여줍니다</li>
+          <li><strong>창의적 접근:</strong> 육아에 즐거움과 새로운 관점을 더합니다</li>
+          <li><strong>진정한 공감:</strong> 아이의 감정과 경험을 깊이 이해하고 수용합니다</li>
+          <li><strong>자유로운 표현 격려:</strong> 자녀가 자신만의 방식으로 자신을 표현하도록 지원합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>일상적 구조 유지:</strong> 창의성과 함께 일관된 루틴도 아이에게 안정감을 줄 수 있습니다</li>
-          <li><strong>계획 완수:</strong> 흥미로운 새 아이디어에 쉽게 이끌리기보다 시작한 프로젝트를 마무리해보세요</li>
-          <li><strong>현실적 기대:</strong> 아이의 잠재력을 보는 동시에 현재의 발달 단계와 능력도 고려하세요</li>
+          <li><strong>일상적 구조 제공:</strong> 흥미롭고 새로운 경험과 함께 안정적인 일상 패턴도 중요합니다</li>
+          <li><strong>일관성 유지:</strong> 다양한 아이디어 사이에서도 핵심 원칙을 지속적으로 지켜보세요</li>
+          <li><strong>현실적 한계 설정:</strong> 모든 것이 가능하다는 태도와 함께 적절한 경계도 필요합니다</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 영감 가득한 에너지가, 아이에게는 세상을 탐험할 용기가 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 논리적 분석형(INTP/ENTP) 부모와 함께하면 창의성과 논리적 사고의 균형을 이룰 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 체계적 계획형(ISTJ/ESTJ) 부모와는 자유로운 접근법 vs 구조화된 접근법 사이의 갈등이 생길 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 파트너의 구조적인 접근과 일관성의 가치를 인정하면서, 당신의 창의적인 비전과 아이디어를 명확히 소통해보세요</li>
-       // ENFP 유형의 나머지 부분
+          <li><strong>하루에 한 가지, 매일 같은 시간에 반복하는 소소한 의식 만들기.</strong> 예를 들어, 잠자리에 들기 전 5분 책 읽기 등 단순하지만 일관된 활동을 시도해보세요.</li>
+          <li>새로운 프로젝트나 활동을 시작하기 전에, 현재 진행 중인 것을 마무리하는 습관을 의식적으로 기르세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 열정, 창의성, 그리고 가능성에 대한 믿음을 배웁니다. 당신의 열정적이고 수용적인 양육 덕분에 아이는 자신감 있고 창의적이며 다양성을 존중하는 사람으로 성장할 가능성이 높습니다. 단, 아이에게도 일상적인 구조와 완수의 중요성을 가르치기 위해 가끔은 재미있는 방식으로 일관성과 책임감을 강조해보세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/enfp-illustration.jpg" alt="ENFP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"화려한 나비처럼, 당신의 다채로운 영감은 아이에게 삶의 무한한 가능성을 보여줍니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 창의적 자유형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 열정적 영감형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -596,7 +724,6 @@ function showENFPResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
-
 // INFP 유형 결과 페이지 콘텐츠
 function showINFPResult() {
   const resultContent = `
@@ -654,52 +781,75 @@ function showINFPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// INTP 유형 결과 페이지 콘텐츠
+// INTP 유형 결과 페이지
 function showINTPResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">논리적 분석형 부모 (INTP)</h1>
+      <div class="result-image">
+        <img src="images/intp.jpg" alt="INTP 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 지적 호기심과 논리적 분석을 중심으로 아이를 양육하는 사색적인 부모입니다. 아이의 독립적 사고와 지적 발달을 격려하며, 질문과 탐구를 통한 학습을 중요시합니다. 획일적인 규칙보다는 원리와 개념을 이해시키는 접근법을 선호하며, 아이가 스스로 문제를 해결하고 자신만의 결론에 도달하도록 공간을 제공합니다.</p>
+      <h1 class="result-title">논리적 탐구형 부모 (INTP)</h1>
+      <div class="result-subtitle">호기심으로 세상을 열어주는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 지적 호기심을 키워주는 탐구적인 부모입니다.</strong> 질문과 발견을 통해 배움의 즐거움을 알려주고, 독립적인 사고를 존중합니다. 당신의 개방적인 사고는 아이에게 <strong>무한한 가능성의 세계</strong>를 열어줍니다.</p>
+        <p>간혹 이론과 현실 사이에서 "아이에게 실용적인 면도 가르쳐야 하나?" 하고 고민하기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>끝없는 지적 호기심</li>
+          <li>열린 마음으로 수용하는 관용</li>
+          <li>문제를 새롭게 보는 창의성</li>
+          <li>아이의 개성을 존중하는 여유</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>지적 탐구 장려:</strong> 아이의 호기심과 비판적 사고를 자극하는 환경을 조성합니다</li>
-          <li><strong>객관적 분석:</strong> 문제 상황에서 감정보다 논리와 원리에 기반한 해결책을 제시합니다</li>
-          <li><strong>독립성 존중:</strong> 아이가 자율적으로 생각하고 결정할 수 있는 자유를 존중합니다</li>
-          <li><strong>창의적 문제 해결:</strong> 관습에 얽매이지 않는 독창적인 해결책과 관점을 제공합니다</li>
+          <li><strong>탐구심 장려:</strong> 아이의 질문을 소중히 여기고 함께 답을 찾아갑니다</li>
+          <li><strong>열린 사고:</strong> 다양한 관점과 가능성을 보여주며 비판적 사고력을 길러줍니다</li>
+          <li><strong>독창적 접근:</strong> 육아 문제에 대해 창의적이고 비관습적인 해결책을 찾습니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>감정적 연결:</strong> 논리적 분석 외에도 감정적 지지와 애정 표현을 더 의식적으로 실천해보세요</li>
-          <li><strong>일상 구조화:</strong> 아이에게 필요한 일관된 루틴과 규칙을 더 적극적으로 설정해보세요</li>
-          <li><strong>실용적 관리:</strong> 개념적 이해를 넘어 일상적인 육아 책임도 체계적으로 관리해보세요</li>
+          <li><strong>감정적 지지:</strong> 지적 탐구만큼 정서적 유대감도 중요합니다</li>
+          <li><strong>일상 구조화:</strong> 아이에게 적절한 일과와 규칙을 제공하는 것도 필요합니다</li>
+          <li><strong>실행력 강화:</strong> 다양한 아이디어를 실제 행동으로 옮기는 노력이 도움됩니다</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 호기심 어린 질문들이, 아이에게는 세상에서 가장 흥미로운 수업입니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 창의적 자유형(ENFP/INFP) 부모와 함께하면 논리와 감성, 개념과 가치의 균형을 이룰 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 따뜻한 양육형(ISFJ/ESFJ) 부모와는 사고 중심 vs 감정 중심, 독립성 vs 보살핌에 대한 접근 차이로 갈등이 생길 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 논리적 분석과 함께 감정과 가치도 의사결정의 중요한 요소로 인정하고, 파트너의 양육 관점을 존중해보세요</li>
+          <li><strong>매주 한 가지 소소한 가족 의식 만들어보기.</strong> 예를 들어, 금요일 저녁 피자 타임이나 일요일 아침 책 읽기 시간 등 단순하지만 규칙적인 활동을 시도해보세요.</li>
+          <li>하루에 한 번, 아이와 눈을 맞추고 감정을 표현하는 짧은 순간을 의식적으로 만들어보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 지적 호기심, 비판적 사고, 그리고 독립적 문제 해결 능력을 배웁니다. 당신의 논리적이고 탐구적인 양육 덕분에 아이는 분석력이 뛰어나고 독창적인 사고를 하는 사람으로 성장할 가능성이 높습니다. 단, 아이의 감정적 필요와 발달 단계에 맞는 구조적 지원도 중요하니, 지적 자극과 함께 정서적 안정감도 균형 있게 제공해주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/intp-illustration.jpg" alt="INTP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"무한한 우주처럼, 당신의 생각은 아이에게 탐험할 세계를 선물합니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 논리적 분석형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 논리적 탐구형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -711,52 +861,75 @@ function showINTPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ENTP 유형 결과 페이지 콘텐츠
+// ENTP 유형 결과 페이지
 function showENTPResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">논리적 분석형 부모 (ENTP)</h1>
+      <div class="result-image">
+        <img src="images/entp.jpg" alt="ENTP 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 지적 자극과 창의적 도전을 통해 아이를 양육하는 혁신적인 부모입니다. 기존 관습에 도전하고 다양한 가능성을 탐색하며, 아이에게 비판적 사고와 독창적 문제 해결 능력을 길러줍니다. 유머와 지적 토론을 즐기며, 아이가 다양한 관점에서 세상을 바라보고 스스로 생각하는 능력을 발달시키도록 격려합니다.</p>
+      <h1 class="result-title">창의적 도전형 부모 (ENTP)</h1>
+      <div class="result-subtitle">가능성의 세계로 아이를 이끄는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 호기심과 창의력을 자극하는 혁신적인 부모입니다.</strong> 관습에 얽매이지 않고 새로운 아이디어와 경험을 장려하며, 자녀가 다양한 관점에서 세상을 바라보도록 돕습니다. 당신의 지적 활력은 아이에게 <strong>창의적 사고와 도전 정신</strong>을 불어넣습니다.</p>
+        <p>때로는 다음 흥미로운 아이디어에 집중하느라 "지속성과 일관성을 유지하고 있을까?" 하는 의문이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>끝없이 샘솟는 창의력</li>
+          <li>틀을 깨는 독창적 사고</li>
+          <li>모험과 도전을 즐기는 용기</li>
+          <li>아이의 가능성을 믿는 열정</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>창의적 사고 자극:</strong> 아이에게 새로운 아이디어와 관점을 끊임없이 제시합니다</li>
-          <li><strong>지적 호기심 격려:</strong> '왜'라는 질문을 장려하고 함께 답을 탐구합니다</li>
-          <li><strong>유연한 문제 해결:</strong> 예상치 못한 상황에서도 창의적인 해결책을 찾아냅니다</li>
-          <li><strong>즐거운 학습 환경:</strong> 유머와 흥미로운 토론으로 학습을 재미있게 만듭니다</li>
+          <li><strong>지적 자극 제공:</strong> 아이에게 다양한 관점과 새로운 아이디어를 소개합니다</li>
+          <li><strong>유연한 사고 장려:</strong> 문제에 대한 창의적인 접근법을 가르칩니다</li>
+          <li><strong>재미와 흥미 중시:</strong> 배움과 성장의 과정을 즐겁고 흥미롭게 만듭니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>일관성 유지:</strong> 새로운 아이디어에 쉽게 이끌리기보다 지속적인 규칙과 루틴을 제공해보세요</li>
-          <li><strong>감정적 지원:</strong> 지적 자극만큼 정서적 안정감과 공감도 중요하게 여겨보세요</li>
-          <li><strong>실행력 강화:</strong> 흥미로운 개념과 계획을 실제 행동과 완성으로 이어가보세요</li>
+          <li><strong>일관성 유지:</strong> 여러 아이디어 사이에서도 중요한 일상의 구조와 안정감을 제공해보세요</li>
+          <li><strong>감정적 지지:</strong> 지적 탐험만큼 정서적 연결도 소중히 여겨보세요</li>
+          <li><strong>실행력 강화:</strong> 흥미로운 계획을 끝까지 실행하는 노력이 도움됩니다</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 창의적인 에너지가, 아이에게는 무한한 가능성을 보는 눈이 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 창의적 자유형(ENFP/INFP) 부모와 함께하면 아이디어와 가능성을 함께 탐색할 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 따뜻한 양육형(ISFJ/ESFJ) 부모와는 논리 vs 감정, 변화 vs 안정성에 대한 접근 차이로 갈등이 생길 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 파트너의 정서적 필요와 안정성 추구를 존중하고, 당신의 아이디어를 실용적인 방식으로 제안해보세요</li>
+          <li><strong>매일 5분, 가장 기본적인 루틴 하나를 정해 꾸준히 지키기.</strong> 단순한 일상 습관(예: 같은 시간 식사, 일정한 취침 시간)이 아이에게 주는 안정감을 경험해보세요.</li>
+          <li>새로운 프로젝트를 시작하기 전에, 현재 진행 중인 활동을 마무리하는 시간을 의식적으로 가져보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 지적 호기심, 창의적 사고, 그리고 변화에 대한 열린 태도를 배웁니다. 당신의 도전적이고 자극적인 양육 덕분에 아이는 독창적이고 적응력이 뛰어난 사람으로 성장할 가능성이 높습니다. 단, 아이에게는 일관된 지원과 감정적 안정감도 필요하니, 지적 도전과 함께 신뢰할 수 있는 정서적 기반도 제공해주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/entp-illustration.jpg" alt="ENTP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"번개처럼 빛나는 당신의 아이디어는, 아이에게 새로운 세계의 문을 열어줍니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 논리적 분석형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 창의적 도전형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -768,52 +941,75 @@ function showENTPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ENTJ 유형 결과 페이지 콘텐츠
+// ENTJ 유형 결과 페이지
 function showENTJResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">성취 지향형 부모 (ENTJ)</h1>
+      <div class="result-image">
+        <img src="images/entj.jpg" alt="ENTJ 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 목표 지향적이고 전략적인 접근으로 아이의 잠재력을 최대한 발현시키는 리더십 있는 부모입니다. 명확한 비전과 체계적인 방법으로 아이의 성장과 성취를 지원하며, 도전과 책임감을 통해 자기 주도적인 능력을 키웁니다. 효율성과 결과를 중요시하면서도 아이가 자신의 꿈을 향해 나아갈 수 있도록 강력한 지지자 역할을 합니다.</p>
+      <h1 class="result-title">목표 지향형 부모 (ENTJ)</h1>
+      <div class="result-subtitle">아이의 잠재력을 이끌어내는 리더</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 성장과 성공을 위해 열정적으로 이끄는 리더십 있는 부모입니다.</strong> 명확한 목표와 기대치를 설정하며, 자녀가 최고의 잠재력을 발휘하도록 격려합니다. 당신의 결단력과 추진력은 아이에게 <strong>자신감과 성취의 길</strong>을 열어줍니다.</p>
+        <p>때로는 높은 기준과 기대치로 인해 "내가 아이에게 너무 많은 것을 요구하고 있나?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>흔들림 없는 리더십</li>
+          <li>효율적으로 문제를 해결하는 능력</li>
+          <li>아이의 잠재력을 보는 통찰력</li>
+          <li>목표를 향해 나아가는 추진력</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>명확한 방향 제시:</strong> 아이에게 높은 기대치와 달성 가능한 목표를 제시합니다</li>
-          <li><strong>리더십 본보기:</strong> 결단력과 자신감 있는 모습으로 아이에게 롤모델이 됩니다</li>
-          <li><strong>전략적 계획:</strong> 아이의 교육과 발달을 위한 장기적 로드맵을 구상합니다</li>
-          <li><strong>문제 해결 역량:</strong> 장애물을 효과적으로 극복하는 능력을 아이에게 가르칩니다</li>
+          <li><strong>명확한 방향 제시:</strong> 아이에게 분명한 목표와 기대치를 설정합니다</li>
+          <li><strong>결단력 있는 지도:</strong> 어려운 상황에서도 확신을 가지고 결정을 내립니다</li>
+          <li><strong>성장 격려:</strong> 자녀가 최대한의 잠재력을 발휘하도록 동기를 부여합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>감정적 연결:</strong> 효율성과 성취만큼 정서적 유대와 공감도 중요하게 여겨보세요</li>
-          <li><strong>과정 중시:</strong> 결과물뿐 아니라 노력의 과정과 작은 성취도 인정하고 축하해보세요</li>
-          <li><strong>유연성 발휘:</strong> 계획이 예상대로 진행되지 않을 때도 인내심을 갖고 적응해보세요</li>
+          <li><strong>감정적 민감성:</strong> 효율성만큼 아이의 감정과 필요도 소중히 여겨보세요</li>
+          <li><strong>인내심 기르기:</strong> 모든 성장 과정에는 시간이 필요하다는 것을 기억하세요</li>
+          <li><strong>유연성 발휘:</strong> 계획대로 되지 않을 때도 적응하는 여유를 가져보세요</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 강한 의지가, 아이에게는 세상을 헤쳐나갈 용기가 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 체계적 계획형(ISTJ/ESTJ) 부모와 함께하면 효율적이고 일관된 가정 환경을 만들 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 창의적 자유형(ENFP/INFP) 부모와는 구조 vs 자유, 성취 vs 과정에 대한 가치관 차이로 갈등이 생길 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 주도권을 독점하기보다 파트너의 다른 관점과 접근법의 가치를 인정하고 의사결정에 통합해보세요</li>
+          <li><strong>주 1회, 목표 없이 아이와 즐기는 시간 만들기.</strong> 결과보다 과정을 즐기는 활동(예: 자유롭게 그림 그리기, 공원 산책)을 시도해보세요.</li>
+          <li>매일 저녁 5분간, 아이의 감정과 생각을 판단 없이 들어보는 시간을 가져보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 목표 설정, 리더십, 그리고 성취 동기를 배웁니다. 당신의 체계적이고 야심 찬 양육 덕분에 아이는 자신감 있고 목표 지향적인 사람으로 성장할 가능성이 높습니다. 단, 아이의 고유한 속도와 관심사도 존중하며, 완벽함에 대한 부담 없이 자신의 내적 동기를 발견할 수 있는 공간을 제공해주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/entj-illustration.jpg" alt="ENTJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"높은 산을 오르듯, 당신은 언제나 더 높은 목표를 향해 아이의 손을 잡아줍니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 성취 지향형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 목표 지향형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -825,52 +1021,75 @@ function showENTJResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// INFJ 유형 결과 페이지 콘텐츠
+// INFJ 유형 결과 페이지
 function showINFJResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">조화 추구형 부모 (INFJ)</h1>
+      <div class="result-image">
+        <img src="images/infj.jpg" alt="INFJ 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 깊은 통찰력과 이해심으로 아이의 내면 성장을 지원하는 이상주의적인 부모입니다. 인간 관계의 조화와 의미 있는 연결을 중요시하며, 아이의 내적 잠재력과 가치관 형성에 깊은 관심을 기울입니다. 조용하지만 강한 신념을 바탕으로 아이가 자신과 세상에 긍정적인 영향을 미치는 사람으로 성장하도록 영감을 줍니다.</p>
+      <h1 class="result-title">이상적 통찰형 부모 (INFJ)</h1>
+      <div class="result-subtitle">아이의 내면을 깊이 이해하는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 내면세계를 깊이 이해하는 통찰력 있는 부모입니다.</strong> 자녀의 잠재력과 고유한 가치를 알아보고, 의미 있는 삶으로 인도하고자 합니다. 당신의 직관적 이해력은 아이에게 <strong>영감과 정서적 안정감</strong>을 제공합니다.</p>
+        <p>때로는 높은 이상과 현실 사이에서 "내 기대가 아이에게 부담이 되진 않을까?" 하고 고민하기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>마음을 읽는 듯한 직관력</li>
+          <li>흔들리지 않는 내적 가치관</li>
+          <li>아이의 가능성을 보는 통찰력</li>
+          <li>깊고 의미있는 관계를 만드는 능력</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>직관적 이해:</strong> 아이의 말하지 않은 필요와 감정을 예민하게 감지합니다</li>
-          <li><strong>가치 중심 교육:</strong> 공감, 정의, 진실성과 같은 보편적 가치를 중요시합니다</li>
-          <li><strong>깊은 유대 형성:</strong> 아이와 진정성 있고 의미 있는 관계를 발전시킵니다</li>
-          <li><strong>장기적 비전:</strong> 아이의 전체적인 성장과 잠재력 발현을 위한 방향을 제시합니다</li>
+          <li><strong>깊은 이해와 공감:</strong> 아이의 감정과 필요를 직관적으로 파악합니다</li>
+          <li><strong>의미 있는 가치 전달:</strong> 자녀에게 깊은 가치와 원칙을 심어줍니다</li>
+          <li><strong>헌신적 지원:</strong> 아이의 잠재력 실현을 위해 끊임없이 노력합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>현실적 기대:</strong> 이상적인 비전과 현실 사이의 균형을 찾아보세요</li>
-          <li><strong>자기 돌봄:</strong> 타인을 위해 자신을 희생하기보다 자신의 필요도 충족시키는 시간을 가지세요</li>
-          <li><strong>직접적 소통:</strong> 때로는 갈등을 피하기보다 솔직하고 명확한 의사소통이 필요합니다</li>
+          <li><strong>현실적 기대:</strong> 완벽한 이상보다 현실적인 성장 과정을 수용해보세요</li>
+          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
+          <li><strong>유연성 발휘:</strong> 계획이 변경될 때도 적응하는 여유를 가져보세요</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 깊은 이해와 공감이, 아이에게는 가장 안전한 정서적 안식처예요."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 창의적 자유형(ENFP/INFP) 부모와 함께하면 이상과 가치관에 대한 공감대를 형성할 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 논리적 분석형(INTP/ENTP) 부모와는 감정 vs 논리, 조화 vs 도전 사이의 접근 차이로 갈등이 생길 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 내면의 생각과 감정을 더 명확히 표현하고, 파트너의 다른 관점도 양육에 보완적인 요소로 받아들여보세요</li>
+          <li><strong>매일 10분, 오직 자신만을 위한 시간 가지기.</strong> 끊임없이 남을 돌보는 당신, 자신을 위한 작은 시간도 필요합니다.</li>
+          <li>아이의 행동에 과도하게 의미를 부여할 때, 잠시 멈추고 "이것은 단순한 아이다움일 수 있다"라고 자신에게 말해보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 공감 능력, 진정성, 그리고 더 나은 세상을 위한 이상을 배웁니다. 당신의 사려 깊고 의미 중심적인 양육 덕분에 아이는 자아 인식이 높고 타인과 깊은 관계를 형성할 수 있는 사람으로 성장할 가능성이 높습니다. 단, 아이에게 너무 높은 기대나 완벽주의적 부담을 주지 않도록 주의하고, 때로는 가벼운 즐거움과 실용적인 경험도 중요하게 여겨주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/infj-illustration.jpg" alt="INFJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"깊은 호수처럼, 당신의 마음은 아이의 모든 것을 담아내고 비춰줍니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 조화 추구형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 이상적 통찰형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -882,52 +1101,76 @@ function showINFJResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ENFJ 유형 결과 페이지 콘텐츠
+
+// ENFJ 유형 결과 페이지
 function showENFJResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">조화 추구형 부모 (ENFJ)</h1>
+      <div class="result-image">
+        <img src="images/enfj.jpg" alt="ENFJ 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 따뜻한 열정과 긍정적인 에너지로 아이의 성장을 지원하는 영감을 주는 부모입니다. 아이의 잠재력을 알아보고 발전시키는 데 타고난 재능이 있으며, 가족 간의 조화와 의미 있는 관계를 만드는 데 헌신합니다. 적극적인 소통과 격려를 통해 아이가 자신감 있고 타인을 배려하는 사람으로 성장하도록 안내합니다.</p>
+      <h1 class="result-title">따뜻한 지도자형 부모 (ENFJ)</h1>
+      <div class="result-subtitle">아이의 잠재력을 꽃피우는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 성장과 행복을 위해 열정적으로 헌신하는 카리스마 있는 부모입니다.</strong> 자녀의 잠재력을 알아보고 최선의 길로 인도하며, 따뜻한 지지와 격려를 아끼지 않습니다. 당신의 진정성과 열정은 아이에게 <strong>긍정적 영향력과 자신감</strong>을 심어줍니다.</p>
+        <p>때로는 타인을 위해 너무 많은 것을 주다 보니 "나 자신은 충분히 돌보고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>사람의 마음을 움직이는 카리스마</li>
+          <li>타인의 필요를 알아채는 민감성</li>
+          <li>변함없이 지지하는 따뜻함</li>
+          <li>긍정적인 변화를 이끄는 영향력</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>공감적 소통:</strong> 아이의 필요와 감정에 민감하게 반응하고 효과적으로 소통합니다</li>
-          <li><strong>영감과 격려:</strong> 아이에게 긍정적인 비전과 자신감을 불어넣어 성장을 촉진합니다</li>
-          <li><strong>관계 조율:</strong> 가족 간의 갈등을 조화롭게 해결하고 건강한 관계를 형성합니다</li>
-          <li><strong>가치 중심 지도:</strong> 공동체 의식, 친절함, 책임감과 같은 핵심 가치를 가르칩니다</li>
+          <li><strong>따뜻한 격려와 지지:</strong> 아이에게 무조건적인 사랑과 응원을 보여줍니다</li>
+          <li><strong>감정적 유대감 형성:</strong> 자녀와 깊고 의미 있는 관계를 구축합니다</li>
+          <li><strong>가치와 성장 중시:</strong> 아이가 좋은 사람으로 성장하도록 인도합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>자기 돌봄:</strong> 타인의 필요에 너무 집중하여 자신의 필요를 무시하지 않도록 주의하세요</li>
-          <li><strong>현실적 기대:</strong> 아이와 자신에게 때로는 비현실적으로 높은 기대를 설정하지 않도록 해보세요</li>
-          <li><strong>독립성 허용:</strong> 도움을 주려는 강한 욕구를 절제하고 아이가 스스로 해결할 공간을 제공하세요</li>
+          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
+          <li><strong>비판적 사고 장려:</strong> 조화와 함께 건강한 의견 차이도 가치 있게 여겨보세요</li>
+          <li><strong>과잉보호 경계:</strong> 아이가 실패와 좌절을 통해 배울 수 있는 공간을 허용해보세요</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 따뜻한 지지가, 아이에게는 세상을 바꿀 수 있는 자신감이 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 창의적 자유형(ENFP/INFP) 부모와 함께하면 가치 중심적이고 사람 중심적인 환경을 만들 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 논리적 분석형(INTP/ENTP) 부모와는 감정 vs 논리, 조화 vs 비판적 분석 사이의 접근 차이로 갈등이 생길 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 모든 문제를 해결하려는 충동을 자제하고, 파트너의 독립적인 문제 해결 방식도 존중해보세요</li>
+          <li><strong>매일 15분, 온전히 자신만을 위한 시간 확보하기.</strong> 타인을 위해 에너지를 쏟는 당신, 자신을 채우는 시간도 필요합니다.</li>
+          <li>하루에 한 번, 아이에게 "네가 실수해도 괜찮아"라고 말해주는 순간을 의식적으로 만들어보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 대인관계 기술, 공감 능력, 그리고 긍정적인 리더십을 배웁니다. 당신의 지지적이고 격려하는 양육 덕분에 아이는 자신감 있고 타인을 배려하는 사람으로 성장할 가능성이 높습니다. 단, 아이가 자신의 진정한 감정과 필요를 표현하는 것을 어려워할 수 있으니, 아이의 독립성과 자기 주도성도 충분히 존중해주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/enfj-illustration.jpg" alt="ENFJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"따스한 햇살처럼, 당신의 사랑은 아이의 모든 가능성을 꽃피웁니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 조화 추구형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 따뜻한 지도자형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -939,52 +1182,75 @@ function showENFJResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ISTP 유형 결과 페이지 콘텐츠
+// ISTP 유형 결과 페이지
 function showISTPResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">탐험가형 부모 (ISTP)</h1>
+      <div class="result-image">
+        <img src="images/istp.jpg" alt="ISTP 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 실용적이고 문제 해결 능력이 뛰어난 침착한 부모입니다. 아이에게 많은 자유와 독립성을 제공하며, 실제 경험을 통한 학습을 중요시합니다. 불필요한 규칙보다는 실질적인 기술과 적응력을 가르치는 데 중점을 두며, 위기 상황에서도 침착하게 대처하는 능력으로 아이에게 안정감을 줍니다.</p>
+      <h1 class="result-title">실용적 자유형 부모 (ISTP)</h1>
+      <div class="result-subtitle">아이에게 문제 해결력을 가르치는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이에게 세상을 스스로 탐색하는 방법을 알려주는 실용적인 부모입니다.</strong> 문제 해결력과 독립심을 키워주며, 불필요한 규칙보다 본질에 집중합니다. 당신의 침착하고 유연한 대응은 아이에게 <strong>실용적 지혜와 적응력</strong>을 가르칩니다.</p>
+        <p>때로는 자유를 중시하는 성향으로 "아이에게 필요한 구조와 감정적 안정감을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>위기에도 침착함을 유지하는 평정심</li>
+          <li>문제의 핵심을 꿰뚫는 통찰력</li>
+          <li>실용적인 해결책을 찾는 지혜</li>
+          <li>행동으로 보여주는 진정한 사랑</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>실용적 문제 해결:</strong> 어떤 상황에서도 효율적이고 창의적인 해결책을 찾아냅니다</li>
-          <li><strong>침착한 대응:</strong> 위기나 스트레스 상황에서도 안정적으로 대처합니다</li>
-          <li><strong>실제적 기술 교육:</strong> 아이에게 유용한 실생활 기술을 직접 보여주고 가르칩니다</li>
-          <li><strong>자유와 탐험 존중:</strong> 아이가 자신만의 방식으로 세상을 탐험하도록 공간을 제공합니다</li>
+          <li><strong>실용적 문제 해결:</strong> 자녀에게 실제적인 기술과 해결 방법을 가르칩니다</li>
+          <li><strong>침착한 위기 대응:</strong> 어려운 상황에서도 감정적으로 동요하지 않고 현명하게 대처합니다</li>
+          <li><strong>자율성 존중:</strong> 아이가 자신만의 방식으로 세상을 탐색할 공간을 제공합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>감정적 표현:</strong> 실용성 외에도 감정과 애정을 더 자주, 명확하게 표현해보세요</li>
-          <li><strong>장기적 계획:</strong> 현재의 문제 해결 외에도 아이의 장기적 발달과 미래를 고려해보세요</li>
-          <li><strong>구조적 일관성:</strong> 자유로운 접근법 속에서도 아이에게 필요한 기본적인 규칙과 루틴을 제공하세요</li>
+          <li><strong>감정적 연결:</strong> 행동과 함께 언어로도 사랑과 지지를 표현해보세요</li>
+          <li><strong>일상 구조화:</strong> 자유로움과 함께 예측 가능한 일상 패턴의 안정감도 중요합니다</li>
+          <li><strong>미래 계획:</strong> 현재에 충실하면서도 장기적 성장을 위한 계획도 고려해보세요</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 침착함과 실용적 지혜가, 아이에게는 어떤 어려움도 극복할 수 있는 자신감이 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 체계적 계획형(ISTJ/ESTJ) 부모와 함께하면 당신의 유연성과 파트너의 구조성이 균형을 이룰 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 조화 추구형(INFJ/ENFJ) 부모와는 실용 vs 이상, 독립성 vs 관계성 측면에서 접근 차이가 있을 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 감정과 장기적 계획에 대한 대화에도 참여하고, 당신의 실용적인 해결책과 독립적인 접근법의 가치를 분명히 전달해보세요</li>
+          <li><strong>매일 5분, 아이와 감정을 나누는 대화 시간 갖기.</strong> "오늘 어떤 기분이었어?" 같은 간단한 질문으로 시작해보세요.</li>
+          <li>주말마다 아이와 함께하는 소소한 가족 의식을 하나 정해 꾸준히 실천해보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 독립성, 적응력, 그리고 실용적인 문제 해결 능력을 배웁니다. 당신의 침착하고 자유를 존중하는 양육 덕분에 아이는 자기 주도적이고 실질적인 기술을 갖춘 사람으로 성장할 가능성이 높습니다. 단, 아이의 감정적 필요와 안정감을 위한 일상적 구조도 중요하니, 자유와 함께 기본적인 안정감도 균형 있게 제공해주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/istp-illustration.jpg" alt="ISTP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"단단한 바위처럼, 당신은 어떤 상황에서도 아이에게 실용적인 지혜를 전합니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 탐험가형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 실용적 자유형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -995,53 +1261,75 @@ function showISTPResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
-
-// ESTP 유형 결과 페이지 콘텐츠
+// ESTP 유형 결과 페이지
 function showESTPResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">탐험가형 부모 (ESTP)</h1>
+      <div class="result-image">
+        <img src="images/estp.jpg" alt="ESTP 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 활동적이고 현실적인 접근으로 아이에게 실제 경험을 통한 학습을 장려하는 모험심 많은 부모입니다. 즉흥적이고 유연한 태도로 아이와 함께 다양한 활동과 모험을 즐기며, 이론보다는 실전을 통해 문제를 해결하는 방법을 가르칩니다. 현재의 순간을 중요시하고, 아이가 자신감 있고 적응력 있는 사람으로 성장하도록 지원합니다.</p>
+      <h1 class="result-title">활동적 모험형 부모 (ESTP)</h1>
+      <div class="result-subtitle">아이에게 세상을 경험하게 하는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이와 함께 세상을 적극적으로 탐험하는 활력 넘치는 부모입니다.</strong> 실제 경험을 통한 배움을 중요시하며, 자녀가 주변 환경과 적극적으로 상호작용하도록 격려합니다. 당신의 현실적인 문제 해결 능력은 아이에게 <strong>실용적인 대처 기술과 모험심</strong>을 길러줍니다.</p>
+        <p>때로는 순간의 즐거움에 집중하다 보니 "장기적인 감정적 연결과 일관성을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>어떤 상황에서도 적응하는 유연성</li>
+          <li>위기에 빠르게 대응하는 임기응변</li>
+          <li>삶을 즐기는 긍정적인 에너지</li>
+          <li>현실적인 문제를 해결하는 능력</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>활동적 학습 환경:</strong> 아이에게 다양한 경험과 모험을 통한 실제적 학습 기회를 제공합니다</li>
-          <li><strong>유연한 대처:</strong> 계획이 바뀌어도 빠르게 적응하고 상황에 맞는 해결책을 찾습니다</li>
-          <li><strong>재미와 모험:</strong> 육아에 활력과 재미를 불어넣어 아이의 호기심과 탐험 정신을 키웁니다</li>
-          <li><strong>위기 대응력:</strong> 긴급 상황에서도 침착하게 행동하며 효과적으로 대처합니다</li>
+          <li><strong>활력과 재미 제공:</strong> 아이와 함께하는 시간을 생동감 있고 즐겁게 만듭니다</li>
+          <li><strong>실제 경험 중시:</strong> 책으로만 배우기보다 직접 경험하고 탐험하도록 격려합니다</li>
+          <li><strong>유연한 적응력:</strong> 변화하는 상황에 빠르게 대처하고 문제를 해결합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>장기적 계획:</strong> 즉각적인 재미 외에도 아이의 장기적 발달을 위한 계획을 고려해보세요</li>
-          <li><strong>감정적 지원:</strong> 활동과 모험 사이에서 아이의 감정적 필요와 내면의 성장도 살펴보세요</li>
-          <li><strong>기본 구조 제공:</strong> 자유로운 스타일 속에서도 아이에게 필요한 일부 규칙과 일관성을 제공하세요</li>
+          <li><strong>정서적 연결 강화:</strong> 활동과 재미 외에도 감정을 나누는 대화의 시간도 중요합니다</li>
+          <li><strong>장기적 계획:</strong> 현재의 즐거움과 함께 미래를 위한 준비도 함께 고려해보세요</li>
+          <li><strong>일관된 구조 제공:</strong> 자유로운 탐험과 함께 예측 가능한 일상의 안정감도 필요합니다</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 모험심과 활력이, 아이에게는 세상을 두려움 없이 탐험할 용기가 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 체계적 계획형(ISTJ/ESTJ) 부모와 함께하면 당신의 즉흥성과 파트너의 구조성이 균형을 이룰 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 조화 추구형(INFJ/ENFJ) 부모와는 현실 vs 이상, 행동 vs 내면성 사이의 접근 차이가 있을 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 행동 중심적 접근의 가치를 설명하되, 파트너의 감정적, 장기적 관점도 육아에 중요한 측면임을 인정해보세요</li>
+          <li><strong>매일 10분, 아이와 차분히 대화하는 시간 갖기.</strong> 활동적인 시간 외에도 감정과 생각을 나누는 조용한 순간을 만들어보세요.</li>
+          <li>일주일에 한 번, 가족 일정을 함께 계획하고 앞으로의 중요한 활동들을 아이와 공유해보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 실용적인 문제 해결, 모험심, 그리고 순간을 즐기는 법을 배웁니다. 당신의 활동적이고 경험 중심적인 양육 덕분에 아이는 자신감 있고 적응력이 뛰어난 사람으로 성장할 가능성이 높습니다. 단, 아이의 감정적 안정감과 장기적 발달을 위한 체계적 지원도 균형 있게 제공하는 것이 중요합니다.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/estp-illustration.jpg" alt="ESTP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"역동적인 강물처럼, 당신의 에너지는 아이에게 삶의 모험을 선사합니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 탐험가형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 활동적 모험형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -1053,52 +1341,75 @@ function showESTPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ISFP 유형 결과 페이지 콘텐츠
+// ISFP 유형 결과 페이지
 function showISFPResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">예술가형 부모 (ISFP)</h1>
+      <div class="result-image">
+        <img src="images/isfp.jpg" alt="ISFP 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 섬세한 감수성과 따뜻한 수용성으로 아이의 개성을 존중하는 부드러운 부모입니다. 현재의 순간에 충실하며, 미적 감각과 감정적 연결을 중요시합니다. 엄격한 규율보다는 아이의 자연스러운 발달과 자기표현을 지지하며, 행동으로 가치를 보여주는 조용한 롤모델이 되어줍니다.</p>
+      <h1 class="result-title">감성적 보호형 부모 (ISFP)</h1>
+      <div class="result-subtitle">아이의 세계를 아름답게 그려주는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 개성과 감성을 소중히 여기는 따뜻한 부모입니다.</strong> 작은 순간의 기쁨을 함께 나누며, 자녀가 자신만의 방식으로 세상을 경험하도록 격려합니다. 당신의 수용적인 태도는 아이에게 <strong>안전한 정서적 안식처</strong>가 됩니다.</p>
+        <p>때로는 균형을 찾는 과정에서 "아이에게 필요한 구조와 지침을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>순간의 아름다움을 발견하는 섬세함</li>
+          <li>있는 그대로 받아들이는 따뜻한 수용력</li>
+          <li>행동으로 사랑을 표현하는 진정성</li>
+          <li>자신과 타인에게 진실한 정직함</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>무조건적 수용:</strong> 아이를 있는 그대로 받아들이고 개인의 고유성을 존중합니다</li>
-          <li><strong>감각적 풍요로움:</strong> 아이에게 예술, 자연, 감각적 경험의 아름다움을 소개합니다</li>
-          <li><strong>현재에 충실:</strong> 아이와 함께 지금 이 순간을 온전히 즐기고 경험합니다</li>
-          <li><strong>진정성 있는 관계:</strong> 말보다 행동으로 가치를 보여주고 진실된 관계를 형성합니다</li>
+          <li><strong>무조건적 수용:</strong> 아이를 있는 그대로 사랑하고 개성을 존중합니다</li>
+          <li><strong>감성적 연결:</strong> 자녀와 깊고 진실된 정서적 유대를 형성합니다</li>
+          <li><strong>삶의 아름다움 공유:</strong> 일상의 소소한 기쁨과 창의적 표현을 장려합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>구조와 일관성:</strong> 자유로운 접근법 속에서도 기본적인 경계와 규칙을 제공해보세요</li>
-          <li><strong>장기 계획:</strong> 현재의 순간 외에도 아이의 미래를 위한 장기적 계획을 고려해보세요</li>
-          <li><strong>의사 표현:</strong> 갈등을 피하기보다 필요할 때는 분명하게 의견을 표현해보세요</li>
+          <li><strong>일상 구조화:</strong> 자유로운 표현과 함께 예측 가능한 일과의 안정감도 중요합니다</li>
+          <li><strong>명확한 경계 설정:</strong> 조화를 중시하면서도 일관된 규칙과 기대치를 세워보세요</li>
+          <li><strong>장기적 계획:</strong> 현재의 순간을 즐기면서도 미래를 위한 준비도 함께 해보세요</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 부드러운 감성이, 아이에게는 세상에서 가장 따뜻한 안식처예요."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 따뜻한 양육형(ISFJ/ESFJ) 부모와 함께하면 감성과 실용성의 균형을 이룰 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 성취 지향형(ENTJ) 부모와는 자유 vs 구조, 현재 vs 미래 계획에 대한 접근 차이가 있을 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 갈등을 피하기보다 당신의 가치와 감정을 솔직하게 표현하고, 파트너의 다른 접근법도 존중해보세요</li>
+          <li><strong>매일 같은 시간에 반복하는 한 가지 의식 만들기.</strong> 예를 들어, 저녁 식사 전 감사한 일 나누기 같은 간단하지만 의미 있는 시간을 가져보세요.</li>
+          <li>주 1회, 가족 캘린더를 함께 확인하며 앞으로의 일정과 계획을 아이와 공유해보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 자기표현의 자유, 심미적 감각, 그리고 진실된 삶의 가치를 배웁니다. 당신의 수용적이고 감성적인 양육 덕분에 아이는 자신의 감정에 솔직하고 창의적인 사람으로 성장할 가능성이 높습니다. 단, 아이에게 필요한 기본적인 구조와 일관성도 함께 제공하여 세상에 적응하는 능력도 키워주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/isfp-illustration.jpg" alt="ISFP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"봄날의 꽃처럼, 당신의 섬세한 마음은 아이의 세상을 아름답게 물들입니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 예술가형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 감성적 보호형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -1110,52 +1421,75 @@ function showISFPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ESFP 유형 결과 페이지 콘텐츠
+// ESFP 유형 결과 페이지
 function showESFPResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">예술가형 부모 (ESFP)</h1>
+      <div class="result-image">
+        <img src="images/esfp.jpg" alt="ESFP 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 열정적이고 활기찬 에너지로 아이의 삶에 즐거움과 모험을 불어넣는 매력적인 부모입니다. 현재의 순간을 최대한 즐기며, 아이와 함께 다양한 경험과 사회적 활동에 참여합니다. 유연하고 수용적인 태도로 아이의 자유로운 자기표현을 격려하며, 실용적인 문제 해결과 함께 따뜻한 정서적 지원을 제공합니다.</p>
+      <h1 class="result-title">즐거운 격려형 부모 (ESFP)</h1>
+      <div class="result-subtitle">아이에게 삶의 기쁨을 알려주는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이와 함께 매 순간을 축제처럼 즐기는 활기 넘치는 부모입니다.</strong> 온화한 사랑으로 자녀를 격려하고, 삶의 작은 기쁨을 나누는 것을 중요시합니다. 당신의 자연스러운 열정은 아이에게 <strong>자신감과 삶의 즐거움</strong>을 알려줍니다.</p>
+        <p>때로는 현재의 즐거움에 집중하다 보니 "미래를 위한 준비와 일관된 구조를 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>세상을 밝게 만드는 낙천적 에너지</li>
+          <li>순간을 소중히 여기는 현재 지향성</li>
+          <li>타인의 마음을 따뜻하게 하는 친절함</li>
+          <li>현실적인 문제에 대응하는 실용성</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
-          <li><strong>재미와 활력:</strong> 일상을 즐겁고 활기찬 경험으로 만들어 아이에게 긍정적인 에너지를 전달합니다</li>
-          <li><strong>실용적 보살핌:</strong> 아이의 즉각적인 필요에 빠르게 대응하고 창의적인 해결책을 제시합니다</li>
-          <li><strong>사회적 연결:</strong> 아이가 다양한 사람들과 편안하게 교류하는 사회성을 기르도록 돕습니다</li>
-          <li><strong>유연한 적응력:</strong> 상황에 따라 쉽게 적응하고 변화를 자연스럽게 받아들입니다</li>
+          <li><strong>따뜻한 격려와 지지:</strong> 아이에게 풍부한 정서적 지지와 긍정적 에너지를 제공합니다</li>
+          <li><strong>실제적 경험 중시:</strong> 이론보다 직접 체험을 통해 배우는 환경을 조성합니다</li>
+          <li><strong>유연한 적응력:</strong> 상황에 맞게 유연하게 대처하고 삶의 변화를 수용합니다</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>성장 가능한 부분</h2>
         <ul>
-          <li><strong>장기적 계획:</strong> 즉각적인 즐거움 외에도 아이의 미래를 위한 장기적 계획을 고려해보세요</li>
-          <li><strong>일관된 구조:</strong> 즐거운 환경 속에서도 기본적인 규칙과 경계를 일관되게 유지해보세요</li>
-          <li><strong>깊은 대화:</strong> 활동적인 시간 외에도 아이와 심층적인 감정과 생각을 나누는 조용한 시간도 가져보세요</li>
+          <li><strong>장기적 계획:</strong> 즐거운 현재와 함께 미래를 위한 구체적인 준비도 함께 해보세요</li>
+          <li><strong>일관된 구조 제공:</strong> 자유로운 표현과 함께 안정적인 일상 패턴도 중요합니다</li>
+          <li><strong>책임감 강조:</strong> 재미와 함께 책임과 약속의 중요성도 가르쳐보세요</li>
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 밝은 에너지가, 아이에게는 세상을 사랑하는 법을 가르치는 빛이 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 따뜻한 양육형(ISFJ/ESFJ) 부모와 함께하면 즐거움과, 안정감의 균형을 이룰 수 있습니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 체계적 계획형(ISTJ/ESTJ) 부모와는 즉흥적 vs 계획적, 유연성 vs 일관성 측면에서 접근 차이가 있을 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 즐거움과 현재 중심적 접근의 가치를 설명하되, 파트너의 체계적인 접근도 아이의 안정에 필요한 요소로 받아들여보세요</li>
+          <li><strong>매일 같은 시간에 하는 간단한 가족 루틴 만들기.</strong> 예를 들어, 저녁 식사 후 5분 정리 시간이나 일정한 취침 의식 등을 시도해보세요.</li>
+          <li>주 1회, 가족 캘린더를 함께 살펴보며 다가오는 일정과 책임을 확인하는 시간을 가져보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 삶의 즐거움, 사회성, 그리고 현재 순간을 충만하게 살아가는 법을 배웁니다. 당신의 활기차고 수용적인 양육 덕분에 아이는 낙관적이고 사교적인 사람으로 성장할 가능성이 높습니다. 단, 아이에게 필요한 기본적인 구조와 자기 규율도 가르쳐서 즐거움과 책임감 사이의 균형을 찾도록 도와주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/esfp-illustration.jpg" alt="ESFP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"반짝이는 불꽃처럼, 당신의 밝은 에너지는 아이의 일상을 축제로 만듭니다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 예술가형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 즐거운 격려형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
@@ -1164,7 +1498,7 @@ function showESFPResult() {
     </div>
   `;
   
-   document.getElementById('result-content').innerHTML = resultContent;
+  document.getElementById('result-content').innerHTML = resultContent;
 }
 
 function hideAllContainers() {
