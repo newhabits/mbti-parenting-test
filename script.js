@@ -336,14 +336,14 @@ function showISTJResult() {
       </section>
       
       <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/istj-illustration.jpg" alt="ISTJ 일러스트" id="type-illustration">
-          </div>
-          <p class="illustrated-quote">"세심히 짜여진 하루 속에서, 가끔은 빈칸도 사랑이 된다."</p>
-        </div>
-      </section>
+    <h2>당신의 하루를 위한 일러스트</h2>
+    <div class="illustration-container">
+      <div class="illustration-placeholder">
+        <p class="coming-soon-text">곧 여기에 특별한 일러스트가 추가될 예정입니다</p>
+      </div>
+      <p class="illustrated-quote">"세심히 짜여진 하루 속에서, 가끔은 빈칸도 사랑이 된다."</p>
+    </div>
+  </section>
       
       <section class="items-section">
         <h2>✨ 체계적 계획형 부모를 위한 육아 아이템</h2>
