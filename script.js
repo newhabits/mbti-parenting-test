@@ -282,20 +282,34 @@ function showMoreItems(type) {
 function showISTJResult() {
   const resultContent = `
     <div class="result-container">
-      <h1 class="result-title">체계적 계획형 부모 (ISTJ)</h1>
+      <div class="result-image">
+        <img src="images/istj.jpg" alt="ISTJ 유형 이미지">
+      </div>
       
-      <section class="style-section">
-        <h2>당신의 육아 스타일</h2>
-        <p>당신은 일관성과 체계를 중요시하는 안정적인 부모입니다. 명확한 규칙과 루틴을 통해 아이에게 안정감 있는 환경을 제공하는 것을 중요하게 생각합니다. 책임감이 강하고 약속을 철저히 지키기 때문에 아이들에게 신뢰할 수 있는 어른의 모습을 보여줍니다.</p>
+      <h1 class="result-title">체계적 계획형 부모 (ISTJ)</h1>
+      <div class="result-subtitle">조용한 단단함으로 지켜내는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 일상을 안정적으로 만들어주는 기둥 같은 부모입니다.</strong> 약속은 지켜야 한다고 믿고, 질서와 규칙 안에서 아이가 잘 자라길 바랍니다. 당신이 계획하는 하루는, 아이에게 <strong>세상이 안전하다는 신호</strong>가 됩니다.</p>
+        <p>하지만 가끔, 모든 걸 잘하려고 애쓰는 자신이 너무 딱딱한 사람처럼 느껴질 때가 있죠. "이렇게까지 해야 하나?" 하며 외로움도 스며듭니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신 안에는...</h2>
+        <ul>
+          <li>책임감 있게 하루를 쌓아올리는 힘</li>
+          <li>실수하지 않으려는 진심</li>
+          <li>조용히 헌신하는 사랑</li>
+          <li>'말보다 행동'으로 보여주는 따뜻함</li>
+        </ul>
       </section>
       
       <section class="strengths-section">
         <h2>당신의 강점</h2>
         <ul>
           <li><strong>안정적인 환경 조성:</strong> 일관된 규칙과 명확한 기대치를 설정해 아이에게 안정감을 줍니다</li>
-          <li><strong>책임감 있는 양육:</strong> 약속한 것은 반드시 지키며 아이에게 책임감의 중요성을 몸소 보여줍니다</li>
+          <li><strong>책임감 있는 양육:</strong> 약속한 것은 반드시 지키며 아이에게 신뢰할 수 있는 모습을 보여줍니다</li>
           <li><strong>실용적인 문제 해결:</strong> 일상의 문제를 효율적으로 해결하는 능력이 뛰어납니다</li>
-          <li><strong>체계적인 학습 지원:</strong> 아이의 학습과 발달을 위한 체계적인 계획을 세우고 실천합니다</li>
         </ul>
       </section>
       
@@ -308,22 +322,31 @@ function showISTJResult() {
         </ul>
       </section>
       
-      <section class="partner-section">
-        <h2>파트너와의 관계</h2>
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신이 매일 해내는 그 평범한 일들이, 아이에겐 가장 큰 안정이에요."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>잘 맞는 유형:</strong> 따뜻한 양육형(ISFJ/ESFJ) 부모와 균형을 이루며, 서로의 체계성과 따뜻함을 보완합니다</li>
-          <li><strong>도전이 될 수 있는 유형:</strong> 창의적 자유형(ENFP/INFP) 부모와는 구조 vs 자유에 대한 가치관 차이로 갈등할 수 있습니다</li>
-          <li><strong>소통 팁:</strong> 규칙과 계획의 이유를 명확히 설명하고, 파트너의 즉흥적인 제안에도 가끔은 열린 마음으로 임해보세요</li>
+          <li><strong>오늘 하루, 아이와의 약속 중 하나를 과감히 미뤄보기.</strong> 예상보다 더 편안한 관계가 자라날 수도 있어요.</li>
+          <li>계획하지 않은 즉흥적인 놀이 시간을 일주일에 한 번 정도 만들어보세요.</li>
         </ul>
       </section>
       
-      <section class="child-section">
-        <h2>아이와의 관계</h2>
-        <p>아이는 당신에게서 안정감과 신뢰를 배웁니다. 당신의 체계적인 양육 덕분에 아이는 규칙을 존중하고 책임감 있는 사람으로 성장할 가능성이 높습니다. 단, 아이의 창의성과 자발성을 격려하는 시간도 중요하니, 가끔은 계획에서 벗어나 자유로운 탐험과 놀이의 시간을 마련해주세요.</p>
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/istj-illustration.jpg" alt="ISTJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"세심히 짜여진 하루 속에서, 가끔은 빈칸도 사랑이 된다."</p>
+        </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 체계적 계획형 부모를 위한 엄선한 아이템</h2>
+        <h2>✨ 체계적 계획형 부모를 위한 육아 아이템</h2>
         <div class="coming-soon">
           <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
           <h3>See you soon!</h3>
