@@ -364,3 +364,37 @@ body {
   font-weight: bold;
   color: #2980b9;
 }
+
+/* 일러스트 섹션 스타일 */
+.illustration-section {
+  margin: 35px 0;
+  text-align: center;
+}
+
+.illustration-container {
+  background-color: #fffbf0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.illustration-image {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.illustration-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.illustrated-quote {
+  font-family: 'KyoboHand', sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  text-align: center;
+  color: #555;
+  line-height: 1.6;
+  margin: 20px 0 10px;
+}
