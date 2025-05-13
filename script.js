@@ -18,6 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
         shareButton.addEventListener("click", shareResult);
     }
     
+    // 결과 페이지가 로드된 후 일러스트 이미지 확인
+    const illustration = document.getElementById("type-illustration");
+    if (illustration) {
+        illustration.onerror = function() {
+            // 이미지가 없으면 대체 콘텐츠 표시
+            const container = this.parentNode;
+            container.innerHTML = '<div class="illustration-placeholder"><p class="coming-soon-text">곧 여기에 특별한 일러스트가 추가될 예정입니다</p></div>';
+        };
+    }
+    
     // URL에서 공유된 결과 확인
     checkSharedResult();
 });
