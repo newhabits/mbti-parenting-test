@@ -172,13 +172,7 @@ function renderQuestion() {
         answersElement.appendChild(button);
     });
 
-    // 뒤로 가기 버튼 표시/숨김
-    if (currentQuestionIndex > 0) {
-        document.getElementById("back-button").style.display = "block";
-    } else {
-        document.getElementById("back-button").style.display = "none";
-    }
-}
+    document.getElementById("back-button").style.display = "block";
 
 // 다음 질문으로 이동
 function nextQuestion() {
