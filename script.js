@@ -183,6 +183,7 @@ function renderQuestion() {
     });
 
     document.getElementById("back-button").style.display = "block";
+}
 
 // 다음 질문으로 이동
 function nextQuestion() {
