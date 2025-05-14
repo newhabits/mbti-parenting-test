@@ -2,15 +2,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // 시작 버튼에 클릭 이벤트 등록
     const startButton = document.getElementById("start-btn");
     if (startButton) {
-        startButton.addEventListener("click", function () {
+        startButton.addEventListener("click", function() {
             hideAllContainers();
-            document.getElementById("quiz-container").style.display = "block";
+            document.getElementById("quiz-container").classList.add("active");
             initializeQuiz();
         });
+    } else {
+        console.error("시작 버튼을 찾을 수 없습니다!");
     }
     
     // 뒤로가기 버튼 이벤트 등록
-    document.getElementById("back-button").addEventListener("click", goBack);
+    const backButton = document.getElementById("back-button");
+    if (backButton) {
+        backButton.addEventListener("click", goBack);
+    }
     
     // 공유 버튼 이벤트 등록
     const shareButton = document.getElementById("share-button");
