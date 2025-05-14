@@ -109,14 +109,14 @@ body {
 #back-button {
   margin: 15px auto;
   display: block;
-  font-size: 14px; /* 글자 크기 줄임 */
-  height: 2.3rem; /* 높이 줄임 (2/3 정도) */
-  padding-left: 1.3rem; /* 패딩 줄임 */
-  padding-right: 1.3rem; /* 패딩 줄임 */
+  font-size: 14px;
+  height: 2.3rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
 }
 
-#back-button {
-  display: block !important;
+#back-button.hidden {
+  display: none !important;
 }
 
 /* 모바일 대응 */
