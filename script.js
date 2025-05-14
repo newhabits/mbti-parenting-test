@@ -327,7 +327,7 @@ function showINTJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>감정적 연결:</strong> 논리적 사고와 함께 감정적 유대감도 소중히 여겨보세요</li>
           <li><strong>유연성 발휘:</strong> 계획이 틀어질 때도 적응하고 순간을 즐기는 여유를 가져보세요</li>
@@ -407,7 +407,7 @@ function showISTJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>융통성:</strong> 때로는 계획에서 벗어나 즉흥적인 즐거움을 경험하는 것도 중요합니다</li>
           <li><strong>감정 표현:</strong> 사랑과 애정을 더 자주, 다양한 방식으로 표현해보세요</li>
@@ -473,7 +473,7 @@ function showESTJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>감정적 민감성:</strong> 아이의 감정적 필요에 더 세심하게 주의를 기울여보세요</li>
           <li><strong>유연성 발휘:</strong> 때로는 계획과 규칙에서 벗어나 즉흥적인 순간을 즐겨보세요</li>
@@ -530,7 +530,7 @@ function showISFJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>자기 돌봄:</strong> 아이를 돌보느라 자신의 필요를 잊지 말고 스스로를 위한 시간도 확보하세요</li>
           <li><strong>독립성 장려:</strong> 아이가 스스로 시도하고 실수할 수 있는 기회를 더 많이 제공해보세요</li>
@@ -601,7 +601,7 @@ function showESFJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>자율성 존중:</strong> 과도한 개입 대신 아이가 스스로 결정할 공간을 허용해보세요</li>
           <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
@@ -682,7 +682,7 @@ function showENFPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>일상적 구조 제공:</strong> 흥미롭고 새로운 경험과 함께 안정적인 일상 패턴도 중요합니다</li>
           <li><strong>일관성 유지:</strong> 다양한 아이디어 사이에서도 핵심 원칙을 지속적으로 지켜보세요</li>
@@ -747,7 +747,7 @@ function showINFPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>일상적 구조 제공:</strong> 이상적인 양육 비전만큼 실용적인 일상 구조도 중요합니다</li>
           <li><strong>경계 설정:</strong> 무조건적 수용과 함께 적절한 한계와 기대치도 필요합니다</li>
@@ -818,7 +818,7 @@ function showINTPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>감정적 지지:</strong> 지적 탐구만큼 정서적 유대감도 중요합니다</li>
           <li><strong>일상 구조화:</strong> 아이에게 적절한 일과와 규칙을 제공하는 것도 필요합니다</li>
@@ -898,7 +898,7 @@ function showENTPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>일관성 유지:</strong> 여러 아이디어 사이에서도 중요한 일상의 구조와 안정감을 제공해보세요</li>
           <li><strong>감정적 지지:</strong> 지적 탐험만큼 정서적 연결도 소중히 여겨보세요</li>
@@ -978,7 +978,7 @@ function showENTJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>감정적 민감성:</strong> 효율성만큼 아이의 감정과 필요도 소중히 여겨보세요</li>
           <li><strong>인내심 기르기:</strong> 모든 성장 과정에는 시간이 필요하다는 것을 기억하세요</li>
@@ -1058,7 +1058,7 @@ function showINFJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>현실적 기대:</strong> 완벽한 이상보다 현실적인 성장 과정을 수용해보세요</li>
           <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
@@ -1139,7 +1139,7 @@ function showENFJResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
           <li><strong>비판적 사고 장려:</strong> 조화와 함께 건강한 의견 차이도 가치 있게 여겨보세요</li>
@@ -1219,7 +1219,7 @@ function showISTPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>감정적 연결:</strong> 행동과 함께 언어로도 사랑과 지지를 표현해보세요</li>
           <li><strong>일상 구조화:</strong> 자유로움과 함께 예측 가능한 일상 패턴의 안정감도 중요합니다</li>
@@ -1298,7 +1298,7 @@ function showESTPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>정서적 연결 강화:</strong> 활동과 재미 외에도 감정을 나누는 대화의 시간도 중요합니다</li>
           <li><strong>장기적 계획:</strong> 현재의 즐거움과 함께 미래를 위한 준비도 함께 고려해보세요</li>
@@ -1378,7 +1378,7 @@ function showISFPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>일상 구조화:</strong> 자유로운 표현과 함께 예측 가능한 일과의 안정감도 중요합니다</li>
           <li><strong>명확한 경계 설정:</strong> 조화를 중시하면서도 일관된 규칙과 기대치를 세워보세요</li>
@@ -1458,7 +1458,7 @@ function showESFPResult() {
       </section>
       
       <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
+        <h2>더 발전시키면 좋을 점</h2>
         <ul>
           <li><strong>장기적 계획:</strong> 즐거운 현재와 함께 미래를 위한 구체적인 준비도 함께 해보세요</li>
           <li><strong>일관된 구조 제공:</strong> 자유로운 표현과 함께 안정적인 일상 패턴도 중요합니다</li>
