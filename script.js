@@ -182,7 +182,11 @@ function renderQuestion() {
         answersElement.appendChild(button);
     });
 
-    document.getElementById("back-button").style.display = "block";
+// 첫 번째 질문이면 뒤로가기 버튼 숨기기, 아니면 보이기
+if (currentQuestionIndex === 0) {
+    document.getElementById("back-button").classList.add("hidden");
+} else {
+    document.getElementById("back-button").classList.remove("hidden");
 }
 
 // 다음 질문으로 이동
