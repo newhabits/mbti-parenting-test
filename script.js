@@ -226,7 +226,7 @@ function calculateMBTI() {
 // 결과 표시
 function showResult() {
     hideAllContainers();
-    document.getElementById('result-container').style.display = 'block';
+    document.getElementById('result-container').classList.add('active');
     const mbti = calculateMBTI();
     showPersonalityResult(mbti);
 }
@@ -1592,9 +1592,9 @@ function showESFPResult() {
 }
 
 function hideAllContainers() {
-    document.getElementById("intro-container").style.display = "none";
-    document.getElementById("quiz-container").style.display = "none";
-    document.getElementById("result-container").style.display = "none";
+    document.getElementById("intro-container").classList.remove("active");
+    document.getElementById("quiz-container").classList.remove("active");
+    document.getElementById("result-container").classList.remove("active");
 }
 
 // 결과 페이지가 로드된 후 공유 버튼에 이벤트 리스너 추가
