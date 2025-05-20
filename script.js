@@ -245,8 +245,7 @@ function showResult() {
 
 // 모든 유형에 대한 메인 컨트롤 함수
 function showPersonalityResult(type) {
-    // 이 부분들을 삭제 또는 주석처리
-  /*
+  const resultContainer = document.getElementById('result-container');
   const resultHeader = document.createElement('div');
   resultHeader.className = 'result-image';
   resultHeader.innerHTML = `<img src="images/${type.toLowerCase()}.png" alt="${type} 유형 이미지">`;
@@ -254,7 +253,6 @@ function showPersonalityResult(type) {
   // 기존 내용을 비우고 새 이미지 추가
   document.getElementById('result-content').innerHTML = '';
   resultContainer.insertBefore(resultHeader, document.getElementById('result-content'));
-  */
   
   updateMetaTags(type);
 
