@@ -100,6 +100,7 @@ body {
 /* 테스트 시작하기 버튼 스타일 */
 #start-btn {
   margin-top: 20px;
+  margin-bottom: 60px;
   font-family: 'KyoboHand', sans-serif;
   font-size: 24px;
   font-weight: bold;
