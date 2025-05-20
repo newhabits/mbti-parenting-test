@@ -256,7 +256,7 @@ function showPersonalityResult(type) {
   }
   
   // 이미지 설정
-  imageContainer.innerHTML = `<div class="result-image"><img src="images/${type.toLowerCase()}.png" alt="${type} 유형 이미지"></div>`;
+ imageContainer.innerHTML = `<div class="result-image"><img src="/mbti-parenting-test/images/${type.toLowerCase()}.png" alt="${type} 유형 이미지"></div>`;
   
   // 기존 내용 비우기
   document.getElementById('result-content').innerHTML = '';
