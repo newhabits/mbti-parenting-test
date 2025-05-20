@@ -254,6 +254,8 @@ function showPersonalityResult(type) {
   document.getElementById('result-content').innerHTML = '';
   resultContainer.insertBefore(resultHeader, document.getElementById('result-content'));
   
+  updateMetaTags(type);
+
   switch(type) {
     case 'INTJ':
       showINTJResult(); // 수정됨: INTJ가 자신의 결과를 보여줌
@@ -306,8 +308,39 @@ function showPersonalityResult(type) {
     default:
       document.getElementById('result-content').innerHTML = '<p>선택한 유형에 대한 결과를 찾을 수 없습니다.</p>';
   }
+
 }
 
+function updateMetaTags(mbtiType) {
+  // 제목 업데이트 (안전장치 추가)
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+  
+  if (ogTitle) {
+    ogTitle.content = `${mbtiType} 유형 육아 스타일 - MBTI 육아 테스트`;
+  }
+  if (twitterTitle) {
+    twitterTitle.content = `${mbtiType} 유형 육아 스타일 - MBTI 육아 테스트`;
+  }
+  
+  // 이미지 업데이트 (안전장치 추가)
+  const imageUrl = `https://newhabits.github.io/mbti-parenting-test/images/${mbtiType.toLowerCase()}.png`;
+  const ogImage = document.querySelector('meta[property="og:image"]');
+  const twitterImage = document.querySelector('meta[name="twitter:image"]');
+  
+  if (ogImage) {
+    ogImage.content = imageUrl;
+  }
+  if (twitterImage) {
+    twitterImage.content = imageUrl;
+  }
+  
+  // URL 업데이트 (안전장치 추가)
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) {
+    ogUrl.content = `https://newhabits.github.io/mbti-parenting-test/?type=${mbtiType}`;
+  }
+}
 // 더 많은 아이템 보기 함수
 function showMoreItems(type) {
   alert(type + ' 유형을 위한 더 많은 아이템을 보여줍니다.');
