@@ -402,7 +402,7 @@ function showINTJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/intj.jpg" alt="INTJ 유형 이미지">
+        <img src="images/intj.png" alt="INTJ 유형 이미지">
       </div>
       
       <h1 class="result-title">전략적 비전형 부모 (INTJ)</h1>
@@ -482,7 +482,7 @@ function showISTJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/istj.jpg" alt="ISTJ 유형 이미지">
+        <img src="images/istj.png" alt="ISTJ 유형 이미지">
       </div>
       
       <h1 class="result-title">체계적 계획형 부모 (ISTJ)</h1>
@@ -562,7 +562,7 @@ function showESTJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/estj.jpg" alt="ESTJ 유형 이미지">
+        <img src="images/estj.png" alt="ESTJ 유형 이미지">
       </div>
       
       <h1 class="result-title">체계적 실행형 부모 (ESTJ)</h1>
@@ -642,7 +642,7 @@ function showISFJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/isfj.jpg" alt="ISFJ 유형 이미지">
+        <img src="images/isfj.png" alt="ISFJ 유형 이미지">
       </div>
       
       <h1 class="result-title">섬세한 보호형 부모 (ISFJ)</h1>
@@ -722,7 +722,7 @@ function showESFJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/esfj.jpg" alt="ESFJ 유형 이미지">
+        <img src="images/esfj.png" alt="ESFJ 유형 이미지">
       </div>
       
       <h1 class="result-title">헌신적 돌봄형 부모 (ESFJ)</h1>
@@ -812,7 +812,7 @@ function showENFPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/enfp.jpg" alt="ENFP 유형 이미지">
+        <img src="images/enfp.png" alt="ENFP 유형 이미지">
       </div>
       
       <h1 class="result-title">열정적 영감형 부모 (ENFP)</h1>
@@ -892,7 +892,7 @@ function showINFPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/infp.jpg" alt="INFP 유형 이미지">
+        <img src="images/infp.png" alt="INFP 유형 이미지">
       </div>
       
       <h1 class="result-title">창의적 자유형 부모 (INFP)</h1>
@@ -972,7 +972,7 @@ function showINTPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/intp.jpg" alt="INTP 유형 이미지">
+        <img src="images/intp.png" alt="INTP 유형 이미지">
       </div>
       
       <h1 class="result-title">논리적 탐구형 부모 (INTP)</h1>
@@ -1052,7 +1052,7 @@ function showENTPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/entp.jpg" alt="ENTP 유형 이미지">
+        <img src="images/entp.png" alt="ENTP 유형 이미지">
       </div>
       
       <h1 class="result-title">창의적 도전형 부모 (ENTP)</h1>
@@ -1132,7 +1132,7 @@ function showENTJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/entj.jpg" alt="ENTJ 유형 이미지">
+        <img src="images/entj.png" alt="ENTJ 유형 이미지">
       </div>
       
       <h1 class="result-title">목표 지향형 부모 (ENTJ)</h1>
@@ -1212,7 +1212,7 @@ function showINFJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/infj.jpg" alt="INFJ 유형 이미지">
+        <img src="images/infj.png" alt="INFJ 유형 이미지">
       </div>
       
       <h1 class="result-title">이상적 통찰형 부모 (INFJ)</h1>
@@ -1293,7 +1293,7 @@ function showENFJResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/enfj.jpg" alt="ENFJ 유형 이미지">
+        <img src="images/enfj.png" alt="ENFJ 유형 이미지">
       </div>
       
       <h1 class="result-title">따뜻한 지도자형 부모 (ENFJ)</h1>
@@ -1373,7 +1373,7 @@ function showISTPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/istp.jpg" alt="ISTP 유형 이미지">
+        <img src="images/istp.png" alt="ISTP 유형 이미지">
       </div>
       
       <h1 class="result-title">실용적 자유형 부모 (ISTP)</h1>
@@ -1453,7 +1453,7 @@ function showESTPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/estp.jpg" alt="ESTP 유형 이미지">
+        <img src="images/estp.png" alt="ESTP 유형 이미지">
       </div>
       
       <h1 class="result-title">활동적 모험형 부모 (ESTP)</h1>
@@ -1533,7 +1533,7 @@ function showISFPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/isfp.jpg" alt="ISFP 유형 이미지">
+        <img src="images/isfp.png" alt="ISFP 유형 이미지">
       </div>
       
       <h1 class="result-title">감성적 보호형 부모 (ISFP)</h1>
@@ -1613,7 +1613,7 @@ function showESFPResult() {
   const resultContent = `
     <div class="result-container">
       <div class="result-image">
-        <img src="images/esfp.jpg" alt="ESFP 유형 이미지">
+        <img src="images/esfp.png" alt="ESFP 유형 이미지">
       </div>
       
       <h1 class="result-title">즐거운 격려형 부모 (ESFP)</h1>
