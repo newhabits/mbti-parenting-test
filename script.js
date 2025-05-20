@@ -401,9 +401,6 @@ function checkSharedResult() {
 function showINTJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/intj.png" alt="INTJ 유형 이미지">
-      </div>
       
       <h1 class="result-title">전략적 비전형 부모 (INTJ)</h1>
       <div class="result-subtitle">내일을 준비하며 오늘을 살아가는 사람</div>
@@ -481,9 +478,6 @@ function showINTJResult() {
 function showISTJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/istj.png" alt="ISTJ 유형 이미지">
-      </div>
       
       <h1 class="result-title">체계적 계획형 부모 (ISTJ)</h1>
       <div class="result-subtitle">조용한 단단함으로 지켜내는 사람</div>
@@ -561,9 +555,6 @@ function showISTJResult() {
 function showESTJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/estj.png" alt="ESTJ 유형 이미지">
-      </div>
       
       <h1 class="result-title">체계적 실행형 부모 (ESTJ)</h1>
       <div class="result-subtitle">명확한 원칙으로 아이를 이끄는 사람</div>
@@ -641,10 +632,7 @@ function showESTJResult() {
 function showISFJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/isfj.png" alt="ISFJ 유형 이미지">
-      </div>
-      
+   
       <h1 class="result-title">섬세한 보호형 부모 (ISFJ)</h1>
       <div class="result-subtitle">아이의 모든 순간을 지키는 사람</div>
       
@@ -721,9 +709,6 @@ function showISFJResult() {
 function showESFJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/esfj.png" alt="ESFJ 유형 이미지">
-      </div>
       
       <h1 class="result-title">헌신적 돌봄형 부모 (ESFJ)</h1>
       <div class="result-subtitle">아이의 행복을 위해 헌신하는 사람</div>
@@ -811,9 +796,6 @@ function showESFJResult() {
 function showENFPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/enfp.png" alt="ENFP 유형 이미지">
-      </div>
       
       <h1 class="result-title">열정적 영감형 부모 (ENFP)</h1>
       <div class="result-subtitle">아이와 함께 성장하는 모험가</div>
@@ -891,9 +873,6 @@ function showENFPResult() {
 function showINFPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/infp.png" alt="INFP 유형 이미지">
-      </div>
       
       <h1 class="result-title">창의적 자유형 부모 (INFP)</h1>
       <div class="result-subtitle">내면의 깊이로 아이를 바라보는 사람</div>
@@ -971,9 +950,6 @@ function showINFPResult() {
 function showINTPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/intp.png" alt="INTP 유형 이미지">
-      </div>
       
       <h1 class="result-title">논리적 탐구형 부모 (INTP)</h1>
       <div class="result-subtitle">호기심으로 세상을 열어주는 사람</div>
@@ -1051,9 +1027,6 @@ function showINTPResult() {
 function showENTPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/entp.png" alt="ENTP 유형 이미지">
-      </div>
       
       <h1 class="result-title">창의적 도전형 부모 (ENTP)</h1>
       <div class="result-subtitle">가능성의 세계로 아이를 이끄는 사람</div>
@@ -1131,9 +1104,6 @@ function showENTPResult() {
 function showENTJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/entj.png" alt="ENTJ 유형 이미지">
-      </div>
       
       <h1 class="result-title">목표 지향형 부모 (ENTJ)</h1>
       <div class="result-subtitle">아이의 잠재력을 이끌어내는 리더</div>
@@ -1211,9 +1181,6 @@ function showENTJResult() {
 function showINFJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/infj.png" alt="INFJ 유형 이미지">
-      </div>
       
       <h1 class="result-title">이상적 통찰형 부모 (INFJ)</h1>
       <div class="result-subtitle">아이의 내면을 깊이 이해하는 사람</div>
@@ -1292,9 +1259,6 @@ function showINFJResult() {
 function showENFJResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/enfj.png" alt="ENFJ 유형 이미지">
-      </div>
       
       <h1 class="result-title">따뜻한 지도자형 부모 (ENFJ)</h1>
       <div class="result-subtitle">아이의 잠재력을 꽃피우는 사람</div>
@@ -1372,10 +1336,7 @@ function showENFJResult() {
 function showISTPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/istp.png" alt="ISTP 유형 이미지">
-      </div>
-      
+     
       <h1 class="result-title">실용적 자유형 부모 (ISTP)</h1>
       <div class="result-subtitle">아이에게 문제 해결력을 가르치는 사람</div>
       
@@ -1452,9 +1413,6 @@ function showISTPResult() {
 function showESTPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/estp.png" alt="ESTP 유형 이미지">
-      </div>
       
       <h1 class="result-title">활동적 모험형 부모 (ESTP)</h1>
       <div class="result-subtitle">아이에게 세상을 경험하게 하는 사람</div>
@@ -1532,9 +1490,6 @@ function showESTPResult() {
 function showISFPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/isfp.png" alt="ISFP 유형 이미지">
-      </div>
       
       <h1 class="result-title">감성적 보호형 부모 (ISFP)</h1>
       <div class="result-subtitle">아이의 세계를 아름답게 그려주는 사람</div>
@@ -1612,9 +1567,6 @@ function showISFPResult() {
 function showESFPResult() {
   const resultContent = `
     <div class="result-container">
-      <div class="result-image">
-        <img src="images/esfp.png" alt="ESFP 유형 이미지">
-      </div>
       
       <h1 class="result-title">즐거운 격려형 부모 (ESFP)</h1>
       <div class="result-subtitle">아이에게 삶의 기쁨을 알려주는 사람</div>
@@ -1740,9 +1692,6 @@ function checkSharedResult() {
       // 인트로 화면 숨기고 결과 화면 표시
       hideAllContainers();
       document.getElementById('result-container').style.display = 'block';
-      
-      // 결과 표시
-      showPersonalityResult(mbtiType);
       
       // 공유된 결과임을 알리는 메시지 추가
       const resultContent = document.getElementById('result-content');
