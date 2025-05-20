@@ -246,14 +246,22 @@ function showResult() {
 // 모든 유형에 대한 메인 컨트롤 함수
 function showPersonalityResult(type) {
   const resultContainer = document.getElementById('result-container');
-  const resultHeader = document.createElement('div');
-  resultHeader.className = 'result-image';
-  resultHeader.innerHTML = `<img src="images/${type.toLowerCase()}.png" alt="${type} 유형 이미지">`;
   
-  // 기존 내용을 비우고 새 이미지 추가
+  // 이미지용 별도 컨테이너 확인 및 생성
+  let imageContainer = document.getElementById('result-type-image');
+  if (!imageContainer) {
+    imageContainer = document.createElement('div');
+    imageContainer.id = 'result-type-image';
+    resultContainer.insertBefore(imageContainer, document.getElementById('result-content'));
+  }
+  
+  // 이미지 설정
+  imageContainer.innerHTML = `<div class="result-image"><img src="images/${type.toLowerCase()}.png" alt="${type} 유형 이미지"></div>`;
+  
+  // 기존 내용 비우기
   document.getElementById('result-content').innerHTML = '';
-  resultContainer.insertBefore(resultHeader, document.getElementById('result-content'));
   
+  // 메타태그 업데이트 및 결과 표시
   updateMetaTags(type);
 
   switch(type) {
