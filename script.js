@@ -405,75 +405,106 @@ function checkSharedResult() {
     }
   }
 }
-// INTJ 유형 결과 페이지
-function showINTJResult() {
+}
+
+// ISTP 유형 결과 페이지
+function showISTPResult() {
   const resultContent = `
     <div class="result-container">
-      
-      <h1 class="result-title">전략적 비전형 부모 (INTJ)</h1>
-      <div class="result-subtitle">내일을 준비하며 오늘을 살아가는 사람</div>
+      <h1 class="result-title">실용적 자유형 부모 (ISTP)</h1>
+      <div class="result-subtitle">아이에게 문제 해결력을 가르치는 사람</div>
       
       <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이의 성장을 위한 장기적 비전을 가진 전략적인 부모입니다.</strong> 자녀가 독립적이고 논리적인 사고를 발달시키도록 돕는 것을 중요시합니다. 당신의 깊은 통찰력은 자녀에게 <strong>지적 성장의 든든한 길잡이</strong>가 됩니다.</p>
-        <p>때로는 완벽을 추구하는 마음에 "이 방식이 아이에게 최선일까?" 하고 고민하기도 합니다.</p>
+        <p class="essence-text"><strong>당신은 아이에게 세상을 스스로 탐색하는 방법을 알려주는 실용적인 부모입니다.</strong> 문제 해결력과 독립심을 키워주며, 불필요한 규칙보다 본질에 집중합니다. 당신의 침착하고 유연한 대응은 아이에게 <strong>실용적 지혜와 적응력</strong>을 가르칩니다.</p>
+        <p>때로는 자유를 중시하는 성향으로 "아이에게 필요한 구조와 감정적 안정감을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
       </section>
       
       <section class="inner-strength-section">
         <h2>당신이어서 좋은 점 </h2>
         <ul>
-          <li>미래를 내다보는 선견지명</li>
-          <li>복잡한 문제도 해결하는 지혜</li>
-          <li>아이의 자립심을 키우는 인내</li>
-          <li>흔들리지 않는 내적 확신</li>
+          <li>위기에도 침착함을 유지하는 평정심</li>
+          <li>문제의 핵심을 꿰뚫는 통찰력</li>
+          <li>실용적인 해결책을 찾는 지혜</li>
+          <li>행동으로 보여주는 진정한 사랑</li>
         </ul>
       </section>
-      
+    
       <section class="growth-section">
         <h2>더 발전시키면 좋을 점</h2>
         <ul>
-          <li><strong>감정적 연결:</strong> 논리적 사고와 함께 감정적 유대감도 소중히 여겨보세요</li>
-          <li><strong>유연성 발휘:</strong> 계획이 틀어질 때도 적응하고 순간을 즐기는 여유를 가져보세요</li>
-          <li><strong>자기 기대치 조정:</strong> 완벽함보다는 '충분히 좋은 부모'가 되는 것에 의미를 두세요</li>
+          <li><strong>감정적 연결:</strong> 행동과 함께 언어로도 사랑과 지지를 표현해보세요</li>
+          <li><strong>일상 구조화:</strong> 자유로움과 함께 예측 가능한 일상 패턴의 안정감도 중요합니다</li>
+          <li><strong>미래 계획:</strong> 현재에 충실하면서도 장기적 성장을 위한 계획도 고려해보세요</li>
         </ul>
       </section>
       
       <section class="encouragement-section">
         <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 깊은 통찰력이, 아이에게는 인생의 나침반이 되어줍니다."</p>
+        <p class="quote">"당신의 침착함과 실용적 지혜가, 아이에게는 어떤 어려움도 극복할 수 있는 자신감이 됩니다."</p>
       </section>
       
       <section class="routine-section">
         <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>하루 10분, 계획 없이 아이와 함께하는 시간을 가져보기.</strong> 즉흥적인 순간이 주는 기쁨을 경험해보세요.</li>
-          <li>매일 잠들기 전, 오늘 아이와 함께한 순간 중 감사한 점 하나를 생각해보세요.</li>
+          <li><strong>매일 5분, 아이와 감정을 나누는 대화 시간 갖기.</strong> "오늘 어떤 기분이었어?" 같은 간단한 질문으로 시작해보세요.</li>
+          <li>주말마다 아이와 함께하는 소소한 가족 의식을 하나 정해 꾸준히 실천해보세요.</li>
         </ul>
       </section>
 
       <section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ENFP, ENTP 유형의 배우자는 INTJ의 깊은 생각에 새로운 관점과 에너지를 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ESFJ, ISFJ 유형과는 소통 방식과 가치관 차이로 오해가 생길 수 있습니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 감정과 논리를 균형 있게 아이에게 보여주세요. 배우자가 표현하는 감정적 교감의 중요성을 인정하고, 당신의 장기적 계획과 비전을 명확히 공유하세요.</li>
-  </ul>
-</section>
-
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ESFJ, ESTJ 유형의 배우자는 ISTP의 실용적 접근에 구조와 감정적 안정감을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ENFJ, INFJ 유형과는 현실적 접근과 이상적 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 실용적 문제 해결과 함께 감정적 연결의 중요성도 인정하세요. 배우자의 감성적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
+      
       <section class="illustration-section">
         <h2>당신의 하루를 위한 일러스트</h2>
         <div class="illustration-container">
           <div class="illustration-image">
-            <img src="images/intj-illustration.jpg" alt="INTJ 일러스트" id="type-illustration">
+            <img src="images/istp-illustration.jpg" alt="ISTP 일러스트" id="type-illustration">
           </div>
-          <p class="illustrated-quote">"높이 나는 독수리처럼, 당신의 시선은 언제나 먼 미래를 바라봅니다."</p>
+          <p class="illustrated-quote">"단단한 바위처럼, 당신은 어떤 상황에서도 아이에게 실용적인 지혜를 전합니다."</p>
         </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 전략적 비전형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        <h2>✨ 실용적 자유형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>DIY 도구세트</h3>
+              <p>직접 만들고 수리하는 실용 기술 교육용</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">준비중</p>
+              </div>
+              <a href="#" target="_blank" class="item-link" style="background-color: #ccc;">준비중</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>멀티툴/만능도구</h3>
+              <p>다양한 상황에 대비하는 실용적 도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXU8" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0tEe" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>조립형 장난감</h3>
+              <p>손기능과 문제해결 능력 개발용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXXj" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0ufN" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
@@ -481,12 +512,11 @@ function showINTJResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
-    
-// ISTJ 유형 결과 페이지 콘텐츠
+
+// ISTJ 유형 결과 페이지
 function showISTJResult() {
   const resultContent = `
     <div class="result-container">
-      
       <h1 class="result-title">체계적 계획형 부모 (ISTJ)</h1>
       <div class="result-subtitle">조용한 단단함으로 지켜내는 사람</div>
       
@@ -527,30 +557,166 @@ function showISTJResult() {
         </ul>
       </section>
 
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ESFJ, ESTJ 유형의 배우자는 ISTJ의 안정감과 책임감을 공유하며 실용적인 가정을 꾸려갑니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ENFP, INFP 유형과는 구조적 접근과 자유로운 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 때로는 계획에서 벗어나 즉흥적인 순간을 받아들이세요. 배우자가 제안하는 새로운 방식을 시도해보고, 가족 규칙에 대해 함께 대화하는 시간을 가지세요.</li>
-  </ul>
-</section>
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ESFJ, ESTJ 유형의 배우자는 ISTJ의 안정감과 책임감을 공유하며 실용적인 가정을 꾸려갑니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ENFP, INFP 유형과는 구조적 접근과 자유로운 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 때로는 계획에서 벗어나 즉흥적인 순간을 받아들이세요. 배우자가 제안하는 새로운 방식을 시도해보고, 가족 규칙에 대해 함께 대화하는 시간을 가지세요.</li>
+        </ul>
+      </section>
       
       <section class="illustration-section">
-    <h2>당신의 하루를 위한 일러스트</h2>
-    <div class="illustration-container">
-      <div class="illustration-placeholder">
-        <p class="coming-soon-text">곧 여기에 특별한 일러스트가 추가될 예정입니다</p>
-      </div>
-      <p class="illustrated-quote">"세심히 짜여진 하루 속에서, 가끔은 빈칸도 사랑이 된다."</p>
-    </div>
-  </section>
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-placeholder">
+            <p class="coming-soon-text">곧 여기에 특별한 일러스트가 추가될 예정입니다</p>
+          </div>
+          <p class="illustrated-quote">"세심히 짜여진 하루 속에서, 가끔은 빈칸도 사랑이 된다."</p>
+        </div>
+      </section>
       
       <section class="items-section">
-        <h2>✨ 체계적 계획형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        <h2>✨ 체계적 계획형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>교육용 달력/플래너</h3>
+              <p>체계적인 교육 계획 수립용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqX09" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0vfY" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>품질 좋은 기본 용품</h3>
+              <p>오래 사용할 수 있는 내구성 있는 제품</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqX7w" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0wL0" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>전통 학습교구</h3>
+              <p>검증된 방식의 기초 학습 도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqX8W" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0w6V" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+        </div>
+      </section>
+    </div>
+  `;
+  
+  document.getElementById('result-content').innerHTML = resultContent;
+}}
+
+// ESTP 유형 결과 페이지
+function showESTPResult() {
+  const resultContent = `
+    <div class="result-container">
+      <h1 class="result-title">활동적 모험형 부모 (ESTP)</h1>
+      <div class="result-subtitle">아이에게 세상을 경험하게 하는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이와 함께 세상을 적극적으로 탐험하는 활력 넘치는 부모입니다.</strong> 실제 경험을 통한 배움을 중요시하며, 자녀가 주변 환경과 적극적으로 상호작용하도록 격려합니다. 당신의 현실적인 문제 해결 능력은 아이에게 <strong>실용적인 대처 기술과 모험심</strong>을 길러줍니다.</p>
+        <p>때로는 순간의 즐거움에 집중하다 보니 "장기적인 감정적 연결과 일관성을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신이어서 좋은 점 </h2>
+        <ul>
+          <li>어떤 상황에서도 적응하는 유연성</li>
+          <li>위기에 빠르게 대응하는 임기응변</li>
+          <li>삶을 즐기는 긍정적인 에너지</li>
+          <li>현실적인 문제를 해결하는 능력</li>
+        </ul>
+      </section>
+      
+      <section class="growth-section">
+        <h2>더 발전시키면 좋을 점</h2>
+        <ul>
+          <li><strong>정서적 연결 강화:</strong> 활동과 재미 외에도 감정을 나누는 대화의 시간도 중요합니다</li>
+          <li><strong>장기적 계획:</strong> 현재의 즐거움과 함께 미래를 위한 준비도 함께 고려해보세요</li>
+          <li><strong>일관된 구조 제공:</strong> 자유로운 탐험과 함께 예측 가능한 일상의 안정감도 필요합니다</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 모험심과 활력이, 아이에게는 세상을 두려움 없이 탐험할 용기가 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>매일 10분, 아이와 차분히 대화하는 시간 갖기.</strong> 활동적인 시간 외에도 감정과 생각을 나누는 조용한 순간을 만들어보세요.</li>
+          <li>일주일에 한 번, 가족 일정을 함께 계획하고 앞으로의 중요한 활동들을 아이와 공유해보세요.</li>
+        </ul>
+      </section>
+
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESTP의 활동적 에너지에 안정감과 지속성을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> INFJ, INTJ 유형과는 즉흥성과 계획성 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 즉각적인 경험과 함께 장기적 계획의 중요성도 인정하세요. 배우자의 체계적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
+      
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/estp-illustration.jpg" alt="ESTP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"역동적인 강물처럼, 당신의 에너지는 아이에게 삶의 모험을 선사합니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 활동적 모험형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>아웃도어 장비</h3>
+              <p>즉석에서 떠나는 야외활동용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXze" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0mod" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>액션캠/카메라</h3>
+              <p>순간순간의 재미있는 모습 기록용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXBc" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0nJC" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>빠른 간식/편의식품</h3>
+              <p>바쁜 일상 속 간편한 식사 해결용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXDh" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0oo1" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
@@ -563,7 +729,6 @@ function showISTJResult() {
 function showESTJResult() {
   const resultContent = `
     <div class="result-container">
-      
       <h1 class="result-title">체계적 실행형 부모 (ESTJ)</h1>
       <div class="result-subtitle">명확한 원칙으로 아이를 이끄는 사람</div>
       
@@ -604,14 +769,14 @@ function showESTJResult() {
         </ul>
       </section>
 
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESTJ의 체계적인 접근을 지지하고 안정된 가정 환경을 함께 만들어갑니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> INFP, ENFP 유형과는 구조와 자유에 대한 다른 관점으로 인해 갈등이 생길 수 있습니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 감정적 측면도 논리만큼 중요하다는 것을 인정하세요. 결정을 내릴 때 배우자의 직관과 감정적 통찰도 가치 있게 여기고, 때로는 계획에서 벗어나는 유연성을 보여주세요.</li>
-  </ul>
-</section>
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESTJ의 체계적인 접근을 지지하고 안정된 가정 환경을 함께 만들어갑니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> INFP, ENFP 유형과는 구조와 자유에 대한 다른 관점으로 인해 갈등이 생길 수 있습니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 감정적 측면도 논리만큼 중요하다는 것을 인정하세요. 결정을 내릴 때 배우자의 직관과 감정적 통찰도 가치 있게 여기고, 때로는 계획에서 벗어나는 유연성을 보여주세요.</li>
+        </ul>
+      </section>
 
       <section class="illustration-section">
         <h2>당신의 하루를 위한 일러스트</h2>
@@ -619,15 +784,151 @@ function showESTJResult() {
           <div class="illustration-image">
             <img src="images/estj-illustration.jpg" alt="ESTJ 일러스트" id="type-illustration">
           </div>
-          <p class="illustrated-quote">"단단한 기둥처럼, 당신의 원칙은 아이에게 흔들리지 않는, 안전한 세상을 만듭니다."</p>
+          <p class="illustrated-quote">"단단한 기둥처럼, 당신의 원칙은 아이에게 흔들리지 않는 안전한 세상을 만듭니다."</p>
         </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 체계적 실행형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        <h2>✨ 체계적 실행형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>가계부/가정관리 도구</h3>
+              <p>효율적인 가정 운영을 위한 관리 용품</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXEy" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0oPD" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>교육스케줄러</h3>
+              <p>아이의 학습 및 활동 일정 관리용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXGi" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0pmB" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>생활습관 차트</h3>
+              <p>규칙적인 생활패턴 형성을 위한 도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXG7" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0pFo" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+        </div>
+      </section>
+    </div>
+  `;
+  
+  document.getElementById('result-content').innerHTML = resultContent;
+}
+
+// ISFP 유형 결과 페이지
+function showISFPResult() {
+  const resultContent = `
+    <div class="result-container">
+      <h1 class="result-title">감성적 보호형 부모 (ISFP)</h1>
+      <div class="result-subtitle">아이의 세계를 아름답게 그려주는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 개성과 감성을 소중히 여기는 따뜻한 부모입니다.</strong> 작은 순간의 기쁨을 함께 나누며, 자녀가 자신만의 방식으로 세상을 경험하도록 격려합니다. 당신의 수용적인 태도는 아이에게 <strong>안전한 정서적 안식처</strong>가 됩니다.</p>
+        <p>때로는 균형을 찾는 과정에서 "아이에게 필요한 구조와 지침을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신이어서 좋은 점 </h2>
+        <ul>
+          <li>순간의 아름다움을 발견하는 섬세함</li>
+          <li>있는 그대로 받아들이는 따뜻한 수용력</li>
+          <li>행동으로 사랑을 표현하는 진정성</li>
+          <li>자신과 타인에게 진실한 정직함</li>
+        </ul>
+      </section>
+      
+      <section class="growth-section">
+        <h2>더 발전시키면 좋을 점</h2>
+        <ul>
+          <li><strong>일상 구조화:</strong> 자유로운 표현과 함께 예측 가능한 일과의 안정감도 중요합니다</li>
+          <li><strong>명확한 경계 설정:</strong> 조화를 중시하면서도 일관된 규칙과 기대치를 세워보세요</li>
+          <li><strong>장기적 계획:</strong> 현재의 순간을 즐기면서도 미래를 위한 준비도 함께 해보세요</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 부드러운 감성이, 아이에게는 세상에서 가장 따뜻한 안식처예요."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>매일 같은 시간에 반복하는 한 가지 의식 만들기.</strong> 예를 들어, 저녁 식사 전 감사한 일 나누기 같은 간단하지만 의미 있는 시간을 가져보세요.</li>
+          <li>주 1회, 가족 캘린더를 함께 확인하며 앞으로의 일정과 계획을 아이와 공유해보세요.</li>
+        </ul>
+      </section>
+
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ENFJ, ESFJ 유형의 배우자는 ISFP의 감성적 깊이에 방향성과 사회적 연결을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ENTJ, INTJ 유형과는 즉흥성과 계획성 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 자유로운 표현과 함께 일관된 구조의 중요성도 인정하세요. 배우자의 체계적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
+      
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/isfp-illustration.jpg" alt="ISFP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"봄날의 꽃처럼, 당신의 섬세한 마음은 아이의 세상을 아름답게 물들입니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 감성적 보호형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>자연친화 교구/가드닝</h3>
+              <p>자연과 함께하는 교육 활동용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXHw" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0pXI" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>힐링 음악/명상음악</h3>
+              <p>평온한 가정 분위기 조성용</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">준비중</p>
+              </div>
+              <a href="#" target="_blank" class="item-link" style="background-color: #ccc;">준비중</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>수공예품/핸드메이드 키트</h3>
+              <p>손으로 직접 만드는 창작 활동용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXJq" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0quq" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
@@ -640,7 +941,6 @@ function showESTJResult() {
 function showISFJResult() {
   const resultContent = `
     <div class="result-container">
-   
       <h1 class="result-title">섬세한 보호형 부모 (ISFJ)</h1>
       <div class="result-subtitle">아이의 모든 순간을 지키는 사람</div>
       
@@ -682,13 +982,13 @@ function showISFJResult() {
       </section>
 
       <section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ESFJ, ESTJ 유형의 배우자는 ISFJ의 돌봄과 헌신을 이해하고 안정적인 가족 환경을 함께 조성합니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ENTP, INTP 유형과는 실용적 접근과 개념적 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 모든 것을 혼자 책임지려 하지 말고 배우자와 책임을 나누세요. 아이의 독립성을 기르기 위해 때로는 한 발 물러서는 법을 배우고, 자신의 필요도 표현하세요.</li>
-  </ul>
-</section>
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ESFJ, ESTJ 유형의 배우자는 ISFJ의 돌봄과 헌신을 이해하고 안정적인 가족 환경을 함께 조성합니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ENTP, INTP 유형과는 실용적 접근과 개념적 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 모든 것을 혼자 책임지려 하지 말고 배우자와 책임을 나누세요. 아이의 독립성을 기르기 위해 때로는 한 발 물러서는 법을 배우고, 자신의 필요도 표현하세요.</li>
+        </ul>
+      </section>
 
       <section class="illustration-section">
         <h2>당신의 하루를 위한 일러스트</h2>
@@ -701,110 +1001,50 @@ function showISFJResult() {
       </section>
       
       <section class="items-section">
-        <h2>✨ 섬세한 보호형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
-}
-    
-// ESFJ 유형 결과 페이지
-function showESFJResult() {
-  const resultContent = `
-    <div class="result-container">
-      
-      <h1 class="result-title">헌신적 돌봄형 부모 (ESFJ)</h1>
-      <div class="result-subtitle">아이의 행복을 위해 헌신하는 사람</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이의 필요를 세심하게 살피는 따뜻하고 헌신적인 부모입니다.</strong> 가족의 화목과 조화를 위해 노력하며, 자녀가 사회적 가치와 전통을 배우도록 도와줍니다. 당신의 변함없는 지지는 아이에게 <strong>안정감과 소속감</strong>을 선물합니다.</p>
-        <p>때로는 너무 많은 것을 책임지려다 보니 "내가 지나치게 개입하고 있진 않을까?" 하는 고민이 들기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점 </h2>
-        <ul>
-          <li>가족을 따뜻하게 보살피는 헌신</li>
-          <li>타인의 필요를 알아채는 섬세함</li>
-          <li>안정된 환경을 조성하는 능력</li>
-          <li>전통과 가치를 소중히 여기는 마음</li>
-        </ul>
-      </section>
-      
-      <section class="strengths-section">
-        <h2>당신의 강점</h2>
-        <ul>
-          <li><strong>헌신적 보살핌:</strong> 아이의 모든 필요를 세심하게 챙기고 지원합니다</li>
-          <li><strong>안정적 환경 조성:</strong> 편안하고 질서 있는 가정 분위기를 만듭니다</li>
-          <li><strong>사회적 가치 전달:</strong> 아이가 타인과 조화롭게 지내는 법을 가르칩니다</li>
-        </ul>
-      </section>
-      
-      <section class="growth-section">
-        <h2>더 발전시키면 좋을 점</h2>
-        <ul>
-          <li><strong>자율성 존중:</strong> 과도한 개입 대신 아이가 스스로 결정할 공간을 허용해보세요</li>
-          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
-          <li><strong>변화 수용:</strong> 전통적 방식과 함께 새로운 접근법도 시도해보세요</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 헌신적인 사랑이, 아이에게는 세상에서 가장 안전한 둥지가 됩니다."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>매일 15분, 오직 자신만을 위한 시간 가지기.</strong> 끊임없이 타인을 돌보는 당신, 스스로를 위한 시간도 필요합니다.</li>
-          <li>아이가 작은 실수를 했을 때, 먼저 해결해주기보다 "네가 어떻게 하고 싶니?"라고 물어보는 연습을 해보세요.</li>
-        </ul>
-      </section>
-
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESFJ의 사회적 가치와 전통을 존중하며 안정된 가정을 함께 만들어갑니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> INTP, ISTP 유형과는 감정 중심과 논리 중심의 접근 방식 차이로 오해가 생길 수 있습니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 배우자의 분석적 관점도 아이 양육에 도움이 된다는 것을 인정하세요. 모든 가족 문제를 해결하려 하기보다 배우자와 책임을 나누고, 때로는 아이와 배우자에게 독립적인 공간을 주세요.</li>
-  </ul>
-</section>
-      
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/esfj-illustration.jpg" alt="ESFJ 일러스트" id="type-illustration">
+        <h2>✨ 섬세한 보호형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>건강 관리용품</h3>
+              <p>아이 건강 체크와 관리를 위한 용품</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">준비중</p>
+              </div>
+              <a href="#" target="_blank" class="item-link" style="background-color: #ccc;">준비중</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>전통 교육교구</h3>
+              <p>좋은 가치와 예의를 가르치는 교육 도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXOW" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0rYn" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>보온/보냉용품</h3>
+              <p>아이의 편안함을 챙기는 실용적 용품</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXQP" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0swc" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
           </div>
-          <p class="illustrated-quote">"따뜻한 둥지처럼, 당신의 헌신은 아이에게 세상에서 가장 안전한 장소가 됩니다."</p>
         </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 헌신적 돌봄형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
   `;
   
   document.getElementById('result-content').innerHTML = resultContent;
-}
-
-
-// ENFP 유형 결과 페이지
+}// ENFP 유형 결과 페이지
 function showENFPResult() {
   const resultContent = `
     <div class="result-container">
-      
       <h1 class="result-title">열정적 영감형 부모 (ENFP)</h1>
       <div class="result-subtitle">아이와 함께 성장하는 모험가</div>
       
@@ -820,15 +1060,6 @@ function showENFPResult() {
           <li>모든 가능성을 보는 긍정적 시선</li>
           <li>아이의 마음을 열어주는 공감 능력</li>
           <li>규칙보다 중요한 가치를 아는 지혜</li>
-        </ul>
-      </section>
-      
-      <section class="strengths-section">
-        <h2>당신의 강점</h2>
-        <ul>
-          <li><strong>창의적 접근:</strong> 육아에 즐거움과 새로운 관점을 더합니다</li>
-          <li><strong>진정한 공감:</strong> 아이의 감정과 경험을 깊이 이해하고 수용합니다</li>
-          <li><strong>자유로운 표현 격려:</strong> 자녀가 자신만의 방식으로 자신을 표현하도록 지원합니다</li>
         </ul>
       </section>
       
@@ -865,10 +1096,40 @@ function showENFPResult() {
       </section>
       
       <section class="items-section">
-        <h2>✨ 열정적 영감형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        <h2>✨ 열정적 영감형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>아이디어 노트/플래너</h3>
+              <p>창의적 활동 계획과 아이와의 추억 기록용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqV05" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ1iO" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>DIY/만들기 키트</h3>
+              <p>아이와 함께할 수 있는 창작 활동 세트</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqV3O" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ2a6" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>보드게임/가족게임</h3>
+              <p>소통과 재미를 동시에 챙기는 가족 시간용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqV55" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ2Ot" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
@@ -876,12 +1137,329 @@ function showENFPResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
-    
-// INFP 유형 결과 페이지 콘텐츠
+
+// ENFJ 유형 결과 페이지
+function showENFJResult() {
+  const resultContent = `
+    <div class="result-container">
+      <h1 class="result-title">따뜻한 지도자형 부모 (ENFJ)</h1>
+      <div class="result-subtitle">아이의 잠재력을 꽃피우는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 성장과 행복을 위해 열정적으로 헌신하는 카리스마 있는 부모입니다.</strong> 자녀의 잠재력을 알아보고 최선의 길로 인도하며, 따뜻한 지지와 격려를 아끼지 않습니다. 당신의 진정성과 열정은 아이에게 <strong>긍정적 영향력과 자신감</strong>을 심어줍니다.</p>
+        <p>때로는 타인을 위해 너무 많은 것을 주다 보니 "나 자신은 충분히 돌보고 있을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신이어서 좋은 점</h2>
+        <ul>
+          <li>사람의 마음을 움직이는 카리스마</li>
+          <li>타인의 필요를 알아채는 민감성</li>
+          <li>변함없이 지지하는 따뜻함</li>
+          <li>긍정적인 변화를 이끄는 영향력</li>
+        </ul>
+      </section>
+      
+      <section class="growth-section">
+        <h2>더 발전시키면 좋을 점</h2>
+        <ul>
+          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
+          <li><strong>비판적 사고 장려:</strong> 조화와 함께 건강한 의견 차이도 가치 있게 여겨보세요</li>
+          <li><strong>과잉보호 경계:</strong> 아이가 실패와 좌절을 통해 배울 수 있는 공간을 허용해보세요</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 따뜻한 지지가, 아이에게는 세상을 바꿀 수 있는 자신감이 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>매일 15분, 온전히 자신만을 위한 시간 확보하기.</strong> 타인을 위해 에너지를 쏟는 당신, 자신을 채우는 시간도 필요합니다.</li>
+          <li>하루에 한 번, 아이에게 "네가 실수해도 괜찮아"라고 말해주는 순간을 의식적으로 만들어보세요.</li>
+        </ul>
+      </section>
+
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> INFP, ISFP 유형의 배우자는 ENFJ의 열정과 카리스마에 깊이와 진정성을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ISTP, INTP 유형과는 감정 중심과 논리 중심의 접근 방식 차이로 오해가 생길 수 있습니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 조화를 중시하는 만큼 건강한 의견 차이의 중요성도 인정하세요. 배우자의 분석적 접근도 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
+      
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/enfj-illustration.jpg" alt="ENFJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"따스한 햇살처럼, 당신의 사랑은 아이의 모든 가능성을 꽃피웁니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 따뜻한 지도자형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>육아서/교육서적</h3>
+              <p>아이 발달과 교육에 대한 전문 지식 습득용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqV7o" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ3bB" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>감정표현 교구/카드</h3>
+              <p>아이의 감정 발달을 돕는 교육 도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWbJ" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ4fi" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>가족 사진액자/앨범</h3>
+              <p>소중한 가족 순간들을 기록하고 전시하는 용품</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWc2" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ4AB" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+        </div>
+      </section>
+    </div>
+  `;
+  
+  document.getElementById('result-content').innerHTML = resultContent;
+}
+
+// ENTP 유형 결과 페이지
+function showENTPResult() {
+  const resultContent = `
+    <div class="result-container">
+      <h1 class="result-title">창의적 도전형 부모 (ENTP)</h1>
+      <div class="result-subtitle">가능성의 세계로 아이를 이끄는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 호기심과 창의력을 자극하는 혁신적인 부모입니다.</strong> 관습에 얽매이지 않고 새로운 아이디어와 경험을 장려하며, 자녀가 다양한 관점에서 세상을 바라보도록 돕습니다. 당신의 지적 활력은 아이에게 <strong>창의적 사고와 도전 정신</strong>을 불어넣습니다.</p>
+        <p>때로는 다음 흥미로운 아이디어에 집중하느라 "지속성과 일관성을 유지하고 있을까?" 하는 의문이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신이어서 좋은 점 </h2>
+        <ul>
+          <li>끝없이 샘솟는 창의력</li>
+          <li>틀을 깨는 독창적 사고</li>
+          <li>모험과 도전을 즐기는 용기</li>
+          <li>아이의 가능성을 믿는 열정</li>
+        </ul>
+      </section>
+      
+      <section class="growth-section">
+        <h2>더 발전시키면 좋을 점</h2>
+        <ul>
+          <li><strong>일관성 유지:</strong> 여러 아이디어 사이에서도 중요한 일상의 구조와 안정감을 제공해보세요</li>
+          <li><strong>감정적 지지:</strong> 지적 탐험만큼 정서적 연결도 소중히 여겨보세요</li>
+          <li><strong>실행력 강화:</strong> 흥미로운 계획을 끝까지 실행하는 노력이 도움됩니다</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 창의적인 에너지가, 아이에게는 무한한 가능성을 보는 눈이 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>매일 5분, 가장 기본적인 루틴 하나를 정해 꾸준히 지키기.</strong> 단순한 일상 습관(예: 같은 시간 식사, 일정한 취침 시간)이 아이에게 주는 안정감을 경험해보세요.</li>
+          <li>새로운 프로젝트를 시작하기 전에, 현재 진행 중인 활동을 마무리하는 시간을 의식적으로 가져보세요.</li>
+        </ul>
+      </section>
+
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> INFJ, INTJ 유형의 배우자는 ENTP의 창의적 사고에 깊이와 일관성을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ISFJ, ESFJ 유형과는 혁신과 전통 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 새로운 아이디어와 함께 일상의 안정성도 아이에게 필요함을 인정하세요. 배우자의 체계적이고 감정적인 접근도 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
+      
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/entp-illustration.jpg" alt="ENTP 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"번개처럼 빛나는 당신의 아이디어는, 아이에게 새로운 세계의 문을 열어줍니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 창의적 도전형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>과학실험키트/STEM 교구</h3>
+              <p>호기심 자극하는 체험형 학습도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWfT" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ5d3" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>여행용품/캠핑용품</h3>
+              <p>아이와의 모험과 새로운 경험을 위한 준비물</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWhM" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ5EV" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>퍼즐/브레인티저 게임</h3>
+              <p>논리적 사고력 개발하는 두뇌 게임</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWle" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ6At" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+        </div>
+      </section>
+    </div>
+  `;
+  
+  document.getElementById('result-content').innerHTML = resultContent;
+}
+
+// ENTJ 유형 결과 페이지
+function showENTJResult() {
+  const resultContent = `
+    <div class="result-container">
+      <h1 class="result-title">목표 지향형 부모 (ENTJ)</h1>
+      <div class="result-subtitle">아이의 잠재력을 이끌어내는 리더</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 성장과 성공을 위해 열정적으로 이끄는 리더십 있는 부모입니다.</strong> 명확한 목표와 기대치를 설정하며, 자녀가 최고의 잠재력을 발휘하도록 격려합니다. 당신의 결단력과 추진력은 아이에게 <strong>자신감과 성취의 길</strong>을 열어줍니다.</p>
+        <p>때로는 높은 기준과 기대치로 인해 "내가 아이에게 너무 많은 것을 요구하고 있나?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신이어서 좋은 점 </h2>
+        <ul>
+          <li>흔들림 없는 리더십</li>
+          <li>효율적으로 문제를 해결하는 능력</li>
+          <li>아이의 잠재력을 보는 통찰력</li>
+          <li>목표를 향해 나아가는 추진력</li>
+        </ul>
+      </section>
+      
+      <section class="growth-section">
+        <h2>더 발전시키면 좋을 점</h2>
+        <ul>
+          <li><strong>감정적 민감성:</strong> 효율성만큼 아이의 감정과 필요도 소중히 여겨보세요</li>
+          <li><strong>인내심 기르기:</strong> 모든 성장 과정에는 시간이 필요하다는 것을 기억하세요</li>
+          <li><strong>유연성 발휘:</strong> 계획대로 되지 않을 때도 적응하는 여유를 가져보세요</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 강한 의지가, 아이에게는 세상을 헤쳐나갈 용기가 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>주 1회, 목표 없이 아이와 즐기는 시간 만들기.</strong> 결과보다 과정을 즐기는 활동(예: 자유롭게 그림 그리기, 공원 산책)을 시도해보세요.</li>
+          <li>매일 저녁 5분간, 아이의 감정과 생각을 판단 없이 들어보는 시간을 가져보세요.</li>
+        </ul>
+      </section>
+
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> INFP, INTP 유형의 배우자는 ENTJ의 목표 지향적 접근에 깊이와 다양한 관점을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ISFP, ESFP 유형과는 효율성과 즉흥성 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 효율성과 성취만큼 감정적 연결과 놀이의 중요성도 인정하세요. 배우자의 감성적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
+      
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/entj-illustration.jpg" alt="ENTJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"높은 산을 오르듯, 당신은 언제나 더 높은 목표를 향해 아이의 손을 잡아줍니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 목표 지향형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>학습 계획표/시간관리 도구</h3>
+              <p>체계적인 일정 관리와 목표 설정용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWmD" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ6V8" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>어린이 경제교육 교구</h3>
+              <p>실용적 생활 기술 교육을 위한 도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWpe" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ7Fs" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>스마트 학습기기/태블릿</h3>
+              <p>효율적인 디지털 학습 환경 구축용</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">준비중</p>
+              </div>
+              <a href="#" target="_blank" class="item-link" style="background-color: #ccc;">준비중</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+        </div>
+      </section>
+    </div>
+  `;
+  
+  document.getElementById('result-content').innerHTML = resultContent;
+}
+
+// INFP 유형 결과 페이지
 function showINFPResult() {
   const resultContent = `
     <div class="result-container">
-      
       <h1 class="result-title">창의적 자유형 부모 (INFP)</h1>
       <div class="result-subtitle">내면의 깊이로 아이를 바라보는 사람</div>
       
@@ -923,13 +1501,13 @@ function showINFPResult() {
       </section>
       
       <section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ENFJ, ENTJ 유형의 배우자는 INFP의 이상과 가치를 존중하면서 방향성을 제시해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ESTJ, ISTJ 유형과는 이상과 현실, 자유와 구조 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 이상적인 양육 비전과 함께 실용적인 일상 구조도 중요하다는 것을 인정하세요. 배우자의 체계적인 접근이 아이에게 안정감을 줄 수 있음을 이해하고, 함께 현실적인 육아 계획을 세워보세요.</li>
-  </ul>
-</section>
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ENFJ, ENTJ 유형의 배우자는 INFP의 이상과 가치를 존중하면서 방향성을 제시해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ESTJ, ISTJ 유형과는 이상과 현실, 자유와 구조 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 이상적인 양육 비전과 함께 실용적인 일상 구조도 중요하다는 것을 인정하세요. 배우자의 체계적인 접근이 아이에게 안정감을 줄 수 있음을 이해하고, 함께 현실적인 육아 계획을 세워보세요.</li>
+        </ul>
+      </section>
 
       <section class="illustration-section">
         <h2>당신의 하루를 위한 일러스트</h2>
@@ -942,10 +1520,40 @@ function showINFPResult() {
       </section>
       
       <section class="items-section">
-        <h2>✨ 창의적 자유형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        <h2>✨ 창의적 자유형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>감성 동화책/그림책</h3>
+              <p>아이의 상상력과 감수성 발달용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWrm" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ8BB" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>아트&크래프트 용품</h3>
+              <p>창의적 표현활동을 위한 미술용품 세트</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWtu" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cvZ9j9" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>디퓨저/아로마</h3>
+              <p>편안하고 따뜻한 가정 분위기 조성용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWw7" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0aqn" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
@@ -953,12 +1561,11 @@ function showINFPResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
-    
+
 // INTP 유형 결과 페이지
 function showINTPResult() {
   const resultContent = `
     <div class="result-container">
-      
       <h1 class="result-title">논리적 탐구형 부모 (INTP)</h1>
       <div class="result-subtitle">호기심으로 세상을 열어주는 사람</div>
       
@@ -999,14 +1606,14 @@ function showINTPResult() {
         </ul>
       </section>
       
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ENTJ, ENTP 유형의 배우자는 INTP의 분석적 사고를 존중하면서 실행력을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ESFJ, ISFJ 유형과는 논리 중심과 감정 중심의 접근 방식 차이로 오해가 생길 수 있습니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 이론적 접근과 함께 감정적 연결도 아이 발달에 중요하다는 것을 인정하세요. 배우자의 감정적 통찰을 존중하고, 함께 체계적이면서도 따뜻한 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ENTJ, ENTP 유형의 배우자는 INTP의 분석적 사고를 존중하면서 실행력을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ESFJ, ISFJ 유형과는 논리 중심과 감정 중심의 접근 방식 차이로 오해가 생길 수 있습니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 이론적 접근과 함께 감정적 연결도 아이 발달에 중요하다는 것을 인정하세요. 배우자의 감정적 통찰을 존중하고, 함께 체계적이면서도 따뜻한 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
 
       <section class="illustration-section">
         <h2>당신의 하루를 위한 일러스트</h2>
@@ -1019,10 +1626,40 @@ function showINTPResult() {
       </section>
       
       <section class="items-section">
-        <h2>✨ 논리적 탐구형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        <h2>✨ 논리적 탐구형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>코딩/프로그래밍 교구</h3>
+              <p>논리적 사고와 문제해결 능력 개발용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWOo" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0gwH" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>백과사전/지식 도서</h3>
+              <p>깊이 있는 학습과 탐구를 위한 참고서</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWPm" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0g5R" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>레고/조립 장난감</h3>
+              <p>창의적 사고와 공간지각 능력 향상용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWQN" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0hJC" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
@@ -1031,538 +1668,104 @@ function showINTPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-// ENTP 유형 결과 페이지
-function showENTPResult() {
+// INTJ 유형 결과 페이지
+function showINTJResult() {
   const resultContent = `
     <div class="result-container">
-      
-      <h1 class="result-title">창의적 도전형 부모 (ENTP)</h1>
-      <div class="result-subtitle">가능성의 세계로 아이를 이끄는 사람</div>
+      <h1 class="result-title">전략적 비전형 부모 (INTJ)</h1>
+      <div class="result-subtitle">내일을 준비하며 오늘을 살아가는 사람</div>
       
       <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이의 호기심과 창의력을 자극하는 혁신적인 부모입니다.</strong> 관습에 얽매이지 않고 새로운 아이디어와 경험을 장려하며, 자녀가 다양한 관점에서 세상을 바라보도록 돕습니다. 당신의 지적 활력은 아이에게 <strong>창의적 사고와 도전 정신</strong>을 불어넣습니다.</p>
-        <p>때로는 다음 흥미로운 아이디어에 집중하느라 "지속성과 일관성을 유지하고 있을까?" 하는 의문이 들기도 합니다.</p>
+        <p class="essence-text"><strong>당신은 아이의 성장을 위한 장기적 비전을 가진 전략적인 부모입니다.</strong> 자녀가 독립적이고 논리적인 사고를 발달시키도록 돕는 것을 중요시합니다. 당신의 깊은 통찰력은 자녀에게 <strong>지적 성장의 든든한 길잡이</strong>가 됩니다.</p>
+        <p>때로는 완벽을 추구하는 마음에 "이 방식이 아이에게 최선일까?" 하고 고민하기도 합니다.</p>
       </section>
       
       <section class="inner-strength-section">
         <h2>당신이어서 좋은 점 </h2>
         <ul>
-          <li>끝없이 샘솟는 창의력</li>
-          <li>틀을 깨는 독창적 사고</li>
-          <li>모험과 도전을 즐기는 용기</li>
-          <li>아이의 가능성을 믿는 열정</li>
+          <li>미래를 내다보는 선견지명</li>
+          <li>복잡한 문제도 해결하는 지혜</li>
+          <li>아이의 자립심을 키우는 인내</li>
+          <li>흔들리지 않는 내적 확신</li>
         </ul>
       </section>
       
       <section class="growth-section">
         <h2>더 발전시키면 좋을 점</h2>
         <ul>
-          <li><strong>일관성 유지:</strong> 여러 아이디어 사이에서도 중요한 일상의 구조와 안정감을 제공해보세요</li>
-          <li><strong>감정적 지지:</strong> 지적 탐험만큼 정서적 연결도 소중히 여겨보세요</li>
-          <li><strong>실행력 강화:</strong> 흥미로운 계획을 끝까지 실행하는 노력이 도움됩니다</li>
+          <li><strong>감정적 연결:</strong> 논리적 사고와 함께 감정적 유대감도 소중히 여겨보세요</li>
+          <li><strong>유연성 발휘:</strong> 계획이 틀어질 때도 적응하고 순간을 즐기는 여유를 가져보세요</li>
+          <li><strong>자기 기대치 조정:</strong> 완벽함보다는 '충분히 좋은 부모'가 되는 것에 의미를 두세요</li>
         </ul>
       </section>
       
       <section class="encouragement-section">
         <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 창의적인 에너지가, 아이에게는 무한한 가능성을 보는 눈이 됩니다."</p>
+        <p class="quote">"당신의 깊은 통찰력이, 아이에게는 인생의 나침반이 되어줍니다."</p>
       </section>
       
       <section class="routine-section">
         <h2>작은 루틴 제안</h2>
         <ul>
-          <li><strong>매일 5분, 가장 기본적인 루틴 하나를 정해 꾸준히 지키기.</strong> 단순한 일상 습관(예: 같은 시간 식사, 일정한 취침 시간)이 아이에게 주는 안정감을 경험해보세요.</li>
-          <li>새로운 프로젝트를 시작하기 전에, 현재 진행 중인 활동을 마무리하는 시간을 의식적으로 가져보세요.</li>
+          <li><strong>하루 10분, 계획 없이 아이와 함께하는 시간을 가져보기.</strong> 즉흥적인 순간이 주는 기쁨을 경험해보세요.</li>
+          <li>매일 잠들기 전, 오늘 아이와 함께한 순간 중 감사한 점 하나를 생각해보세요.</li>
         </ul>
       </section>
 
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> INFJ, INTJ 유형의 배우자는 ENTP의 창의적 사고에 깊이와 일관성을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ISFJ, ESFJ 유형과는 혁신과 전통 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 새로운 아이디어와 함께 일상의 안정성도 아이에게 필요함을 인정하세요. 배우자의 체계적이고 감정적인 접근도 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
-      
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/entp-illustration.jpg" alt="ENTP 일러스트" id="type-illustration">
-          </div>
-          <p class="illustrated-quote">"번개처럼 빛나는 당신의 아이디어는, 아이에게 새로운 세계의 문을 열어줍니다."</p>
-        </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 창의적 도전형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
-}
-
-// ENTJ 유형 결과 페이지
-function showENTJResult() {
-  const resultContent = `
-    <div class="result-container">
-      
-      <h1 class="result-title">목표 지향형 부모 (ENTJ)</h1>
-      <div class="result-subtitle">아이의 잠재력을 이끌어내는 리더</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이의 성장과 성공을 위해 열정적으로 이끄는 리더십 있는 부모입니다.</strong> 명확한 목표와 기대치를 설정하며, 자녀가 최고의 잠재력을 발휘하도록 격려합니다. 당신의 결단력과 추진력은 아이에게 <strong>자신감과 성취의 길</strong>을 열어줍니다.</p>
-        <p>때로는 높은 기준과 기대치로 인해 "내가 아이에게 너무 많은 것을 요구하고 있나?" 하는 고민이 들기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점 </h2>
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
         <ul>
-          <li>흔들림 없는 리더십</li>
-          <li>효율적으로 문제를 해결하는 능력</li>
-          <li>아이의 잠재력을 보는 통찰력</li>
-          <li>목표를 향해 나아가는 추진력</li>
+          <li><strong>잘 맞는 파트너:</strong> ENFP, ENTP 유형의 배우자는 INTJ의 깊은 생각에 새로운 관점과 에너지를 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ESFJ, ISFJ 유형과는 소통 방식과 가치관 차이로 오해가 생길 수 있습니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 감정과 논리를 균형 있게 아이에게 보여주세요. 배우자가 표현하는 감정적 교감의 중요성을 인정하고, 당신의 장기적 계획과 비전을 명확히 공유하세요.</li>
         </ul>
       </section>
-      
-      <section class="growth-section">
-        <h2>더 발전시키면 좋을 점</h2>
-        <ul>
-          <li><strong>감정적 민감성:</strong> 효율성만큼 아이의 감정과 필요도 소중히 여겨보세요</li>
-          <li><strong>인내심 기르기:</strong> 모든 성장 과정에는 시간이 필요하다는 것을 기억하세요</li>
-          <li><strong>유연성 발휘:</strong> 계획대로 되지 않을 때도 적응하는 여유를 가져보세요</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 강한 의지가, 아이에게는 세상을 헤쳐나갈 용기가 됩니다."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>주 1회, 목표 없이 아이와 즐기는 시간 만들기.</strong> 결과보다 과정을 즐기는 활동(예: 자유롭게 그림 그리기, 공원 산책)을 시도해보세요.</li>
-          <li>매일 저녁 5분간, 아이의 감정과 생각을 판단 없이 들어보는 시간을 가져보세요.</li>
-        </ul>
-      </section>
-
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> INFP, INTP 유형의 배우자는 ENTJ의 목표 지향적 접근에 깊이와 다양한 관점을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ISFP, ESFP 유형과는 효율성과 즉흥성 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 효율성과 성취만큼 감정적 연결과 놀이의 중요성도 인정하세요. 배우자의 감성적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
-      
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/entj-illustration.jpg" alt="ENTJ 일러스트" id="type-illustration">
-          </div>
-          <p class="illustrated-quote">"높은 산을 오르듯, 당신은 언제나 더 높은 목표를 향해 아이의 손을 잡아줍니다."</p>
-        </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 목표 지향형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
-}
-
-// INFJ 유형 결과 페이지
-function showINFJResult() {
-  const resultContent = `
-    <div class="result-container">
-      
-      <h1 class="result-title">이상적 통찰형 부모 (INFJ)</h1>
-      <div class="result-subtitle">아이의 내면을 깊이 이해하는 사람</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이의 내면세계를 깊이 이해하는 통찰력 있는 부모입니다.</strong> 자녀의 잠재력과 고유한 가치를 알아보고, 의미 있는 삶으로 인도하고자 합니다. 당신의 직관적 이해력은 아이에게 <strong>영감과 정서적 안정감</strong>을 제공합니다.</p>
-        <p>때로는 높은 이상과 현실 사이에서 "내 기대가 아이에게 부담이 되진 않을까?" 하고 고민하기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점 </h2>
-        <ul>
-          <li>마음을 읽는 듯한 직관력</li>
-          <li>흔들리지 않는 내적 가치관</li>
-          <li>아이의 가능성을 보는 통찰력</li>
-          <li>깊고 의미있는 관계를 만드는 능력</li>
-        </ul>
-      </section>
-
-      <section class="growth-section">
-        <h2>더 발전시키면 좋을 점</h2>
-        <ul>
-          <li><strong>현실적 기대:</strong> 완벽한 이상보다 현실적인 성장 과정을 수용해보세요</li>
-          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
-          <li><strong>유연성 발휘:</strong> 계획이 변경될 때도 적응하는 여유를 가져보세요</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 깊은 이해와 공감이, 아이에게는 가장 안전한 정서적 안식처예요."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>매일 10분, 오직 자신만을 위한 시간 가지기.</strong> 끊임없이 남을 돌보는 당신, 자신을 위한 작은 시간도 필요합니다.</li>
-          <li>아이의 행동에 과도하게 의미를 부여할 때, 잠시 멈추고 "이것은 단순한 아이다움일 수 있다"라고 자신에게 말해보세요.</li>
-        </ul>
-      </section>
-      
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ENFP, ENTP 유형의 배우자는 INFJ의 깊은 통찰에 활력과 새로운 관점을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ESTP, ISTP 유형과는 이상과 현실적 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 완벽한 이상보다 현실적인 성장 과정을 수용하세요. 배우자의 실용적 접근도 존중하고, 함께 이상과 현실이 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
 
       <section class="illustration-section">
         <h2>당신의 하루를 위한 일러스트</h2>
         <div class="illustration-container">
           <div class="illustration-image">
-            <img src="images/infj-illustration.jpg" alt="INFJ 일러스트" id="type-illustration">
+            <img src="images/intj-illustration.jpg" alt="INTJ 일러스트" id="type-illustration">
           </div>
-          <p class="illustrated-quote">"깊은 호수처럼, 당신의 마음은 아이의 모든 것을 담아내고 비춰줍니다."</p>
+          <p class="illustrated-quote">"높이 나는 독수리처럼, 당신의 시선은 언제나 먼 미래를 바라봅니다."</p>
         </div>
       </section>
       
       <section class="items-section">
-        <h2>✨ 이상적 통찰형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
-}
-
-
-// ENFJ 유형 결과 페이지
-function showENFJResult() {
-  const resultContent = `
-    <div class="result-container">
-      
-      <h1 class="result-title">따뜻한 지도자형 부모 (ENFJ)</h1>
-      <div class="result-subtitle">아이의 잠재력을 꽃피우는 사람</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이의 성장과 행복을 위해 열정적으로 헌신하는 카리스마 있는 부모입니다.</strong> 자녀의 잠재력을 알아보고 최선의 길로 인도하며, 따뜻한 지지와 격려를 아끼지 않습니다. 당신의 진정성과 열정은 아이에게 <strong>긍정적 영향력과 자신감</strong>을 심어줍니다.</p>
-        <p>때로는 타인을 위해 너무 많은 것을 주다 보니 "나 자신은 충분히 돌보고 있을까?" 하는 고민이 들기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점</h2>
-        <ul>
-          <li>사람의 마음을 움직이는 카리스마</li>
-          <li>타인의 필요를 알아채는 민감성</li>
-          <li>변함없이 지지하는 따뜻함</li>
-          <li>긍정적인 변화를 이끄는 영향력</li>
-        </ul>
-      </section>
-      
-      <section class="growth-section">
-        <h2>더 발전시키면 좋을 점</h2>
-        <ul>
-          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
-          <li><strong>비판적 사고 장려:</strong> 조화와 함께 건강한 의견 차이도 가치 있게 여겨보세요</li>
-          <li><strong>과잉보호 경계:</strong> 아이가 실패와 좌절을 통해 배울 수 있는 공간을 허용해보세요</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 따뜻한 지지가, 아이에게는 세상을 바꿀 수 있는 자신감이 됩니다."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>매일 15분, 온전히 자신만을 위한 시간 확보하기.</strong> 타인을 위해 에너지를 쏟는 당신, 자신을 채우는 시간도 필요합니다.</li>
-          <li>하루에 한 번, 아이에게 "네가 실수해도 괜찮아"라고 말해주는 순간을 의식적으로 만들어보세요.</li>
-        </ul>
-      </section>
-
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> INFP, ISFP 유형의 배우자는 ENFJ의 열정과 카리스마에 깊이와 진정성을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ISTP, INTP 유형과는 감정 중심과 논리 중심의 접근 방식 차이로 오해가 생길 수 있습니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 조화를 중시하는 만큼 건강한 의견 차이의 중요성도 인정하세요. 배우자의 분석적 접근도 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
-      
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/enfj-illustration.jpg" alt="ENFJ 일러스트" id="type-illustration">
+        <h2>✨ 전략적 비전형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>체계적 학습교재</h3>
+              <p>단계별 커리큘럼이 있는 학습 시스템</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">준비중</p>
+              </div>
+              <a href="#" target="_blank" class="item-link" style="background-color: #ccc;">준비중</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>홈스쿨링 교구</h3>
+              <p>맞춤형 교육을 위한 전문 교육도구</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">한글,숫자,영어 학습 벽보</p>
+              </div>
+              <a href="https://ozip.me/JiNdUdP?af" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>독서등/학습환경 용품</h3>
+              <p>최적의 학습 환경 구축용 인테리어</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">높이각도조절 아기책상 의자세트</p>
+              </div>
+              <a href="https://ozip.me/JPoTRzJ?af" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
           </div>
-          <p class="illustrated-quote">"따스한 햇살처럼, 당신의 사랑은 아이의 모든 가능성을 꽃피웁니다."</p>
         </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 따뜻한 지도자형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
-}
-
-// ISTP 유형 결과 페이지
-function showISTPResult() {
-  const resultContent = `
-    <div class="result-container">
-     
-      <h1 class="result-title">실용적 자유형 부모 (ISTP)</h1>
-      <div class="result-subtitle">아이에게 문제 해결력을 가르치는 사람</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이에게 세상을 스스로 탐색하는 방법을 알려주는 실용적인 부모입니다.</strong> 문제 해결력과 독립심을 키워주며, 불필요한 규칙보다 본질에 집중합니다. 당신의 침착하고 유연한 대응은 아이에게 <strong>실용적 지혜와 적응력</strong>을 가르칩니다.</p>
-        <p>때로는 자유를 중시하는 성향으로 "아이에게 필요한 구조와 감정적 안정감을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점 </h2>
-        <ul>
-          <li>위기에도 침착함을 유지하는 평정심</li>
-          <li>문제의 핵심을 꿰뚫는 통찰력</li>
-          <li>실용적인 해결책을 찾는 지혜</li>
-          <li>행동으로 보여주는 진정한 사랑</li>
-        </ul>
-      </section>
-    
-      <section class="growth-section">
-        <h2>더 발전시키면 좋을 점</h2>
-        <ul>
-          <li><strong>감정적 연결:</strong> 행동과 함께 언어로도 사랑과 지지를 표현해보세요</li>
-          <li><strong>일상 구조화:</strong> 자유로움과 함께 예측 가능한 일상 패턴의 안정감도 중요합니다</li>
-          <li><strong>미래 계획:</strong> 현재에 충실하면서도 장기적 성장을 위한 계획도 고려해보세요</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 침착함과 실용적 지혜가, 아이에게는 어떤 어려움도 극복할 수 있는 자신감이 됩니다."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>매일 5분, 아이와 감정을 나누는 대화 시간 갖기.</strong> "오늘 어떤 기분이었어?" 같은 간단한 질문으로 시작해보세요.</li>
-          <li>주말마다 아이와 함께하는 소소한 가족 의식을 하나 정해 꾸준히 실천해보세요.</li>
-        </ul>
-      </section>
-
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ESFJ, ESTJ 유형의 배우자는 ISTP의 실용적 접근에 구조와 감정적 안정감을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ENFJ, INFJ 유형과는 현실적 접근과 이상적 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 실용적 문제 해결과 함께 감정적 연결의 중요성도 인정하세요. 배우자의 감성적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
-      
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/istp-illustration.jpg" alt="ISTP 일러스트" id="type-illustration">
-          </div>
-          <p class="illustrated-quote">"단단한 바위처럼, 당신은 어떤 상황에서도 아이에게 실용적인 지혜를 전합니다."</p>
-        </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 실용적 자유형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
-}
-    
-// ESTP 유형 결과 페이지
-function showESTPResult() {
-  const resultContent = `
-    <div class="result-container">
-      
-      <h1 class="result-title">활동적 모험형 부모 (ESTP)</h1>
-      <div class="result-subtitle">아이에게 세상을 경험하게 하는 사람</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이와 함께 세상을 적극적으로 탐험하는 활력 넘치는 부모입니다.</strong> 실제 경험을 통한 배움을 중요시하며, 자녀가 주변 환경과 적극적으로 상호작용하도록 격려합니다. 당신의 현실적인 문제 해결 능력은 아이에게 <strong>실용적인 대처 기술과 모험심</strong>을 길러줍니다.</p>
-        <p>때로는 순간의 즐거움에 집중하다 보니 "장기적인 감정적 연결과 일관성을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점 </h2>
-        <ul>
-          <li>어떤 상황에서도 적응하는 유연성</li>
-          <li>위기에 빠르게 대응하는 임기응변</li>
-          <li>삶을 즐기는 긍정적인 에너지</li>
-          <li>현실적인 문제를 해결하는 능력</li>
-        </ul>
-      </section>
-      
-      <section class="growth-section">
-        <h2>더 발전시키면 좋을 점</h2>
-        <ul>
-          <li><strong>정서적 연결 강화:</strong> 활동과 재미 외에도 감정을 나누는 대화의 시간도 중요합니다</li>
-          <li><strong>장기적 계획:</strong> 현재의 즐거움과 함께 미래를 위한 준비도 함께 고려해보세요</li>
-          <li><strong>일관된 구조 제공:</strong> 자유로운 탐험과 함께 예측 가능한 일상의 안정감도 필요합니다</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 모험심과 활력이, 아이에게는 세상을 두려움 없이 탐험할 용기가 됩니다."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>매일 10분, 아이와 차분히 대화하는 시간 갖기.</strong> 활동적인 시간 외에도 감정과 생각을 나누는 조용한 순간을 만들어보세요.</li>
-          <li>일주일에 한 번, 가족 일정을 함께 계획하고 앞으로의 중요한 활동들을 아이와 공유해보세요.</li>
-        </ul>
-      </section>
-
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESTP의 활동적 에너지에 안정감과 지속성을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> INFJ, INTJ 유형과는 즉흥성과 계획성 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 즉각적인 경험과 함께 장기적 계획의 중요성도 인정하세요. 배우자의 체계적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
-      
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/estp-illustration.jpg" alt="ESTP 일러스트" id="type-illustration">
-          </div>
-          <p class="illustrated-quote">"역동적인 강물처럼, 당신의 에너지는 아이에게 삶의 모험을 선사합니다."</p>
-        </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 활동적 모험형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
-}
-
-// ISFP 유형 결과 페이지
-function showISFPResult() {
-  const resultContent = `
-    <div class="result-container">
-      
-      <h1 class="result-title">감성적 보호형 부모 (ISFP)</h1>
-      <div class="result-subtitle">아이의 세계를 아름답게 그려주는 사람</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이의 개성과 감성을 소중히 여기는 따뜻한 부모입니다.</strong> 작은 순간의 기쁨을 함께 나누며, 자녀가 자신만의 방식으로 세상을 경험하도록 격려합니다. 당신의 수용적인 태도는 아이에게 <strong>안전한 정서적 안식처</strong>가 됩니다.</p>
-        <p>때로는 균형을 찾는 과정에서 "아이에게 필요한 구조와 지침을 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점 </h2>
-        <ul>
-          <li>순간의 아름다움을 발견하는 섬세함</li>
-          <li>있는 그대로 받아들이는 따뜻한 수용력</li>
-          <li>행동으로 사랑을 표현하는 진정성</li>
-          <li>자신과 타인에게 진실한 정직함</li>
-        </ul>
-      </section>
-      
-      <section class="growth-section">
-        <h2>더 발전시키면 좋을 점</h2>
-        <ul>
-          <li><strong>일상 구조화:</strong> 자유로운 표현과 함께 예측 가능한 일과의 안정감도 중요합니다</li>
-          <li><strong>명확한 경계 설정:</strong> 조화를 중시하면서도 일관된 규칙과 기대치를 세워보세요</li>
-          <li><strong>장기적 계획:</strong> 현재의 순간을 즐기면서도 미래를 위한 준비도 함께 해보세요</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 부드러운 감성이, 아이에게는 세상에서 가장 따뜻한 안식처예요."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>매일 같은 시간에 반복하는 한 가지 의식 만들기.</strong> 예를 들어, 저녁 식사 전 감사한 일 나누기 같은 간단하지만 의미 있는 시간을 가져보세요.</li>
-          <li>주 1회, 가족 캘린더를 함께 확인하며 앞으로의 일정과 계획을 아이와 공유해보세요.</li>
-        </ul>
-      </section>
-
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ENFJ, ESFJ 유형의 배우자는 ISFP의 감성적 깊이에 방향성과 사회적 연결을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> ENTJ, INTJ 유형과는 즉흥성과 계획성 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 자유로운 표현과 함께 일관된 구조의 중요성도 인정하세요. 배우자의 체계적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
-      
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/isfp-illustration.jpg" alt="ISFP 일러스트" id="type-illustration">
-          </div>
-          <p class="illustrated-quote">"봄날의 꽃처럼, 당신의 섬세한 마음은 아이의 세상을 아름답게 물들입니다."</p>
-        </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 감성적 보호형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
@@ -1575,7 +1778,6 @@ function showISFPResult() {
 function showESFPResult() {
   const resultContent = `
     <div class="result-container">
-      
       <h1 class="result-title">즐거운 격려형 부모 (ESFP)</h1>
       <div class="result-subtitle">아이에게 삶의 기쁨을 알려주는 사람</div>
       
@@ -1616,14 +1818,14 @@ function showESFPResult() {
         </ul>
       </section>
 
-<section class="couple-compatibility-section">
-  <h2>배우자와의 관계 팁</h2>
-  <ul>
-    <li><strong>잘 맞는 파트너:</strong> ISTJ, ISFJ 유형의 배우자는 ESFP의 즐거운 에너지에 안정감과 지속성을 더해줍니다.</li>
-    <li><strong>노력이 필요한 관계:</strong> INTJ, ENTJ 유형과는 즉흥성과 계획성 사이의 균형을 찾는 과정이 필요합니다.</li>
-    <li><strong>조화로운 육아를 위해:</strong> 즐거움과 현재 순간과 함께 일관성과 미래 계획의 중요성도 인정하세요. 배우자의 체계적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
-  </ul>
-</section>
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ISTJ, ISFJ 유형의 배우자는 ESFP의 즐거운 에너지에 안정감과 지속성을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> INTJ, ENTJ 유형과는 즉흥성과 계획성 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 즐거움과 현재 순간과 함께 일관성과 미래 계획의 중요성도 인정하세요. 배우자의 체계적 접근을 존중하고, 함께 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
       
       <section class="illustration-section">
         <h2>당신의 하루를 위한 일러스트</h2>
@@ -1636,15 +1838,255 @@ function showESFPResult() {
       </section>
       
       <section class="items-section">
-        <h2>✨ 즐거운 격려형 부모를 위한 육아 아이템</h2>
-        <div class="coming-soon">
-          <p>당신의 육아 스타일에 맞는 특별한 아이템들을 준비 중입니다.</p>
-          <h3>See you soon!</h3>
+        <h2>✨ 즐거운 격려형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>스포츠용품/운동기구</h3>
+              <p>아이와 함께하는 신체활동용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXuY" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0kDM" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>음악교구/악기</h3>
+              <p>즐거운 음악 활동과 감성 발달용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXv5" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0k1d" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>파티용품/이벤트 용품</h3>
+              <p>특별한 날 축하와 재미있는 추억 만들기용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXw9" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0lnb" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
         </div>
       </section>
     </div>
   `;
   
+  document.getElementById('result-content').innerHTML = resultContent;
+}
+
+// ESFJ 유형 결과 페이지
+function showESFJResult() {
+  const resultContent = `
+    <div class="result-container">
+      <h1 class="result-title">헌신적 돌봄형 부모 (ESFJ)</h1>
+      <div class="result-subtitle">아이의 행복을 위해 헌신하는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 필요를 세심하게 살피는 따뜻하고 헌신적인 부모입니다.</strong> 가족의 화목과 조화를 위해 노력하며, 자녀가 사회적 가치와 전통을 배우도록 도와줍니다. 당신의 변함없는 지지는 아이에게 <strong>안정감과 소속감</strong>을 선물합니다.</p>
+        <p>때로는 너무 많은 것을 책임지려다 보니 "내가 지나치게 개입하고 있진 않을까?" 하는 고민이 들기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신이어서 좋은 점 </h2>
+        <ul>
+          <li>가족을 따뜻하게 보살피는 헌신</li>
+          <li>타인의 필요를 알아채는 섬세함</li>
+          <li>안정된 환경을 조성하는 능력</li>
+          <li>전통과 가치를 소중히 여기는 마음</li>
+        </ul>
+      </section>
+      
+      <section class="growth-section">
+        <h2>더 발전시키면 좋을 점</h2>
+        <ul>
+          <li><strong>자율성 존중:</strong> 과도한 개입 대신 아이가 스스로 결정할 공간을 허용해보세요</li>
+          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
+          <li><strong>변화 수용:</strong> 전통적 방식과 함께 새로운 접근법도 시도해보세요</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 헌신적인 사랑이, 아이에게는 세상에서 가장 안전한 둥지가 됩니다."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>매일 15분, 오직 자신만을 위한 시간 가지기.</strong> 끊임없이 타인을 돌보는 당신, 스스로를 위한 시간도 필요합니다.</li>
+          <li>아이가 작은 실수를 했을 때, 먼저 해결해주기보다 "네가 어떻게 하고 싶니?"라고 물어보는 연습을 해보세요.</li>
+        </ul>
+      </section>
+
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESFJ의 사회적 가치와 전통을 존중하며 안정된 가정을 함께 만들어갑니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> INTP, ISTP 유형과는 감정 중심과 논리 중심의 접근 방식 차이로 오해가 생길 수 있습니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 배우자의 분석적 관점도 아이 양육에 도움이 된다는 것을 인정하세요. 모든 가족 문제를 해결하려 하기보다 배우자와 책임을 나누고, 때로는 아이와 배우자에게 독립적인 공간을 주세요.</li>
+        </ul>
+      </section>
+      
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/esfj-illustration.jpg" alt="ESFJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"따뜻한 둥지처럼, 당신의 헌신은 아이에게 세상에서 가장 안전한 장소가 됩니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 헌신적 돌봄형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>요리/베이킹 도구</h3>
+              <p>아이와 함께하는 요리 활동용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqXx9" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0lK6" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>안전용품/보호장구</h3>
+              <p>아이 안전을 위한 필수 용품들</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">매달려 문닫힘 방지 도어쿠션</p>
+              </div>
+              <a href="https://ozip.me/SVvyiix?af" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>정리수납용품</h3>
+              <p>깔끔하고 체계적인 생활환경 조성용</p>
+              <div class="coupang-iframe">
+                <p style="color: #666; font-size: 12px;">투명 pvc 원형 인형 장난감 수납함</p>
+              </div>
+              <a href="https://ozip.me/9aEE3uj?af" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+        </div>
+      </section>
+    </div>
+  `;
+  
+  document.getElementById('result-content').innerHTML = resultContent;
+}
+function showINFJResult() {
+  const resultContent = `
+    <div class="result-container">
+      <h1 class="result-title">이상적 통찰형 부모 (INFJ)</h1>
+      <div class="result-subtitle">아이의 내면을 깊이 이해하는 사람</div>
+      
+      <section class="essence-section">
+        <p class="essence-text"><strong>당신은 아이의 내면세계를 깊이 이해하는 통찰력 있는 부모입니다.</strong> 자녀의 잠재력과 고유한 가치를 알아보고, 의미 있는 삶으로 인도하고자 합니다. 당신의 직관적 이해력은 아이에게 <strong>영감과 정서적 안정감</strong>을 제공합니다.</p>
+        <p>때로는 높은 이상과 현실 사이에서 "내 기대가 아이에게 부담이 되진 않을까?" 하고 고민하기도 합니다.</p>
+      </section>
+      
+      <section class="inner-strength-section">
+        <h2>당신이어서 좋은 점 </h2>
+        <ul>
+          <li>마음을 읽는 듯한 직관력</li>
+          <li>흔들리지 않는 내적 가치관</li>
+          <li>아이의 가능성을 보는 통찰력</li>
+          <li>깊고 의미있는 관계를 만드는 능력</li>
+        </ul>
+      </section>
+
+      <section class="growth-section">
+        <h2>더 발전시키면 좋을 점</h2>
+        <ul>
+          <li><strong>현실적 기대:</strong> 완벽한 이상보다 현실적인 성장 과정을 수용해보세요</li>
+          <li><strong>자기 돌봄:</strong> 타인을 돌보는 만큼 자신의 필요도 소중히 여겨보세요</li>
+          <li><strong>유연성 발휘:</strong> 계획이 변경될 때도 적응하는 여유를 가져보세요</li>
+        </ul>
+      </section>
+      
+      <section class="encouragement-section">
+        <h2>지금 당신에게 필요한 말 한마디</h2>
+        <p class="quote">"당신의 깊은 이해와 공감이, 아이에게는 가장 안전한 정서적 안식처예요."</p>
+      </section>
+      
+      <section class="routine-section">
+        <h2>작은 루틴 제안</h2>
+        <ul>
+          <li><strong>매일 10분, 오직 자신만을 위한 시간 가지기.</strong> 끊임없이 남을 돌보는 당신, 자신을 위한 작은 시간도 필요합니다.</li>
+          <li>아이의 행동에 과도하게 의미를 부여할 때, 잠시 멈추고 "이것은 단순한 아이다움일 수 있다"라고 자신에게 말해보세요.</li>
+        </ul>
+      </section>
+      
+      <section class="couple-compatibility-section">
+        <h2>배우자와의 관계 팁</h2>
+        <ul>
+          <li><strong>잘 맞는 파트너:</strong> ENFP, ENTP 유형의 배우자는 INFJ의 깊은 통찰에 활력과 새로운 관점을 더해줍니다.</li>
+          <li><strong>노력이 필요한 관계:</strong> ESTP, ISTP 유형과는 이상과 현실적 접근 사이의 균형을 찾는 과정이 필요합니다.</li>
+          <li><strong>조화로운 육아를 위해:</strong> 완벽한 이상보다 현실적인 성장 과정을 수용하세요. 배우자의 실용적 접근도 존중하고, 함께 이상과 현실이 균형 잡힌 육아 환경을 만들어가세요.</li>
+        </ul>
+      </section>
+
+      <section class="illustration-section">
+        <h2>당신의 하루를 위한 일러스트</h2>
+        <div class="illustration-container">
+          <div class="illustration-image">
+            <img src="images/infj-illustration.jpg" alt="INFJ 일러스트" id="type-illustration">
+          </div>
+          <p class="illustrated-quote">"깊은 호수처럼, 당신의 마음은 아이의 모든 것을 담아내고 비춰줍니다."</p>
+        </div>
+      </section>
+      
+      <section class="items-section">
+        <h2>✨ 이상적 통찰형 부모를 위한 추천 아이템</h2>
+        <div class="recommended-items">
+          <div class="item-grid">
+            <div class="item-card">
+              <h3>명상/마음챙김 교구</h3>
+              <p>아이의 정서 안정과 집중력 향상용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWAT" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0byC" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>저널링/일기장</h3>
+              <p>성장 과정 기록과 소통의 도구</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWCL" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0cek" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+            
+            <div class="item-card">
+              <h3>식물 키우기 세트</h3>
+              <p>생명의 소중함과 책임감 교육용</p>
+              <div class="coupang-iframe">
+                <iframe src="https://coupa.ng/ciqWDB" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+              </div>
+              <a href="https://link.coupang.com/a/cv0ct6" target="_blank" class="item-link">상품 보러가기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="coupang-disclaimer">
+          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+        </div>
+      </section>
+    </div>
+  `;
+   
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
