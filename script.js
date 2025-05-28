@@ -487,10 +487,12 @@ function getTypeInfo(type) {
         essence: '<p>유효하지 않은 유형입니다.</p>'
     };
 }
+    };
+    
+    return typeInfos[type];
+}
 
-// 새로운 테스트 시작 함수
-function startNewTest() {
-// 새로운 테스트 시작 함수
+// 새로운 테스트 시작 함수  
 function startNewTest() {
     // URL에서 쿼리 파라미터 제거
     window.history.replaceState({}, document.title, window.location.pathname);
