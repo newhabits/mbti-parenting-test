@@ -481,15 +481,11 @@ function getTypeInfo(type) {
        }
     };
     
-    return typeInfos[type] || {
-        title: '결과를 찾을 수 없습니다',
-        subtitle: '',
-        essence: '<p>유효하지 않은 유형입니다.</p>'
-    };
-}
-    };
-    
-    return typeInfos[type];
+return typeInfos[type] || {
+    title: '결과를 찾을 수 없습니다',
+    subtitle: '',
+    essence: '<p>유효하지 않은 유형입니다.</p>'
+};
 }
 
 // 새로운 테스트 시작 함수  
@@ -512,7 +508,6 @@ function startNewTest() {
 
 // ESTJ 유형 결과 페이지
 function showESTJResult() {
-  const resultContent = `
   const resultContent = `
       <div class="result-container">
         <h1 class="result-title">체계적 실행형 부모 (ESTJ)</h1>
