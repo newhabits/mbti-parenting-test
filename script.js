@@ -2611,7 +2611,7 @@ function showINFJResult() {
   `;
    
   document.getElementById('result-content').innerHTML = resultContent;
-}// 이 함수들을 기존 script.js의 맨 마지막에 추가하세요
+}
 
 // INFP 유형 결과 페이지
 function showINFPResult() {
@@ -2895,6 +2895,7 @@ function showINTJResult() {
   `;
   
   document.getElementById('result-content').innerHTML = resultContent;
+}
 
 // INFP 유형 결과 페이지
 function showINFPResult() {
