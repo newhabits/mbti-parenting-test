@@ -513,108 +513,110 @@ function startNewTest() {
 // ESTJ 유형 결과 페이지
 function showESTJResult() {
   const resultContent = `
-    <div class="result-container">
-      <h1 class="result-title">체계적 실행형 부모 (ESTJ)</h1>
-      <div class="result-subtitle">명확한 원칙으로 아이를 이끄는 사람</div>
-      
-      <section class="essence-section">
-        <p class="essence-text"><strong>당신은 아이에게 명확한 구조와 안정감을 제공하는 책임감 있는 부모입니다.</strong> 일관된 규칙과 전통적 가치를 중요시하며, 자녀가 사회에서 성공하고 책임감 있는 구성원이 되도록 지도합니다. 당신의 체계적인 접근방식은 아이에게 <strong>안정감과 명확한 방향성</strong>을 제시합니다.</p>
-        <p>때로는 원칙을 지키려다 보니 "아이의 개성과 유연성을 충분히 존중하고 있을까?" 하는 고민이 들기도 합니다.</p>
-      </section>
-      
-      <section class="inner-strength-section">
-        <h2>당신이어서 좋은 점</h2>
-        <ul>
-          <li>흔들림 없는 책임감</li>
-          <li>일관된 원칙을 지키는 의지</li>
-          <li>실질적 도움을 주는 실행력</li>
-          <li>전통과 가치를 소중히 여기는 마음</li>
-        </ul>
-      </section>
-      
-      <section class="growth-section">
-        <h2>성장 가능한 부분</h2>
-        <ul>
-          <li><strong>감정적 민감성:</strong> 규칙과 원칙 외에도 아이의 감정적 필요에 더 주의를 기울여보세요</li>
-          <li><strong>유연성 발휘:</strong> 때로는 계획에서 벗어나 자발적인 순간도 받아들여보세요</li>
-          <li><strong>개인차 인정:</strong> 모든 아이가 같은 방식으로 배우고 성장하지 않음을 기억하세요</li>
-        </ul>
-      </section>
-      
-      <section class="encouragement-section">
-        <h2>지금 당신에게 필요한 말 한마디</h2>
-        <p class="quote">"당신의 든든한 지원이, 아이에게는 세상을 단단하게 살아갈 힘이 됩니다."</p>
-      </section>
-      
-      <section class="routine-section">
-        <h2>작은 루틴 제안</h2>
-        <ul>
-          <li><strong>일주일에 한 번, 계획에 없던 즉흥적인 활동 시도하기.</strong> 예상치 못한 즐거움이 주는 가치를 경험해보세요.</li>
-          <li>아이와 대화할 때 조언하기 전에 "어떻게 생각해?"라고 물어보는 습관을 들여보세요.</li>
-        </ul>
-      </section>
-
-      <section class="couple-compatibility-section">
-        <h2>배우자와의 관계 팁</h2>
-        <ul>
-          <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESTJ의 체계적인 접근을 지지하고 안정된 가정 환경을 함께 만들어갑니다.</li>
-          <li><strong>노력이 필요한 관계:</strong> INFP, ENFP 유형과는 구조와 자유에 대한 다른 관점으로 인해 갈등이 생길 수 있습니다.</li>
-          <li><strong>조화로운 육아를 위해:</strong> 감정적 측면도 논리만큼 중요하다는 것을 인정하세요. 결정을 내릴 때 배우자의 직관과 감정적 통찰도 가치 있게 여기고, 때로는 계획에서 벗어나는 유연성을 보여주세요.</li>
-        </ul>
-      </section>
-
-      <section class="illustration-section">
-        <h2>당신의 하루를 위한 일러스트</h2>
-        <div class="illustration-container">
-          <div class="illustration-image">
-            <img src="images/estj-illustration.jpg" alt="ESTJ 일러스트" id="type-illustration">
-          </div>
-          <p class="illustrated-quote">"단단한 기둥처럼, 당신의 원칙은 아이에게 흔들리지 않는 안전한 세상을 만듭니다."</p>
-        </div>
-      </section>
-      
-      <section class="items-section">
-        <h2>✨ 체계적 실행형 부모를 위한 추천 아이템</h2>
-        <div class="recommended-items">
-          <div class="item-grid">
-            <div class="item-card">
-              <h3>가계부/가정관리 도구</h3>
-              <p>효율적인 가정 운영을 위한 관리 용품</p>
-              <div class="coupang-iframe">
-                <iframe src="https://coupa.ng/ciqXEy" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
-              </div>
-              <a href="https://link.coupang.com/a/cv0oPD" target="_blank" class="item-link">상품 보러가기</a>
-            </div>
-            
-            <div class="item-card">
-              <h3>교육스케줄러</h3>
-              <p>아이의 학습 및 활동 일정 관리용</p>
-              <div class="coupang-iframe">
-                <iframe src="https://coupa.ng/ciqXGi" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
-              </div>
-              <a href="https://link.coupang.com/a/cv0pmB" target="_blank" class="item-link">상품 보러가기</a>
-            </div>
-            
-            <div class="item-card">
-              <h3>생활습관 차트</h3>
-              <p>규칙적인 생활패턴 형성을 위한 도구</p>
-              <div class="coupang-iframe">
-                <iframe src="https://coupa.ng/ciqXG7" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
-              </div>
-              <a href="https://link.coupang.com/a/cv0pFo" target="_blank" class="item-link">상품 보러가기</a>
-            </div>
-          </div>
-        </div>
+  const resultContent = `
+      <div class="result-container">
+        <h1 class="result-title">체계적 실행형 부모 (ESTJ)</h1>
+        <div class="result-subtitle">명확한 원칙으로 아이를 이끄는 사람</div>
         
-        <div class="coupang-disclaimer">
-          <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
-        </div>
-      </section>
-    </div>
-  `;
-  
-  document.getElementById('result-content').innerHTML = resultContent;
+        <section class="essence-section">
+          <p class="essence-text"><strong>당신은 아이에게 명확한 구조와 안정감을 제공하는 책임감 있는 부모입니다.</strong> 일관된 규칙과 전통적 가치를 중요시하며, 자녀가 사회에서 성공하고 책임감 있는 구성원이 되도록 지도합니다. 당신의 체계적인 접근방식은 아이에게 <strong>안정감과 명확한 방향성</strong>을 제시합니다.</p>
+          <p>때로는 원칙을 지키려다 보니 "아이의 개성과 유연성을 충분히 존중하고 있을까?" 하는 고민이 들기도 합니다.</p>
+        </section>
+        
+        <section class="inner-strength-section">
+          <h2>당신이어서 좋은 점</h2>
+          <ul>
+            <li>흔들림 없는 책임감</li>
+            <li>일관된 원칙을 지키는 의지</li>
+            <li>실질적 도움을 주는 실행력</li>
+            <li>전통과 가치를 소중히 여기는 마음</li>
+          </ul>
+        </section>
+        
+        <section class="growth-section">
+          <h2>성장 가능한 부분</h2>
+          <ul>
+            <li><strong>감정적 민감성:</strong> 규칙과 원칙 외에도 아이의 감정적 필요에 더 주의를 기울여보세요</li>
+            <li><strong>유연성 발휘:</strong> 때로는 계획에서 벗어나 자발적인 순간도 받아들여보세요</li>
+            <li><strong>개인차 인정:</strong> 모든 아이가 같은 방식으로 배우고 성장하지 않음을 기억하세요</li>
+          </ul>
+        </section>
+        
+        <section class="encouragement-section">
+          <h2>지금 당신에게 필요한 말 한마디</h2>
+          <p class="quote">"당신의 든든한 지원이, 아이에게는 세상을 단단하게 살아갈 힘이 됩니다."</p>
+        </section>
+        
+        <section class="routine-section">
+          <h2>작은 루틴 제안</h2>
+          <ul>
+            <li><strong>일주일에 한 번, 계획에 없던 즉흥적인 활동 시도하기.</strong> 예상치 못한 즐거움이 주는 가치를 경험해보세요.</li>
+            <li>아이와 대화할 때 조언하기 전에 "어떻게 생각해?"라고 물어보는 습관을 들여보세요.</li>
+          </ul>
+        </section>
+
+        <section class="couple-compatibility-section">
+          <h2>배우자와의 관계 팁</h2>
+          <ul>
+            <li><strong>잘 맞는 파트너:</strong> ISFJ, ISTJ 유형의 배우자는 ESTJ의 체계적인 접근을 지지하고 안정된 가정 환경을 함께 만들어갑니다.</li>
+            <li><strong>노력이 필요한 관계:</strong> INFP, ENFP 유형과는 구조와 자유에 대한 다른 관점으로 인해 갈등이 생길 수 있습니다.</li>
+            <li><strong>조화로운 육아를 위해:</strong> 감정적 측면도 논리만큼 중요하다는 것을 인정하세요. 결정을 내릴 때 배우자의 직관과 감정적 통찰도 가치 있게 여기고, 때로는 계획에서 벗어나는 유연성을 보여주세요.</li>
+          </ul>
+        </section>
+
+        <section class="illustration-section">
+          <h2>당신의 하루를 위한 일러스트</h2>
+          <div class="illustration-container">
+            <div class="illustration-image">
+              <img src="images/estj-illustration.jpg" alt="ESTJ 일러스트" id="type-illustration">
+            </div>
+            <p class="illustrated-quote">"단단한 기둥처럼, 당신의 원칙은 아이에게 흔들리지 않는 안전한 세상을 만듭니다."</p>
+          </div>
+        </section>
+        
+        <section class="items-section">
+          <h2>✨ 체계적 실행형 부모를 위한 추천 아이템</h2>
+          <div class="recommended-items">
+            <div class="item-grid">
+              <div class="item-card">
+                <h3>가계부/가정관리 도구</h3>
+                <p>효율적인 가정 운영을 위한 관리 용품</p>
+                <div class="coupang-iframe">
+                  <iframe src="https://coupa.ng/ciqXEy" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+                </div>
+                <a href="https://link.coupang.com/a/cv0oPD" target="_blank" class="item-link">상품 보러가기</a>
+              </div>
+              
+              <div class="item-card">
+                <h3>교육스케줄러</h3>
+                <p>아이의 학습 및 활동 일정 관리용</p>
+                <div class="coupang-iframe">
+                  <iframe src="https://coupa.ng/ciqXGi" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+                </div>
+                <a href="https://link.coupang.com/a/cv0pmB" target="_blank" class="item-link">상품 보러가기</a>
+              </div>
+              
+              <div class="item-card">
+                <h3>생활습관 차트</h3>
+                <p>규칙적인 생활패턴 형성을 위한 도구</p>
+                <div class="coupang-iframe">
+                  <iframe src="https://coupa.ng/ciqXG7" width="120" height="240" frameborder="0" scrolling="no" referrerpolicy="unsafe-url" browsingtopics></iframe>
+                </div>
+                <a href="https://link.coupang.com/a/cv0pFo" target="_blank" class="item-link">상품 보러가기</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="coupang-disclaimer">
+            <p><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+          </div>
+        </section>
+      </div>
+    `;
+    
+    document.getElementById('result-content').innerHTML = resultContent;
 }
+
 
 // ISFP 유형 결과 페이지
 function showISFPResult() {
