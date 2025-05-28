@@ -478,9 +478,18 @@ function getTypeInfo(type) {
             title: '즐거운 격려형 부모 (ESFP)',
             subtitle: '아이에게 삶의 기쁨을 알려주는 사람',
             essence: '<p class="essence-text"><strong>당신은 아이와 함께 매 순간을 축제처럼 즐기는 활기 넘치는 부모입니다.</strong> 온화한 사랑으로 자녀를 격려하고, 삶의 작은 기쁨을 나누는 것을 중요시합니다. 당신의 자연스러운 열정은 아이에게 <strong>자신감과 삶의 즐거움</strong>을 알려줍니다.</p><p>때로는 현재의 즐거움에 집중하다 보니 "미래를 위한 준비와 일관된 구조를 충분히 제공하고 있을까?" 하는 고민이 들기도 합니다.</p>'
-        }
+       }
+    };
+    
+    return typeInfos[type] || {
+        title: '결과를 찾을 수 없습니다',
+        subtitle: '',
+        essence: '<p>유효하지 않은 유형입니다.</p>'
+    };
+}
 
-
+// 새로운 테스트 시작 함수
+function startNewTest() {
 // 새로운 테스트 시작 함수
 function startNewTest() {
     // URL에서 쿼리 파라미터 제거
