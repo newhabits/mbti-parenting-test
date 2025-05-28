@@ -1,29 +1,29 @@
-// 페이지가 다 로드된 후에 실행
-window.addEventListener('load', function() {
+// 페이지가 완전히 로드된 후 실행
+window.onload = function() {
     // 인트로 화면 보이기
     document.getElementById("intro-container").classList.add("active");
     
-    // 시작 버튼 클릭하면 퀴즈 시작
-    document.getElementById("start-btn").addEventListener("click", function() {
+    // 시작 버튼 클릭 이벤트
+    document.getElementById("start-btn").onclick = function() {
         hideAllContainers();
         document.getElementById("quiz-container").classList.add("active");
         initializeQuiz();
-    });
+    };
     
-    // 뒤로가기 버튼
-    document.getElementById("back-button").addEventListener("click", goBack);
+    // 뒤로가기 버튼 클릭 이벤트
+    document.getElementById("back-button").onclick = goBack;
     
-    // 공유 버튼
-    document.getElementById("share-button").addEventListener("click", shareResult);
+    // 공유 버튼 클릭 이벤트
+    document.getElementById("share-button").onclick = shareResult;
     
     // URL에 결과가 있는지 확인
     checkSharedResult();
-});
+};
 
-// 점수 저장할 변수들
-let currentQuestionIndex = 0;
-let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-let previousAnswers = [];
+// 점수 저장 변수들
+var currentQuestionIndex = 0;
+var scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+var previousAnswers = [];
 
 // 모든 화면 숨기기
 function hideAllContainers() {
@@ -41,142 +41,145 @@ function initializeQuiz() {
 }
 
 // 질문 목록
-const questions = [
-  {
-    question: "주말 아침, 아무 계획 없이 아이와 하루를 시작할 때 당신의 접근 방식은?",
-    answers: [
-      { text: "\"오늘은 이것부터 하고, 그 다음엔 저것 하자!\" 미리 하루 일정을 계획하고 시간별로 활동을 구성해요.", scores: { J: 2, T: 1 } },
-      { text: "\"오늘은 뭐하고 놀고 싶어?\" 아이의 기분과 선호에 따라 유연하게 하루를 진행해요.", scores: { P: 2, F: 1 } },
-      { text: "\"새로운 곳에 가보는 건 어때?\" 일상에서 벗어난 색다른 경험을 제안하고 모험을 즐겨요.", scores: { N: 2, E: 1 } },
-      { text: "\"우리 집에서 차분히 놀자.\" 아이와 함께 조용한 활동으로 편안한 시간을 보내요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "아이가 분명한 이유 없이 장난감을 사달라고 울며 떼를 쓸 때, 당신은?",
-    answers: [
-      { text: "\"우리는 오늘 장난감을 사기로 약속한 날이 아니야.\" 규칙과 약속을 지키는 것의 중요성을 강조해요.", scores: { J: 2, T: 1 } },
-      { text: "\"그 장난감이 정말 갖고 싶구나. 많이 아쉽겠다.\" 아이의 감정에 먼저 공감하고 대화로 풀어가요.", scores: { F: 2, E: 1 } },
-      { text: "\"이건 어때? 다른 걸로 재미있게 놀아볼까?\" 관심을 돌리고 대안적인 즐거움을 찾아요.", scores: { P: 2, N: 1 } },
-      { text: "차분히 상황을 지켜보며 아이가 스스로 감정을 조절할 수 있는 시간을 줘요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "아이의 교육과 발달에 있어 가장 중요하다고 생각하는 것은?",
-    answers: [
-      { text: "규칙적인 생활습관과 일관된 교육 방식으로 안정감을 주는 것", scores: { J: 2, S: 1 } },
-      { text: "아이의 감정을 존중하고 긍정적인 자아개념 형성을 돕는 것", scores: { F: 2, E: 1 } },
-      { text: "다양한 경험을 통해 호기심과 창의성을 자극하는 것", scores: { N: 2, P: 1 } },
-      { text: "자기 주도적 사고와 문제 해결 능력을 기르는 것", scores: { T: 2, I: 1 } }
-    ]
-  },
-  {
-    question: "갑작스럽게 비가 와서 야외 놀이 계획이 취소되었을 때, 당신은?",
-    answers: [
-      { text: "\"계획이 바뀌었으니 실내 활동 목록을 만들자.\" 신속하게 대안 계획을 세우고 체계적으로 진행해요.", scores: { J: 2, T: 1 } },
-      { text: "\"비가 와서 실망했구나. 집에서 무엇을 하면 기분이 나아질까?\" 아이의 감정을 살피며 원하는 활동을 물어봐요.", scores: { P: 2, F: 1 } },
-      { text: "\"비가 오니까 실내에서 할 수 있는 색다른 놀이를 찾아보자!\" 새로운 아이디어로 즉흥적인 활동을 제안해요.", scores: { N: 2, E: 1 } },
-      { text: "\"오늘은 집에서 조용히 쉬는 날로 하자.\" 아늑한 실내에서 평화로운 시간을 보내요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "육아로 체력과 인내심이 고갈되었을 때, 당신이 선택하는 자기 돌봄 방식은?",
-    answers: [
-      { text: "문제의 원인을 분석하고 더 효율적인 육아 방식을 찾아 적용해요.", scores: { T: 2, J: 1 } },
-      { text: "친구나 가족에게 솔직히 힘든 마음을 나누고 정서적 지지를 얻어요.", scores: { F: 2, E: 1 } },
-      { text: "아이와 잠시 떨어져 나만의 취미나 새로운 활동으로 기분 전환해요.", scores: { N: 2, P: 1 } },
-      { text: "혼자만의 조용한 시간을 갖고 내면의 에너지를 재충전해요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "아이의 생일 파티를 앞두고 있을 때, 당신의 준비 스타일은?",
-    answers: [
-      { text: "체크리스트를 만들고, 날짜별로 할 일을 나눠 체계적으로 준비해요.", scores: { J: 2, T: 1 } },
-      { text: "아이와 함께 파티 아이디어를 나누며 특별한 추억이 될 만한 요소들을 계획해요.", scores: { F: 2, S: 1 } },
-      { text: "독특하고 창의적인 파티 테마를 떠올리며 아이와 친구들이 놀랄 요소를 구상해요.", scores: { N: 2, P: 1 } },
-      { text: "소규모로 의미 있는 파티를 준비하며 세부 사항은 상황에 따라 조정해요.", scores: { I: 2, J: 1 } }
-    ]
-  },
-  {
-    question: "아이가 새로운 환경에 적응하는데 어려움을 겪고 있을 때, 당신은?",
-    answers: [
-      { text: "\"적응을 위한 단계별 계획을 세워보자.\" 구체적인 전략과 목표를 설정하고 진행상황을 확인해요.", scores: { J: 2, T: 1 } },
-      { text: "\"새로운 환경이 무섭고 낯설지?\" 아이의 불안한 감정을 인정하고 공감하며 안심시켜요.", scores: { P: 2, F: 1 } },
-      { text: "\"네가 좋아하는 것들로 새 친구들과 연결점을 찾아보자.\" 흥미를 통한 자연스러운 적응을 유도해요.", scores: { N: 2, E: 1 } },
-      { text: "아이의 행동과 반응을 관찰하고, 필요할 때 조용히 조언과 지원을 제공해요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "아이가 어려운 퍼즐이나 문제를 풀다가 좌절했을 때, 당신의 접근법은?",
-    answers: [
-      { text: "\"이 문제는 이런 순서로 풀면 돼.\" 논리적인 단계와 문제 해결 전략을 알려줘요.", scores: { T: 2, J: 1 } },
-      { text: "\"정말 어렵구나. 함께 해볼까?\" 아이의 좌절감에 공감하고 함께 도전하며 정서적 지지를 해요.", scores: { F: 2, E: 1 } },
-      { text: "\"다른 방법으로도 시도해보자!\" 다양한 창의적 접근법과 발상의 전환을 제안해요.", scores: { N: 2, P: 1 } },
-      { text: "아이가 스스로 해결책을 찾을 수 있도록 필요한 힌트만 최소한으로 제공해요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "공공장소에서 아이가 갑자기 통제하기 어려운 행동을 보일 때, 당신은?",
-    answers: [
-      { text: "\"여기서는 이렇게 행동해야 해.\" 명확한 기준과 결과를 설명하고 규칙을 지키도록 일관되게 대응해요.", scores: { J: 2, T: 1 } },
-      { text: "\"무슨 일이 있니? 기분이 안 좋아?\" 아이의 행동 이면의 감정과 요구를 파악하려 노력해요.", scores: { F: 2, E: 1 } },
-      { text: "\"저쪽에 가면 더 재미있을 것 같은데!\" 아이의 관심을 긍정적인 방향으로 전환시켜요.", scores: { N: 2, P: 1 } },
-      { text: "조용히 아이를 한쪽으로 데려가 상황을 진정시키고 적절한 행동을 안내해요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "육아를 하며 당신이 가장 어려움을 느끼는 상황은?",
-    answers: [
-      { text: "예상치 못한 변수로 계획이 무너지거나 일상의 구조가 흔들릴 때", scores: { J: 2, S: 1 } },
-      { text: "아이의 감정적 요구와 나 자신의 감정적 균형을 동시에 관리해야 할 때", scores: { F: 2, E: 1 } },
-      { text: "아이에게 지속적으로 새롭고 흥미로운 자극과 경험을 제공해야 할 때", scores: { N: 2, P: 1 } },
-      { text: "개인적인 공간과 시간이 부족하고 지속적인 사회적 상호작용이 필요할 때", scores: { I: 2, T: 1 } }
-    ]
-  },
-  {
-    question: "아이 방이 완전히 어질러져 있을 때, 당신의 정리 접근 방식은?",
-    answers: [
-      { text: "체계적인 정리 시스템을 만들고 함께 순서대로 정리해요.", scores: { J: 2, T: 1 } },
-      { text: "정리를 게임처럼 만들어 즐겁게 참여하도록 유도해요.", scores: { F: 2, E: 1 } },
-      { text: "정리하는 색다른 방법을 제안하며 창의적으로 접근해요.", scores: { N: 2, P: 1 } },
-      { text: "아이에게 정리의 필요성을 차분히 설명하고, 스스로 방법을 찾아 정리할 수 있도록 지켜봐요.", scores: { I: 2, S: 1 } }
-    ]
-  },
-  {
-    question: "취침 시간이 다가올 때, 아이와의 저녁 루틴에서 당신에게 가장 중요한 것은?",
-    answers: [
-      { text: "정해진 시간에 일정한 순서로 진행하며 내일을 위한 준비를 완료하는 것", scores: { J: 2, T: 1 } },
-      { text: "아이와 그날의 감정과 경험에 대해 대화하며 정서적 교감을 나누는 것", scores: { F: 2, S: 1 } },
-      { text: "아이의 상상력을 자극하는 이야기나 대화로 풍부한 내면 세계를 키우는 것", scores: { N: 2, E: 1 } },
-      { text: "조용하고 안정된 분위기에서 아이가 평화롭게 휴식할 수 있게 하는 것", scores: { I: 2, P: 1 } }
-    ]
-  }
+var questions = [
+    {
+        question: "주말 아침, 아무 계획 없이 아이와 하루를 시작할 때 당신의 접근 방식은?",
+        answers: [
+            { text: "\"오늘은 이것부터 하고, 그 다음엔 저것 하자!\" 미리 하루 일정을 계획하고 시간별로 활동을 구성해요.", scores: { J: 2, T: 1 } },
+            { text: "\"오늘은 뭐하고 놀고 싶어?\" 아이의 기분과 선호에 따라 유연하게 하루를 진행해요.", scores: { P: 2, F: 1 } },
+            { text: "\"새로운 곳에 가보는 건 어때?\" 일상에서 벗어난 색다른 경험을 제안하고 모험을 즐겨요.", scores: { N: 2, E: 1 } },
+            { text: "\"우리 집에서 차분히 놀자.\" 아이와 함께 조용한 활동으로 편안한 시간을 보내요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "아이가 분명한 이유 없이 장난감을 사달라고 울며 떼를 쓸 때, 당신은?",
+        answers: [
+            { text: "\"우리는 오늘 장난감을 사기로 약속한 날이 아니야.\" 규칙과 약속을 지키는 것의 중요성을 강조해요.", scores: { J: 2, T: 1 } },
+            { text: "\"그 장난감이 정말 갖고 싶구나. 많이 아쉽겠다.\" 아이의 감정에 먼저 공감하고 대화로 풀어가요.", scores: { F: 2, E: 1 } },
+            { text: "\"이건 어때? 다른 걸로 재미있게 놀아볼까?\" 관심을 돌리고 대안적인 즐거움을 찾아요.", scores: { P: 2, N: 1 } },
+            { text: "차분히 상황을 지켜보며 아이가 스스로 감정을 조절할 수 있는 시간을 줘요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "아이의 교육과 발달에 있어 가장 중요하다고 생각하는 것은?",
+        answers: [
+            { text: "규칙적인 생활습관과 일관된 교육 방식으로 안정감을 주는 것", scores: { J: 2, S: 1 } },
+            { text: "아이의 감정을 존중하고 긍정적인 자아개념 형성을 돕는 것", scores: { F: 2, E: 1 } },
+            { text: "다양한 경험을 통해 호기심과 창의성을 자극하는 것", scores: { N: 2, P: 1 } },
+            { text: "자기 주도적 사고와 문제 해결 능력을 기르는 것", scores: { T: 2, I: 1 } }
+        ]
+    },
+    {
+        question: "갑작스럽게 비가 와서 야외 놀이 계획이 취소되었을 때, 당신은?",
+        answers: [
+            { text: "\"계획이 바뀌었으니 실내 활동 목록을 만들자.\" 신속하게 대안 계획을 세우고 체계적으로 진행해요.", scores: { J: 2, T: 1 } },
+            { text: "\"비가 와서 실망했구나. 집에서 무엇을 하면 기분이 나아질까?\" 아이의 감정을 살피며 원하는 활동을 물어봐요.", scores: { P: 2, F: 1 } },
+            { text: "\"비가 오니까 실내에서 할 수 있는 색다른 놀이를 찾아보자!\" 새로운 아이디어로 즉흥적인 활동을 제안해요.", scores: { N: 2, E: 1 } },
+            { text: "\"오늘은 집에서 조용히 쉬는 날로 하자.\" 아늑한 실내에서 평화로운 시간을 보내요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "육아로 체력과 인내심이 고갈되었을 때, 당신이 선택하는 자기 돌봄 방식은?",
+        answers: [
+            { text: "문제의 원인을 분석하고 더 효율적인 육아 방식을 찾아 적용해요.", scores: { T: 2, J: 1 } },
+            { text: "친구나 가족에게 솔직히 힘든 마음을 나누고 정서적 지지를 얻어요.", scores: { F: 2, E: 1 } },
+            { text: "아이와 잠시 떨어져 나만의 취미나 새로운 활동으로 기분 전환해요.", scores: { N: 2, P: 1 } },
+            { text: "혼자만의 조용한 시간을 갖고 내면의 에너지를 재충전해요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "아이의 생일 파티를 앞두고 있을 때, 당신의 준비 스타일은?",
+        answers: [
+            { text: "체크리스트를 만들고, 날짜별로 할 일을 나눠 체계적으로 준비해요.", scores: { J: 2, T: 1 } },
+            { text: "아이와 함께 파티 아이디어를 나누며 특별한 추억이 될 만한 요소들을 계획해요.", scores: { F: 2, S: 1 } },
+            { text: "독특하고 창의적인 파티 테마를 떠올리며 아이와 친구들이 놀랄 요소를 구상해요.", scores: { N: 2, P: 1 } },
+            { text: "소규모로 의미 있는 파티를 준비하며 세부 사항은 상황에 따라 조정해요.", scores: { I: 2, J: 1 } }
+        ]
+    },
+    {
+        question: "아이가 새로운 환경에 적응하는데 어려움을 겪고 있을 때, 당신은?",
+        answers: [
+            { text: "\"적응을 위한 단계별 계획을 세워보자.\" 구체적인 전략과 목표를 설정하고 진행상황을 확인해요.", scores: { J: 2, T: 1 } },
+            { text: "\"새로운 환경이 무섭고 낯설지?\" 아이의 불안한 감정을 인정하고 공감하며 안심시켜요.", scores: { P: 2, F: 1 } },
+            { text: "\"네가 좋아하는 것들로 새 친구들과 연결점을 찾아보자.\" 흥미를 통한 자연스러운 적응을 유도해요.", scores: { N: 2, E: 1 } },
+            { text: "아이의 행동과 반응을 관찰하고, 필요할 때 조용히 조언과 지원을 제공해요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "아이가 어려운 퍼즐이나 문제를 풀다가 좌절했을 때, 당신의 접근법은?",
+        answers: [
+            { text: "\"이 문제는 이런 순서로 풀면 돼.\" 논리적인 단계와 문제 해결 전략을 알려줘요.", scores: { T: 2, J: 1 } },
+            { text: "\"정말 어렵구나. 함께 해볼까?\" 아이의 좌절감에 공감하고 함께 도전하며 정서적 지지를 해요.", scores: { F: 2, E: 1 } },
+            { text: "\"다른 방법으로도 시도해보자!\" 다양한 창의적 접근법과 발상의 전환을 제안해요.", scores: { N: 2, P: 1 } },
+            { text: "아이가 스스로 해결책을 찾을 수 있도록 필요한 힌트만 최소한으로 제공해요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "공공장소에서 아이가 갑자기 통제하기 어려운 행동을 보일 때, 당신은?",
+        answers: [
+            { text: "\"여기서는 이렇게 행동해야 해.\" 명확한 기준과 결과를 설명하고 규칙을 지키도록 일관되게 대응해요.", scores: { J: 2, T: 1 } },
+            { text: "\"무슨 일이 있니? 기분이 안 좋아?\" 아이의 행동 이면의 감정과 요구를 파악하려 노력해요.", scores: { F: 2, E: 1 } },
+            { text: "\"저쪽에 가면 더 재미있을 것 같은데!\" 아이의 관심을 긍정적인 방향으로 전환시켜요.", scores: { N: 2, P: 1 } },
+            { text: "조용히 아이를 한쪽으로 데려가 상황을 진정시키고 적절한 행동을 안내해요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "육아를 하며 당신이 가장 어려움을 느끼는 상황은?",
+        answers: [
+            { text: "예상치 못한 변수로 계획이 무너지거나 일상의 구조가 흔들릴 때", scores: { J: 2, S: 1 } },
+            { text: "아이의 감정적 요구와 나 자신의 감정적 균형을 동시에 관리해야 할 때", scores: { F: 2, E: 1 } },
+            { text: "아이에게 지속적으로 새롭고 흥미로운 자극과 경험을 제공해야 할 때", scores: { N: 2, P: 1 } },
+            { text: "개인적인 공간과 시간이 부족하고 지속적인 사회적 상호작용이 필요할 때", scores: { I: 2, T: 1 } }
+        ]
+    },
+    {
+        question: "아이 방이 완전히 어질러져 있을 때, 당신의 정리 접근 방식은?",
+        answers: [
+            { text: "체계적인 정리 시스템을 만들고 함께 순서대로 정리해요.", scores: { J: 2, T: 1 } },
+            { text: "정리를 게임처럼 만들어 즐겁게 참여하도록 유도해요.", scores: { F: 2, E: 1 } },
+            { text: "정리하는 색다른 방법을 제안하며 창의적으로 접근해요.", scores: { N: 2, P: 1 } },
+            { text: "아이에게 정리의 필요성을 차분히 설명하고, 스스로 방법을 찾아 정리할 수 있도록 지켜봐요.", scores: { I: 2, S: 1 } }
+        ]
+    },
+    {
+        question: "취침 시간이 다가올 때, 아이와의 저녁 루틴에서 당신에게 가장 중요한 것은?",
+        answers: [
+            { text: "정해진 시간에 일정한 순서로 진행하며 내일을 위한 준비를 완료하는 것", scores: { J: 2, T: 1 } },
+            { text: "아이와 그날의 감정과 경험에 대해 대화하며 정서적 교감을 나누는 것", scores: { F: 2, S: 1 } },
+            { text: "아이의 상상력을 자극하는 이야기나 대화로 풍부한 내면 세계를 키우는 것", scores: { N: 2, E: 1 } },
+            { text: "조용하고 안정된 분위기에서 아이가 평화롭게 휴식할 수 있게 하는 것", scores: { I: 2, P: 1 } }
+        ]
+    }
 ];
 
 // 질문 보여주기
 function renderQuestion() {
-    const question = questions[currentQuestionIndex];
-    const questionElement = document.getElementById("question");
-    const answersElement = document.getElementById("answers");
+    var question = questions[currentQuestionIndex];
+    var questionElement = document.getElementById("question");
+    var answersElement = document.getElementById("answers");
     
     questionElement.innerText = question.question;
     answersElement.innerHTML = "";
 
-    const progress = document.querySelector('.progress');
-    const progressPercentage = (currentQuestionIndex / questions.length) * 100;
-    progress.style.width = `${progressPercentage}%`;
+    var progress = document.querySelector('.progress');
+    var progressPercentage = (currentQuestionIndex / questions.length) * 100;
+    progress.style.width = progressPercentage + '%';
 
-    question.answers.forEach((answer, index) => {
-        const button = document.createElement("button");
+    for (var i = 0; i < question.answers.length; i++) {
+        var answer = question.answers[i];
+        var button = document.createElement("button");
         button.innerText = answer.text;
-        button.onclick = () => {
-            previousAnswers.push({ questionIndex: currentQuestionIndex, scores: answer.scores });
-            Object.keys(answer.scores).forEach((key) => {
-                scores[key] += answer.scores[key];
-            });
-            nextQuestion();
-        };
+        button.onclick = (function(ans) {
+            return function() {
+                previousAnswers.push({ questionIndex: currentQuestionIndex, scores: ans.scores });
+                for (var key in ans.scores) {
+                    scores[key] += ans.scores[key];
+                }
+                nextQuestion();
+            };
+        })(answer);
         answersElement.appendChild(button);
-    });
+    }
 
     // 첫 번째 질문이면 뒤로가기 버튼 숨기기
     if (currentQuestionIndex === 0) {
@@ -208,164 +211,149 @@ function goBack() {
 
 // MBTI 결과 계산
 function calculateMBTI() {
-    const eOrI = scores.E >= scores.I ? "E" : "I";
-    const sOrN = scores.S >= scores.N ? "S" : "N";
-    const tOrF = scores.T >= scores.F ? "T" : "F";
-    const jOrP = scores.J >= scores.P ? "J" : "P";
-    return `${eOrI}${sOrN}${tOrF}${jOrP}`;
+    var eOrI = scores.E >= scores.I ? "E" : "I";
+    var sOrN = scores.S >= scores.N ? "S" : "N";
+    var tOrF = scores.T >= scores.F ? "T" : "F";
+    var jOrP = scores.J >= scores.P ? "J" : "P";
+    return eOrI + sOrN + tOrF + jOrP;
 }
 
 // 결과 보여주기
 function showResult() {
     hideAllContainers();
     document.getElementById('result-container').classList.add('active');
-    const mbti = calculateMBTI();
+    var mbti = calculateMBTI();
     showPersonalityResult(mbti);
 }
 
 // 결과 타입별로 보여주기
 function showPersonalityResult(type) {
-  const resultContainer = document.getElementById('result-container');
-  
-  let imageContainer = document.getElementById('result-type-image');
-  if (!imageContainer) {
-    imageContainer = document.createElement('div');
-    imageContainer.id = 'result-type-image';
-    resultContainer.insertBefore(imageContainer, document.getElementById('result-content'));
-  }
-  
-  imageContainer.innerHTML = `<div class="result-image"><img src="images/${type.toLowerCase()}.png" alt="${type} 유형 이미지"></div>`;
-  
-  document.getElementById('result-content').innerHTML = '';
-  
-  updateMetaTags(type);
+    var resultContainer = document.getElementById('result-container');
+    
+    var imageContainer = document.getElementById('result-type-image');
+    if (!imageContainer) {
+        imageContainer = document.createElement('div');
+        imageContainer.id = 'result-type-image';
+        resultContainer.insertBefore(imageContainer, document.getElementById('result-content'));
+    }
+    
+    imageContainer.innerHTML = '<div class="result-image"><img src="images/' + type.toLowerCase() + '.png" alt="' + type + ' 유형 이미지"></div>';
+    
+    document.getElementById('result-content').innerHTML = '';
+    
+    updateMetaTags(type);
 
-  switch(type) {
-    case 'INTJ':
-      showINTJResult();
-      break;          
-    case 'ISTJ':
-      showISTJResult();
-      break;
-    case 'ESTJ':
-      showESTJResult();
-      break;
-    case 'ISFJ':
-      showISFJResult();
-      break;
-    case 'ESFJ':
-      showESFJResult();
-      break;
-    case 'INFP':
-      showINFPResult();
-      break;
-    case 'ENFP':
-      showENFPResult();
-      break;
-    case 'INTP':
-      showINTPResult();
-      break;
-    case 'ENTP':
-      showENTPResult();
-      break;
-    case 'ENTJ':
-      showENTJResult();
-      break;
-    case 'INFJ':
-      showINFJResult();
-      break;
-    case 'ENFJ':
-      showENFJResult();
-      break;
-    case 'ISTP':
-      showISTPResult();
-      break;
-    case 'ESTP':
-      showESTPResult();
-      break;
-    case 'ISFP':
-      showISFPResult();
-      break;
-    case 'ESFP':
-      showESFPResult();
-      break;
-    default:
-      document.getElementById('result-content').innerHTML = '<p>결과를 찾을 수 없습니다.</p>';
-  }
+    if (type === 'INTJ') {
+        showINTJResult();
+    } else if (type === 'ISTJ') {
+        showISTJResult();
+    } else if (type === 'ESTJ') {
+        showESTJResult();
+    } else if (type === 'ISFJ') {
+        showISFJResult();
+    } else if (type === 'ESFJ') {
+        showESFJResult();
+    } else if (type === 'INFP') {
+        showINFPResult();
+    } else if (type === 'ENFP') {
+        showENFPResult();
+    } else if (type === 'INTP') {
+        showINTPResult();
+    } else if (type === 'ENTP') {
+        showENTPResult();
+    } else if (type === 'ENTJ') {
+        showENTJResult();
+    } else if (type === 'INFJ') {
+        showINFJResult();
+    } else if (type === 'ENFJ') {
+        showENFJResult();
+    } else if (type === 'ISTP') {
+        showISTPResult();
+    } else if (type === 'ESTP') {
+        showESTPResult();
+    } else if (type === 'ISFP') {
+        showISFPResult();
+    } else if (type === 'ESFP') {
+        showESFPResult();
+    } else {
+        document.getElementById('result-content').innerHTML = '<p>결과를 찾을 수 없습니다.</p>';
+    }
 }
 
 function updateMetaTags(mbtiType) {
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-  
-  if (ogTitle) {
-    ogTitle.content = `${mbtiType} 유형 육아 스타일 - MBTI 육아 테스트`;
-  }
-  if (twitterTitle) {
-    twitterTitle.content = `${mbtiType} 유형 육아 스타일 - MBTI 육아 테스트`;
-  }
-  
-  const imageUrl = `https://newhabits.github.io/mbti-parenting-test/images/${mbtiType.toLowerCase()}.png`;
-  const ogImage = document.querySelector('meta[property="og:image"]');
-  const twitterImage = document.querySelector('meta[name="twitter:image"]');
-  
-  if (ogImage) {
-    ogImage.content = imageUrl;
-  }
-  if (twitterImage) {
-    twitterImage.content = imageUrl;
-  }
-  
-  const ogUrl = document.querySelector('meta[property="og:url"]');
-  if (ogUrl) {
-    ogUrl.content = `https://newhabits.github.io/mbti-parenting-test/?type=${mbtiType}`;
-  }
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    var twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    
+    if (ogTitle) {
+        ogTitle.content = mbtiType + ' 유형 육아 스타일 - MBTI 육아 테스트';
+    }
+    if (twitterTitle) {
+        twitterTitle.content = mbtiType + ' 유형 육아 스타일 - MBTI 육아 테스트';
+    }
+    
+    var imageUrl = 'https://newhabits.github.io/mbti-parenting-test/images/' + mbtiType.toLowerCase() + '.png';
+    var ogImage = document.querySelector('meta[property="og:image"]');
+    var twitterImage = document.querySelector('meta[name="twitter:image"]');
+    
+    if (ogImage) {
+        ogImage.content = imageUrl;
+    }
+    if (twitterImage) {
+        twitterImage.content = imageUrl;
+    }
+    
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+        ogUrl.content = 'https://newhabits.github.io/mbti-parenting-test/?type=' + mbtiType;
+    }
 }
 
 // 결과 공유하기
 function shareResult() {
-  const mbtiType = calculateMBTI();
-  const shareUrl = `${window.location.origin}${window.location.pathname}?type=${mbtiType}`;
-  
-  navigator.clipboard.writeText(shareUrl)
-    .then(() => {
-      const shareAlert = document.getElementById("share-alert");
-      shareAlert.classList.remove("hidden");
-      
-      setTimeout(() => {
-        shareAlert.classList.add("hidden");
-      }, 3000);
-    })
-    .catch(err => {
-      alert('링크 복사에 실패했습니다.');
-    });
+    var mbtiType = calculateMBTI();
+    var shareUrl = window.location.origin + window.location.pathname + '?type=' + mbtiType;
+    
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareUrl).then(function() {
+            var shareAlert = document.getElementById("share-alert");
+            shareAlert.classList.remove("hidden");
+            
+            setTimeout(function() {
+                shareAlert.classList.add("hidden");
+            }, 3000);
+        }).catch(function() {
+            alert('링크 복사에 실패했습니다.');
+        });
+    } else {
+        alert('링크: ' + shareUrl);
+    }
 }
 
 // URL에서 공유된 결과 확인
 function checkSharedResult() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const mbtiType = urlParams.get('type');
-  
-  if (mbtiType) {
-    const validTypes = ['ISTJ', 'ISFJ', 'INFJ', 'INTJ', 'ISTP', 'ISFP', 'INFP', 'INTP', 'ESTP', 'ESFP', 'ENFP', 'ENTP', 'ESTJ', 'ESFJ', 'ENFJ', 'ENTJ'];
+    var urlParams = new URLSearchParams(window.location.search);
+    var mbtiType = urlParams.get('type');
     
-    if (validTypes.includes(mbtiType)) {
-      hideAllContainers();
-      document.getElementById('result-container').classList.add('active');
-      
-      showPersonalityResult(mbtiType);
-      
-      const resultContent = document.getElementById('result-content');
-      const sharedMessage = document.createElement('div');
-      sharedMessage.className = 'shared-message';
-      sharedMessage.innerHTML = '<p>친구가 공유한 결과입니다. 나의 타입도 알아보세요!</p>';
-      resultContent.insertBefore(sharedMessage, resultContent.firstChild);
+    if (mbtiType) {
+        var validTypes = ['ISTJ', 'ISFJ', 'INFJ', 'INTJ', 'ISTP', 'ISFP', 'INFP', 'INTP', 'ESTP', 'ESFP', 'ENFP', 'ENTP', 'ESTJ', 'ESFJ', 'ENFJ', 'ENTJ'];
+        
+        for (var i = 0; i < validTypes.length; i++) {
+            if (validTypes[i] === mbtiType) {
+                hideAllContainers();
+                document.getElementById('result-container').classList.add('active');
+                
+                showPersonalityResult(mbtiType);
+                
+                var resultContent = document.getElementById('result-content');
+                var sharedMessage = document.createElement('div');
+                sharedMessage.className = 'shared-message';
+                sharedMessage.innerHTML = '<p>친구가 공유한 결과입니다. 나의 타입도 알아보세요!</p>';
+                resultContent.insertBefore(sharedMessage, resultContent.firstChild);
+                break;
+            }
+        }
     }
-  }
 }
-
-// 여기에 모든 MBTI 결과 함수들을 추가하세요 (showENFPResult, showENFJResult 등등...)
-// 이전에 만든 모든 showXXXXResult() 함수들을 여기 아래에 복사해서 붙여넣으세요
 
 // ISTP 유형 결과 페이지
 function showISTPResult() {
@@ -577,7 +565,7 @@ function showISTJResult() {
   `;
   
   document.getElementById('result-content').innerHTML = resultContent;
-}}
+}
 
 // ESTP 유형 결과 페이지
 function showESTPResult() {
