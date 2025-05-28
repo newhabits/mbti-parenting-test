@@ -1,58 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // 인트로 화면을 활성화
+// 페이지가 다 로드된 후에 실행
+window.addEventListener('load', function() {
+    // 인트로 화면 보이기
     document.getElementById("intro-container").classList.add("active");
     
-    // 시작 버튼에 클릭 이벤트 등록
-    const startButton = document.getElementById("start-btn");
-    if (startButton) {
-        startButton.addEventListener("click", function() {
-            hideAllContainers();
-            document.getElementById("quiz-container").classList.add("active");
-            initializeQuiz();
-        });
-    } else {
-        console.error("시작 버튼을 찾을 수 없습니다!");
-    }
+    // 시작 버튼 클릭하면 퀴즈 시작
+    document.getElementById("start-btn").addEventListener("click", function() {
+        hideAllContainers();
+        document.getElementById("quiz-container").classList.add("active");
+        initializeQuiz();
+    });
     
-    // 뒤로가기 버튼 이벤트 등록
-    const backButton = document.getElementById("back-button");
-    if (backButton) {
-        backButton.addEventListener("click", goBack);
-    }
+    // 뒤로가기 버튼
+    document.getElementById("back-button").addEventListener("click", goBack);
     
-    // 공유 버튼 이벤트 등록
-    const shareButton = document.getElementById("share-button");
-    if (shareButton) {
-        shareButton.addEventListener("click", shareResult);
-    }
+    // 공유 버튼
+    document.getElementById("share-button").addEventListener("click", shareResult);
     
-    // 결과 페이지가 로드된 후 일러스트 이미지 확인
-    const illustration = document.getElementById("type-illustration");
-    if (illustration) {
-        illustration.onerror = function() {
-            // 이미지가 없으면 대체 콘텐츠 표시
-            const container = this.parentNode;
-            container.innerHTML = '<div class="illustration-placeholder"><p class="coming-soon-text">곧 여기에 특별한 일러스트가 추가될 예정입니다</p></div>';
-        };
-    }
-    
-    // URL에서 공유된 결과 확인
+    // URL에 결과가 있는지 확인
     checkSharedResult();
 });
 
-// 전역 변수 선언
+// 점수 저장할 변수들
 let currentQuestionIndex = 0;
 let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 let previousAnswers = [];
 
-// 모든 컨테이너 숨기기
+// 모든 화면 숨기기
 function hideAllContainers() {
     document.getElementById("intro-container").classList.remove("active");
     document.getElementById("quiz-container").classList.remove("active");
     document.getElementById("result-container").classList.remove("active");
 }
 
-// 퀴즈 초기화 함수
+// 퀴즈 시작
 function initializeQuiz() {
     currentQuestionIndex = 0;
     scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
@@ -172,7 +152,7 @@ const questions = [
   }
 ];
 
-// 질문 렌더링 함수
+// 질문 보여주기
 function renderQuestion() {
     const question = questions[currentQuestionIndex];
     const questionElement = document.getElementById("question");
@@ -198,7 +178,7 @@ function renderQuestion() {
         answersElement.appendChild(button);
     });
 
-    // 첫 번째 질문이면 뒤로가기 버튼 숨기기, 아니면 보이기
+    // 첫 번째 질문이면 뒤로가기 버튼 숨기기
     if (currentQuestionIndex === 0) {
         document.getElementById("back-button").classList.add("hidden");
     } else {
@@ -206,7 +186,7 @@ function renderQuestion() {
     }
 }
 
-// 다음 질문으로 이동
+// 다음 질문
 function nextQuestion() {
     currentQuestionIndex++;
 
@@ -217,7 +197,7 @@ function nextQuestion() {
     }
 }
 
-// 이전 질문으로 이동
+// 이전 질문
 function goBack() {
     if (currentQuestionIndex > 0) {
         previousAnswers.pop(); 
@@ -226,7 +206,7 @@ function goBack() {
     }
 }
 
-// MBTI 계산
+// MBTI 결과 계산
 function calculateMBTI() {
     const eOrI = scores.E >= scores.I ? "E" : "I";
     const sOrN = scores.S >= scores.N ? "S" : "N";
@@ -235,7 +215,7 @@ function calculateMBTI() {
     return `${eOrI}${sOrN}${tOrF}${jOrP}`;
 }
 
-// 결과 표시
+// 결과 보여주기
 function showResult() {
     hideAllContainers();
     document.getElementById('result-container').classList.add('active');
@@ -243,11 +223,10 @@ function showResult() {
     showPersonalityResult(mbti);
 }
 
-// 모든 유형에 대한 메인 컨트롤 함수
+// 결과 타입별로 보여주기
 function showPersonalityResult(type) {
   const resultContainer = document.getElementById('result-container');
   
-  // 이미지용 별도 컨테이너 확인 및 생성
   let imageContainer = document.getElementById('result-type-image');
   if (!imageContainer) {
     imageContainer = document.createElement('div');
@@ -255,18 +234,15 @@ function showPersonalityResult(type) {
     resultContainer.insertBefore(imageContainer, document.getElementById('result-content'));
   }
   
-  // 이미지 설정
- imageContainer.innerHTML = `<div class="result-image"><img src="images/${type.toLowerCase()}.png" alt="${type} 유형 이미지"></div>`;
+  imageContainer.innerHTML = `<div class="result-image"><img src="images/${type.toLowerCase()}.png" alt="${type} 유형 이미지"></div>`;
   
-  // 기존 내용 비우기
   document.getElementById('result-content').innerHTML = '';
   
-  // 메타태그 업데이트 및 결과 표시
   updateMetaTags(type);
 
   switch(type) {
     case 'INTJ':
-      showINTJResult(); // 수정됨: INTJ가 자신의 결과를 보여줌
+      showINTJResult();
       break;          
     case 'ISTJ':
       showISTJResult();
@@ -314,13 +290,11 @@ function showPersonalityResult(type) {
       showESFPResult();
       break;
     default:
-      document.getElementById('result-content').innerHTML = '<p>선택한 유형에 대한 결과를 찾을 수 없습니다.</p>';
+      document.getElementById('result-content').innerHTML = '<p>결과를 찾을 수 없습니다.</p>';
   }
-
 }
 
 function updateMetaTags(mbtiType) {
-  // 제목 업데이트 (안전장치 추가)
   const ogTitle = document.querySelector('meta[property="og:title"]');
   const twitterTitle = document.querySelector('meta[name="twitter:title"]');
   
@@ -331,7 +305,6 @@ function updateMetaTags(mbtiType) {
     twitterTitle.content = `${mbtiType} 유형 육아 스타일 - MBTI 육아 테스트`;
   }
   
-  // 이미지 업데이트 (안전장치 추가)
   const imageUrl = `https://newhabits.github.io/mbti-parenting-test/images/${mbtiType.toLowerCase()}.png`;
   const ogImage = document.querySelector('meta[property="og:image"]');
   const twitterImage = document.querySelector('meta[name="twitter:image"]');
@@ -343,39 +316,28 @@ function updateMetaTags(mbtiType) {
     twitterImage.content = imageUrl;
   }
   
-  // URL 업데이트 (안전장치 추가)
   const ogUrl = document.querySelector('meta[property="og:url"]');
   if (ogUrl) {
     ogUrl.content = `https://newhabits.github.io/mbti-parenting-test/?type=${mbtiType}`;
   }
 }
-// 더 많은 아이템 보기 함수
-function showMoreItems(type) {
-  alert(type + ' 유형을 위한 더 많은 아이템을 보여줍니다.');
-}
 
-// 결과 공유 함수
+// 결과 공유하기
 function shareResult() {
-  const mbtiType = calculateMBTI(); // 현재 MBTI 결과 가져오기
-  
-  // 공유할 URL 생성 (현재 페이지 URL + 쿼리 파라미터)
+  const mbtiType = calculateMBTI();
   const shareUrl = `${window.location.origin}${window.location.pathname}?type=${mbtiType}`;
   
-  // 클립보드에 URL 복사
   navigator.clipboard.writeText(shareUrl)
     .then(() => {
-      // 복사 성공 알림 표시
       const shareAlert = document.getElementById("share-alert");
       shareAlert.classList.remove("hidden");
       
-      // 3초 후 알림 숨기기
       setTimeout(() => {
         shareAlert.classList.add("hidden");
       }, 3000);
     })
     .catch(err => {
-      console.error('클립보드 복사 실패:', err);
-      alert('링크 복사에 실패했습니다. 직접 URL을 복사해주세요.');
+      alert('링크 복사에 실패했습니다.');
     });
 }
 
@@ -385,18 +347,14 @@ function checkSharedResult() {
   const mbtiType = urlParams.get('type');
   
   if (mbtiType) {
-    // 유효한 MBTI 타입인지 확인
     const validTypes = ['ISTJ', 'ISFJ', 'INFJ', 'INTJ', 'ISTP', 'ISFP', 'INFP', 'INTP', 'ESTP', 'ESFP', 'ENFP', 'ENTP', 'ESTJ', 'ESFJ', 'ENFJ', 'ENTJ'];
     
     if (validTypes.includes(mbtiType)) {
-      // 인트로 화면 숨기고 결과 화면 표시
       hideAllContainers();
       document.getElementById('result-container').classList.add('active');
       
-      // 결과 표시
       showPersonalityResult(mbtiType);
       
-      // 공유된 결과임을 알리는 메시지 추가
       const resultContent = document.getElementById('result-content');
       const sharedMessage = document.createElement('div');
       sharedMessage.className = 'shared-message';
@@ -405,7 +363,9 @@ function checkSharedResult() {
     }
   }
 }
-}
+
+// 여기에 모든 MBTI 결과 함수들을 추가하세요 (showENFPResult, showENFJResult 등등...)
+// 이전에 만든 모든 showXXXXResult() 함수들을 여기 아래에 복사해서 붙여넣으세요
 
 // ISTP 유형 결과 페이지
 function showISTPResult() {
