@@ -2959,8 +2959,7 @@ function showESTPResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
-<<<<<<< HEAD
-=======
+
 
 // INFP 유형 결과 페이지
 function showINFPResult() {
@@ -3067,4 +3066,4 @@ function showINFPResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
->>>>>>> 151c228458d826d3e10a3c0abf275b755e7be79b
+
