@@ -831,8 +831,6 @@ function showISFJResult() {
 document.getElementById('result-content').innerHTML = resultContent;
 }
 
-<<<<<<< HEAD
-=======
 // ENFP 유형 결과 페이지
 function showENFPResult() {
   const resultContent = `
@@ -1346,8 +1344,6 @@ function showENFPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-<<<<<<< HEAD
-=======
 // ESTJ 유형 결과 페이지
 function showESTJResult() {
   const resultContent = `
@@ -2302,7 +2298,6 @@ function showISTPResult() {
   document.getElementById('result-content').innerHTML = resultContent;
 }
 
-
 // ESTP 유형 결과 페이지
 function showESTPResult() {
   const resultContent = `
@@ -2408,5 +2403,4 @@ function showESTPResult() {
   
   document.getElementById('result-content').innerHTML = resultContent;
 }
-
 
